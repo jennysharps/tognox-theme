@@ -556,7 +556,7 @@ TYPOGRAPHY
 	Be sure to remove the comment brackets.
 */
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'Helvetica Neue Web';
   src: url('../fonts/helveticaNeue.eot');
   src: url('../fonts/helveticaNeue.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaNeue.woff') format('woff'), url('../fonts/helveticaNeue.ttf') format('truetype'), url('../fonts/helveticaNeue.svg#helveticaNeue') format('svg');
   font-weight: normal;
@@ -867,7 +867,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue Web", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
@@ -1668,8 +1668,8 @@ you can add resource intensive styles.
   .nav.top-nav li a {
     background: transparent;
     letter-spacing: 1px;
-    line-height: 35px;
-    padding: 4px 1em 0;
+    line-height: 37px;
+    padding: 2px 1em 0;
     border-right: 1px solid #2A0000;
     border-left: 1px solid #89616A;
     font-family: Helvetica, sans-serif;
