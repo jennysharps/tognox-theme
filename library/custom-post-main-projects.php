@@ -54,7 +54,7 @@ add_action( 'init', 'custom_post_projects');
 
 // now let's add custom tags (these act like categories)
 register_taxonomy( 'project_languages', 
-	array('main_projects','main_publications'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('main_projects','main_publications','downloads'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 	array('hierarchical' => false,    /* if this is false, it acts like tags */
 		'label' => __( 'Programming Languages Used' ),             
 		'labels' => array(
