@@ -121,9 +121,9 @@ function custom_metabox_test_proj($post_ID = NULL) {
 
 	$meta = get_post_meta( $post_ID, '_slider_order', true );
 	
-  	$content = wp_nonce_field( 'test-projects-options', 'myplugin_noncename', true, false );
+  	// $content = wp_nonce_field( 'test-projects-options', 'myplugin_noncename', true, false );
 
- 	$content .= '
+ 	$content = '
  	<div class="project-slider-custom-fields">
  		<label>Choose Slider Position</label>
  		<select id="_test_kw_field" name="_test_kw_field">
@@ -147,8 +147,8 @@ function save_project_postdata( $post_id ) {
   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
       return;
 
-  if ( !wp_verify_nonce( $_POST['myplugin_noncename'], 'test-projects-options' ) )
-      return;
+  /* if ( !wp_verify_nonce( $_POST['myplugin_noncename'], 'test-projects-options' ) )
+      return; */
 
   if ( !current_user_can( 'edit_post', $post_id ) )
         return;
