@@ -115,7 +115,7 @@ register_taxonomy( 'project_software',
         'extra_options' => 'custom_metabox_test_proj'
         )
     );
-}; */
+}; 
 	
 function custom_metabox_test_proj($post_ID = NULL) {
 
@@ -147,8 +147,8 @@ function save_project_postdata( $post_id ) {
   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
       return;
 
-  /* if ( !wp_verify_nonce( $_POST['myplugin_noncename'], 'test-projects-options' ) )
-      return; */
+  if ( !wp_verify_nonce( $_POST['myplugin_noncename'], 'test-projects-options' ) )
+      return;
 
   if ( !current_user_can( 'edit_post', $post_id ) )
         return;
@@ -158,7 +158,7 @@ function save_project_postdata( $post_id ) {
   update_post_meta( $post_id, '_slider_order', $mydata );
 }
 add_action( 'save_post', 'save_project_postdata' );
-
+*/
 
 function main_projects_admin_css() {
 	global $post_type; 
