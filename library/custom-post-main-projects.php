@@ -106,7 +106,7 @@ register_taxonomy( 'project_software',
 
 
 // Define additional "post thumbnails". Relies on MultiPostThumbnails to work
-if (class_exists('MultiPostThumbnails')) {
+/* if (class_exists('MultiPostThumbnails')) {
     new MultiPostThumbnails(array(
         'label' => 'Slider Image',
         'id' => 'projects_slider_image',
@@ -115,7 +115,7 @@ if (class_exists('MultiPostThumbnails')) {
         'extra_options' => 'custom_metabox_test_proj'
         )
     );
-};
+}; */
 	
 function custom_metabox_test_proj($post_ID = NULL) {
 
