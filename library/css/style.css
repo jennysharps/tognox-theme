@@ -1006,7 +1006,7 @@ and moe scalable.
   margin: 0 auto;
 }
 .nav.top-nav li a {
-  font-family: "Helvetica Neue Web", Helvetica Neue, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 /*********************
 08. POSTS & CONTENT STYLES
@@ -1684,7 +1684,7 @@ you can add resource intensive styles.
     border-right: 1px solid #2A0000;
     border-left: 1px solid #89616A;
     font-weight: normal;
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-shadow: 2px 2px 2px #000000;
     font-weight: 300;
   }
