@@ -1582,6 +1582,11 @@ you can add resource intensive styles.
   .header {
     margin-bottom: 49px;
   }
+  .header #site-info .site-info-logo,
+  .header #site-info .site-info-text {
+    display: block;
+    float: left;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
