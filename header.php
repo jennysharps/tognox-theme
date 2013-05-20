@@ -40,7 +40,7 @@
 			
 				<div id="inner-header" class="wrap clearfix">
 					
-					<div id="site-info clearfix">
+					<div id="site-info" class="clearfix">
 						<a class="site-info-logo" href="<?php echo site_url(); ?>">
 							<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/gaussian.png" width="84px;"/>
 						</a>
