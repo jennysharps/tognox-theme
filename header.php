@@ -38,13 +38,12 @@
 			
 			<header class="header" role="banner">
 			
-				<div id="inner-header" class="wrap clearfix">	
-					<div id="gaussian"></div>
-					<h1 class="site-logo">
-						<a href="<?php echo home_url(); ?>" rel="nofollow"><img alt="Francesco Tonini Logo" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/francesco-tonini.png"></a>
-					</h1>
-					
-					<h2 class="site-description"><?php  bloginfo('description'); ?></h2>
+				<div id="inner-header" class="wrap clearfix">
+					<a class="site-info" href="">
+						<img class="site-logo" src="<?php get_template_directory_uri(); ?>/images/gaussian.png" width="84px;"/>
+						<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+						<h2 class="site-description"><?php bloginfo('description'); ?></h2>
+					</a>
 					
 					
 					<nav role="navigation">
