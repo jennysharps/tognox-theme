@@ -41,10 +41,10 @@
 				<div id="inner-header" class="wrap clearfix">
 					
 					<div id="site-info clearfix">
-						<a class="site-info-logo" href="<?php site_url(); ?>">
+						<a class="site-info-logo" href="<?php echo site_url(); ?>">
 							<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/gaussian.png" width="84px;"/>
 						</a>
-						<a class="site-info-text">
+						<a class="site-info-text" href="<?php echo site_url(); ?>">
 							<h1 class="site-title"><?php bloginfo('name'); ?></h1>
 							<h2 class="site-description"><?php bloginfo('description'); ?></h2>
 						</a>
