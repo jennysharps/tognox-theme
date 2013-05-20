@@ -567,6 +567,26 @@ TYPOGRAPHY
 	font-style: normal;
 }
 */
+@font-face {
+  font-family: 'NeuzeitGro-Bla';
+  src: url("/fonts/247099_0_0.eot");
+  src: url("/fonts/247099_0_0.eot?#iefix") format("embedded-opentype"), url("/fonts/247099_0_0.woff") format("woff"), url("/fonts/247099_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'NeuzeitGroExt-Bla';
+  src: url("/fonts/247099_2_0.eot");
+  src: url("/fonts/247099_2_0.eot?#iefix") format("embedded-opentype"), url("/fonts/247099_2_0.woff") format("woff"), url("/fonts/247099_2_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'NeuzeitGro-Bol';
+  src: url("/fonts/247099_4_0.eot");
+  src: url("/fonts/247099_4_0.eot?#iefix") format("embedded-opentype"), url("/fonts/247099_4_0.woff") format("woff"), url("/fonts/247099_4_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'NeuzeitGro-Reg';
+  src: url("/fonts/247099_5_0.eot");
+  src: url("/fonts/247099_5_0.eot?#iefix") format("embedded-opentype"), url("/fonts/247099_5_0.woff") format("woff"), url("/fonts/247099_5_0.ttf") format("truetype");
+}
 /* 
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -775,11 +795,10 @@ and will be used across all viewports.
 01. GENERAL STYLES
 *********************/
 body {
-  font-family: $serif;
+  font-family: "NeuzeitGro-Reg", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #565656;
-  background: url(../images/neutral-texture.jpg) 0 0 transparent;
 }
 img {
   max-width: 100%;
@@ -872,7 +891,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "NeuzeitGro-Reg", Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
