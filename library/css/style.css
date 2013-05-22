@@ -865,7 +865,7 @@ and will be used across all viewports.
 01. GENERAL STYLES
 *********************/
 body {
-  font-family: "NeuzeitGro-Reg", "OpenSansregular", Arial, sans-serif;
+  font-family: "OpenSansregular", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #565656;
@@ -961,7 +961,7 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: "NeuzeitGro-Reg", "OpenSansregular", Arial, sans-serif;
+  font-family: "OpenSansregular", Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
