@@ -666,73 +666,73 @@ TYPOGRAPHY
   font-style: italic;
 }
 @font-face {
-  font-family: 'LatoHairline';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-Hai-webfont.eot');
   src: url('../fonts/lato/Lato-Hai-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Hai-webfont.woff') format('woff'), url('../fonts/lato/Lato-Hai-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-Hai-webfont.svg#LatoHairline') format('svg');
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatoHairline';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-HaiIta-webfont.eot');
   src: url('../fonts/lato/Lato-HaiIta-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-HaiIta-webfont.woff') format('woff'), url('../fonts/lato/Lato-HaiIta-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-HaiIta-webfont.svg#LatoHairlineItalic') format('svg');
-  font-weight: normal;
+  font-weight: 100;
   font-style: italic;
 }
 @font-face {
-  font-family: 'LatoLight';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-Lig-webfont.eot');
   src: url('../fonts/lato/Lato-Lig-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Lig-webfont.woff') format('woff'), url('../fonts/lato/Lato-Lig-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-Lig-webfont.svg#LatoLight') format('svg');
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatoLight';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-LigIta-webfont.eot');
   src: url('../fonts/lato/Lato-LigIta-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-LigIta-webfont.woff') format('woff'), url('../fonts/lato/Lato-LigIta-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-LigIta-webfont.svg#LatoLightItalic') format('svg');
-  font-weight: normal;
+  font-weight: 200;
   font-style: italic;
 }
 @font-face {
-  font-family: 'LatoRegular';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-Reg-webfont.eot');
   src: url('../fonts/lato/Lato-Reg-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Reg-webfont.woff') format('woff'), url('../fonts/lato/Lato-Reg-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-Reg-webfont.svg#LatoRegular') format('svg');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatoRegular';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-RegIta-webfont.eot');
   src: url('../fonts/lato/Lato-RegIta-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-RegIta-webfont.woff') format('woff'), url('../fonts/lato/Lato-RegIta-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-RegIta-webfont.svg#LatoItalic') format('svg');
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'LatoRegular';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-Bol-webfont.eot');
   src: url('../fonts/lato/Lato-Bol-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Bol-webfont.woff') format('woff'), url('../fonts/lato/Lato-Bol-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-Bol-webfont.svg#LatoBold') format('svg');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatoRegular';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-BolIta-webfont.eot');
   src: url('../fonts/lato/Lato-BolIta-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-BolIta-webfont.woff') format('woff'), url('../fonts/lato/Lato-BolIta-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-BolIta-webfont.svg#LatoBoldItalic') format('svg');
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
 }
 @font-face {
-  font-family: 'LatoBlack';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-Bla-webfont.eot');
   src: url('../fonts/lato/Lato-Bla-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-Bla-webfont.woff') format('woff'), url('../fonts/lato/Lato-Bla-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-Bla-webfont.svg#LatoBlack') format('svg');
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatoBlack';
+  font-family: 'Lato';
   src: url('../fonts/lato/Lato-BlaIta-webfont.eot');
   src: url('../fonts/lato/Lato-BlaIta-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/Lato-BlaIta-webfont.woff') format('woff'), url('../fonts/lato/Lato-BlaIta-webfont.ttf') format('truetype'), url('../fonts/lato/Lato-BlaIta-webfont.svg#LatoBlackItalic') format('svg');
-  font-weight: normal;
+  font-weight: 900;
   font-style: italic;
 }
 @font-face {
@@ -963,13 +963,15 @@ and will be used across all viewports.
 01. GENERAL STYLES
 *********************/
 body {
-  font-family: "LatoRegular", "NeuzeitGro-Reg", "OpenSansregular", Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #565656;
+  color: #222;
+  background: #f3ede1;
 }
 img {
   max-width: 100%;
+  height: auto;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -1059,9 +1061,9 @@ h4,
 .h4,
 h5,
 .h5 {
-  font-family: "LatoRegular", "NeuzeitGro-Reg", "OpenSansregular", Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 400;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1113,27 +1115,30 @@ h5,
 06. HEADER SYTLES
 *********************/
 .header {
-  background: #f2e9cf;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #f2e9cf 76%, #d2c69e 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(76%, #eee7d4), color-stop(100%, #d2c69e));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #f2e9cf 76%, #d2c69e 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #f2e9cf 76%, #d2c69e 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #f2e9cf 76%, #d2c69e 100%);
-  /* IE10+ */
-
-  background: linear-gradient(top, #f2e9cf 76%, #d2c69e 100%);
-  /* W3C */
-
+  background: #fcf8ee;
+}
+.header #site-info {
+  margin-top: .5em;
+}
+.header #site-info .site-info-text {
+  margin-left: .75em;
+}
+.header #site-info .site-info-text a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header #site-info .site-info-text a h1 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 2.75em;
+  font-weight: 900;
+  letter-spacing: 0.075em;
+  line-height: normal;
+  margin: .1em 0 .1em;
+  word-spacing: .2em;
+}
+.header #site-info .site-info-text h2 {
+  line-height: normal;
+  margin: 0;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -1167,19 +1172,11 @@ and moe scalable.
 }
 .nav li a {
   display: block;
-  color: #EDE7D1;
+  color: #222;
   text-decoration: none;
   padding: 10px 10px;
   border-bottom: 1px solid #ccc;
   background: #ffffff;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjglIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSIjMzIwMDAzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTIlIiBzdG9wLWNvbG9yPSIjODk2MTZhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTQlIiBzdG9wLWNvbG9yPSIjNjAxODFjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTYlIiBzdG9wLWNvbG9yPSIjNjcxNjFjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjNjExNTFmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjIlIiBzdG9wLWNvbG9yPSIjNjUxNDFhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjQlIiBzdG9wLWNvbG9yPSIjNjUxMjFhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjYlIiBzdG9wLWNvbG9yPSIjNjMxMzFjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjglIiBzdG9wLWNvbG9yPSIjNjMxMjE5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzIlIiBzdG9wLWNvbG9yPSIjNjMxMjFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTQlIiBzdG9wLWNvbG9yPSIjNWIwYTExIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzYlIiBzdG9wLWNvbG9yPSIjNTYwNTBjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjNTQwMjBlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODIlIiBzdG9wLWNvbG9yPSIjNTQwMzBhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTAlIiBzdG9wLWNvbG9yPSIjNTMwMDA4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTIlIiBzdG9wLWNvbG9yPSIjZmJkZGU1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(8%, #ffffff), color-stop(10%, #320003), color-stop(12%, #89616a), color-stop(14%, #60181c), color-stop(16%, #67161c), color-stop(20%, #61151f), color-stop(22%, #65141a), color-stop(24%, #65121a), color-stop(26%, #63131c), color-stop(28%, #631219), color-stop(32%, #63121b), color-stop(54%, #5b0a11), color-stop(76%, #56050c), color-stop(80%, #54020e), color-stop(82%, #54030a), color-stop(90%, #530008), color-stop(92%, #fbdde5), color-stop(94%, #ffffff), color-stop(100%, #ffffff));
-  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1847,23 +1844,13 @@ you can add resource intensive styles.
   }
   /* end .nav */
   header nav[role=navigation] {
-    -webkit-box-shadow: 0 1px 4px 0 #7e7e7e;
-    -moz-box-shadow: 0 1px 4px 0 #7e7e7e;
-    box-shadow: 0 1px 4px 0 #7e7e7e;
+    /* .boxShadow(0, 1px, 4px, 0, #7E7E7E); */
+  
     left: 0;
     height: 49px;
     padding: 5px 0;
     position: absolute;
     width: 100%;
-    background: #320003;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjglIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAlIiBzdG9wLWNvbG9yPSIjMzIwMDAzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTIlIiBzdG9wLWNvbG9yPSIjODk2MTZhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTQlIiBzdG9wLWNvbG9yPSIjNjAxODFjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTYlIiBzdG9wLWNvbG9yPSIjNjcxNjFjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjNjExNTFmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjIlIiBzdG9wLWNvbG9yPSIjNjUxNDFhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjQlIiBzdG9wLWNvbG9yPSIjNjUxMjFhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjYlIiBzdG9wLWNvbG9yPSIjNjMxMzFjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjglIiBzdG9wLWNvbG9yPSIjNjMxMjE5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzIlIiBzdG9wLWNvbG9yPSIjNjMxMjFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTQlIiBzdG9wLWNvbG9yPSIjNWIwYTExIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzYlIiBzdG9wLWNvbG9yPSIjNTYwNTBjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjNTQwMjBlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODIlIiBzdG9wLWNvbG9yPSIjNTQwMzBhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTAlIiBzdG9wLWNvbG9yPSIjNTMwMDA4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTIlIiBzdG9wLWNvbG9yPSIjZmJkZGU1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTQlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(8%, #ffffff), color-stop(10%, #320003), color-stop(12%, #89616a), color-stop(14%, #60181c), color-stop(16%, #67161c), color-stop(20%, #61151f), color-stop(22%, #65141a), color-stop(24%, #65121a), color-stop(26%, #63131c), color-stop(28%, #631219), color-stop(32%, #63121b), color-stop(54%, #5b0a11), color-stop(76%, #56050c), color-stop(80%, #54020e), color-stop(82%, #54030a), color-stop(90%, #530008), color-stop(92%, #fbdde5), color-stop(94%, #ffffff), color-stop(100%, #ffffff));
-    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-    background: -o-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-    background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 8%, #320003 10%, #89616a 12%, #60181c 14%, #67161c 16%, #61151f 20%, #65141a 22%, #65121a 24%, #63131c 26%, #631219 28%, #63121b 32%, #5b0a11 54%, #56050c 76%, #54020e 80%, #54030a 82%, #530008 90%, #fbdde5 92%, #ffffff 94%, #ffffff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
   }
   header nav[role=navigation] li:hover {
     background: #3d000f;
@@ -1871,19 +1858,16 @@ you can add resource intensive styles.
   .nav.top-nav {
     background: transparent;
     margin: 0 auto;
-    border-left: 1px solid #2A0000;
   }
   .nav.top-nav li a {
     background: transparent;
     letter-spacing: .1em;
     line-height: 37px;
     padding: 2px 1em 0;
-    border-right: 1px solid #2A0000;
-    border-left: 1px solid #89616A;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 1.1em;
-    text-shadow: 2px 2px 2px #000000;
     font-weight: 300;
+    text-transform: uppercase;
   }
   .nav.top-nav li a:hover,
   .nav.top-nav li a:visited:hover,
