@@ -32,7 +32,7 @@ HEADER SYTLES
 *********************/
 
 .header {
-	margin-bottom: @fullnav-height;
+	padding-bottom: 1em;
 	
 	#site-info {
 	
@@ -42,6 +42,10 @@ HEADER SYTLES
 		}
 	
 	}
+
+        #inner-header {
+                position: relative;
+        }
 	
 }
 
@@ -52,7 +56,6 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
 	border: 0;
 
 	li {
@@ -80,21 +83,21 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
-			width: 200px;
 			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
+                        margin: 0;
 
-			li {
+			li {    
+                                display: block;
+                                width: 100%;
 
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
 
 					&:hover,
 					&:focus {}
@@ -145,36 +148,23 @@ NAVIGATION STYLES
 } /* end .nav */
 
 header nav[role=navigation] {
-	/* .boxShadow(0, 1px, 4px, 0, #7E7E7E); */
-	left: 0;
-	height: @fullnav-height;
-	padding: @fullnav-margin 0;
-	position: absolute;
-	width: 100%;
-	
+        position: absolute;
+        right: 0;
+        bottom: 1em;  
+
 	li:hover {
-		background: #3d000f;
 	}
 }
 
 .nav.top-nav {
-	background: transparent;
-	margin: 0 auto;
+        /* display: inline-block;
+        float: right;
+        width: auto; */
 	
 	li {
-	
-		a {
-			background: transparent;
-			letter-spacing: .1em;
-			line-height: @fullnav-height - @fullnav-margin * 2 - 2;
-			padding: 2px 1em 0;
-			font-size: 1.1em;
-			font-weight: 300;
-			text-transform: uppercase;
-		}
 		
 		a:hover, a:visited:hover, a:focus, a:visited:focus {
-			color: #EDE7D1;
+
 		}
 	}
 }

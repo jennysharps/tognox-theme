@@ -1117,11 +1117,16 @@ h5,
 .header {
   background: #fcf8ee;
 }
+.header .inner-header {
+  position: relative;
+}
 .header #site-info {
-  margin-top: .5em;
+  margin: 1.5em 0 0 0;
+  display: inline-block;
+  float: left;
 }
 .header #site-info .site-info-text {
-  margin-left: .75em;
+  margin-left: 1em;
 }
 .header #site-info .site-info-text a {
   text-decoration: none;
@@ -1129,16 +1134,21 @@ h5,
 }
 .header #site-info .site-info-text a h1 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 2.75em;
+  font-size: 2.25em;
   font-weight: 900;
   letter-spacing: 0.075em;
   line-height: normal;
-  margin: .1em 0 .1em;
+  margin: .3em 0 .1em;
   word-spacing: .2em;
 }
 .header #site-info .site-info-text h2 {
   line-height: normal;
   margin: 0;
+}
+.header #site-info .site-info-text .site-description {
+  font-size: 1.15em;
+  line-height: 1.4em;
+  margin: 0 0 0.375em;
 }
 /*********************
 07. NAVIGATION STYLES
@@ -1176,7 +1186,6 @@ and moe scalable.
   text-decoration: none;
   padding: 10px 10px;
   border-bottom: 1px solid #ccc;
-  background: #ffffff;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1191,8 +1200,14 @@ and moe scalable.
 }
 /* end .nav */
 .nav.top-nav {
-  background: transparent;
   margin: 0 auto;
+}
+.nav.top-nav li a {
+  letter-spacing: .1em;
+  padding: 2px 1em 0;
+  font-size: .9em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 /*********************
 08. POSTS & CONTENT STYLES
@@ -1761,18 +1776,20 @@ you can add resource intensive styles.
   HEADER SYTLES
   *********************/
   .header {
-    margin-bottom: 49px;
+    padding-bottom: 1em;
   }
   .header #site-info .site-info-logo,
   .header #site-info .site-info-text {
     display: block;
     float: left;
   }
+  .header #inner-header {
+    position: relative;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
   .nav {
-    background: #eee;
     border: 0;
     /* end .menu ul li */
   
@@ -1805,17 +1822,19 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
-    width: 200px;
     border: 1px solid #ccc;
     border-top: 0;
     position: absolute;
     display: none;
     z-index: 8999;
+    margin: 0;
     /* highlight sub-menu current page */
   
   }
   .nav li ul.sub-menu li,
   .nav li ul.children li {
+    display: block;
+    width: 100%;
     /*
   				if you need to go deeper, go nuts
   				just remember deeper menus suck
@@ -1828,8 +1847,6 @@ you can add resource intensive styles.
     padding-left: 10px;
     border-right: 0;
     display: block;
-    width: 180px;
-    border-bottom: 1px solid #ccc;
   }
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
@@ -1841,35 +1858,15 @@ you can add resource intensive styles.
   }
   /* end .nav */
   header nav[role=navigation] {
-    /* .boxShadow(0, 1px, 4px, 0, #7E7E7E); */
-  
-    left: 0;
-    height: 49px;
-    padding: 5px 0;
     position: absolute;
-    width: 100%;
-  }
-  header nav[role=navigation] li:hover {
-    background: #3d000f;
+    right: 0;
+    bottom: 1em;
   }
   .nav.top-nav {
-    background: transparent;
-    margin: 0 auto;
-  }
-  .nav.top-nav li a {
-    background: transparent;
-    letter-spacing: .1em;
-    line-height: 37px;
-    padding: 2px 1em 0;
-    font-size: 1.1em;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-  .nav.top-nav li a:hover,
-  .nav.top-nav li a:visited:hover,
-  .nav.top-nav li a:focus,
-  .nav.top-nav li a:visited:focus {
-    color: #EDE7D1;
+    /* display: inline-block;
+          float: right;
+          width: auto; */
+  
   }
   /*********************
   SIDEBARS & ASIDES
