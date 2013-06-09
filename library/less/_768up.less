@@ -35,7 +35,8 @@ HEADER SYTLES
 	padding-bottom: 1em;
 	
 	#site-info {
-	
+                min-width: 488px;
+
 		.site-info-logo, .site-info-text {
 			display: block;
 			float: left;
@@ -150,7 +151,7 @@ NAVIGATION STYLES
 header nav[role=navigation] {
         position: absolute;
         right: 0;
-        bottom: 1em;  
+        bottom: .7em;
 
 	li:hover {
 	}
@@ -166,6 +167,17 @@ header nav[role=navigation] {
 		a:hover, a:visited:hover, a:focus, a:visited:focus {
 
 		}
+	}
+        
+        li.menu-item-object-downloads {
+                margin-left: .75em;
+
+                a {
+                        .border-radius(4px);
+                        display: inline-block;
+                        padding: 0 12px;
+                }      
+
 	}
 }
 

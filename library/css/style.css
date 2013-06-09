@@ -1122,7 +1122,6 @@ h5,
 }
 .header #site-info {
   margin: 1.5em 0 0 0;
-  display: inline-block;
   float: left;
 }
 .header #site-info .site-info-text {
@@ -1186,13 +1185,6 @@ and moe scalable.
   text-decoration: none;
   padding: 10px 10px;
   border-bottom: 1px solid #ccc;
-  /*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1208,6 +1200,26 @@ and moe scalable.
   font-size: .9em;
   font-weight: 400;
   text-transform: uppercase;
+  height: 33px;
+  line-height: 32px;
+}
+.nav.top-nav li.menu-item-object-downloads a {
+  border: 1px solid #ce0802;
+  border-top-color: #ec0902;
+  border-left-color: #ec0902;
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f60902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+  background-image: linear-gradient(to bottom, #fd1c15, #f60902);
 }
 /*********************
 08. POSTS & CONTENT STYLES
@@ -1778,6 +1790,9 @@ you can add resource intensive styles.
   .header {
     padding-bottom: 1em;
   }
+  .header #site-info {
+    min-width: 488px;
+  }
   .header #site-info .site-info-logo,
   .header #site-info .site-info-text {
     display: block;
@@ -1860,13 +1875,23 @@ you can add resource intensive styles.
   header nav[role=navigation] {
     position: absolute;
     right: 0;
-    bottom: 1em;
+    bottom: .7em;
   }
   .nav.top-nav {
     /* display: inline-block;
           float: right;
           width: auto; */
   
+  }
+  .nav.top-nav li.menu-item-object-downloads {
+    margin-left: .75em;
+  }
+  .nav.top-nav li.menu-item-object-downloads a {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 0 12px;
   }
   /*********************
   SIDEBARS & ASIDES

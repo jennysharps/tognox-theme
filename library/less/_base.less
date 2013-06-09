@@ -185,7 +185,6 @@ h5, .h5 {
 
 	#site-info {
                 margin: 1.5em 0 0 0;
-                display: inline-block;
                 float: left;
 	
                 .site-info-text {
@@ -248,12 +247,6 @@ and moe scalable.
 			padding: 10px 10px;
 			border-bottom: 1px solid #ccc;
 
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
 			&:hover, &:focus {
 
 			}
@@ -318,7 +311,21 @@ and moe scalable.
 			font-size: .9em;
 			font-weight: 400;
 			text-transform: uppercase;
-		}	
+                        height: 33px;
+                        line-height: 32px;
+		}
+        }
+
+        li.menu-item-object-downloads {
+                a {
+                        border: 1px solid darken(@bones-pink, 13%);
+                        border-top-color: darken(@bones-pink, 7%);
+                        border-left-color: darken(@bones-pink, 7%);
+                        color: @white;
+                        text-shadow: 0 1px rgba(0,0,0, .75);
+                        .transition();
+                        .css-gradient(@bones-pink,darken(@bones-pink, 5%));
+                }
 
 	}
 }
