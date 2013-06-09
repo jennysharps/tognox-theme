@@ -33,27 +33,25 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-	
-		<div id="container">
 			
-			<header class="header" role="banner">
-			
-				<div id="inner-header" class="wrap clearfix">
-					
-					<div id="site-info" class="clearfix">
-						<a class="site-info-logo" href="<?php echo site_url(); ?>">
-							<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/gaussian.png" width="84px;"/>
-						</a>
-						<div class="site-info-text">
-							<a href="<?php echo site_url(); ?>"><h1 class="site-title"><?php bloginfo('name'); ?></h1></a>
-							<h2 class="site-description"><?php bloginfo('description'); ?></h2>
-						</div>
-					</div>
-					
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-				
-				</div> <!-- end #inner-header -->
-			
-			</header> <!-- end header -->
+                <header class="header" role="banner">
+
+                        <div id="inner-header" class="wrap clearfix">
+
+                                <div id="site-info" class="clearfix">
+                                        <a class="site-info-logo" href="<?php echo site_url(); ?>">
+                                            <img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/library/images/gaussian.png" width="84px;"/>
+                                        </a>
+                                        <div class="site-info-text">
+                                                <a href="<?php echo site_url(); ?>"><h1 class="site-title"><?php bloginfo('name'); ?></h1></a>
+                                                <p class="site-description"><?php bloginfo('description'); ?></p>
+                                        </div>
+                                </div>
+
+                                <nav role="navigation">
+                                        <?php bones_main_nav(); ?>
+                                </nav>
+
+                        </div> <!-- end #inner-header -->
+
+                </header> <!-- end header -->
