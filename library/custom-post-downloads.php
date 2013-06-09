@@ -29,7 +29,7 @@ function custom_post_Downloads() {
 			'query_var' => true,
 			'menu_position' => 9, // this is what order you want it to appear in on the left hand side menu 
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', // the icon for the custom post type menu
-			'rewrite' => array( 'slug' => 'downloads' ),
+			'rewrite' => array( 'slug' => 'downloads', 'with_front' => false ),
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			'permalink_epmask' => 'EP_PERMALINK & EP_YEAR', 

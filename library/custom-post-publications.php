@@ -29,7 +29,7 @@ function custom_post_publications() {
 			'query_var' => true,
 			'menu_position' => 8, // this is what order you want it to appear in on the left hand side menu 
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', // the icon for the custom post type menu
-			'rewrite' => array( 'slug' => 'publications' ),
+			'rewrite' => array( 'slug' => 'publications', 'with_front' => false ),
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			'permalink_epmask' => 'EP_PERMALINK & EP_YEAR', 
