@@ -1846,6 +1846,9 @@ you can add resource intensive styles.
   .nav li a:focus {
     border-bottom: 2px solid #000;
   }
+  .nav li.current-menu-item a {
+    border-bottom: 2px solid #000;
+  }
   .nav li ul.sub-menu,
   .nav li ul.children {
     border: 1px solid #ccc;
@@ -1888,12 +1891,6 @@ you can add resource intensive styles.
     right: 0;
     bottom: .5em;
   }
-  .nav.top-nav {
-    /* display: inline-block;
-          float: right;
-          width: auto; */
-  
-  }
   .nav.top-nav li a,
   .nav.top-nav li a:hover,
   .nav.top-nav li a:visited:hover,
@@ -1913,6 +1910,18 @@ you can add resource intensive styles.
   }
   .nav.top-nav li.menu-item-object-downloads a:hover,
   .nav.top-nav li.menu-item-object-downloads a:focus {
+    color: #ffffff;
+    border: 1px solid #ce0802;
+    border-top-color: #ab0701;
+    border-left-color: #ab0701;
+    background-color: #ab0701;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
+    background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
+    background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
+    background-image: -o-linear-gradient(top, #dd0902, #ab0701);
+    background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+  }
+  .nav.top-nav li.menu-item-object-downloads.current-menu-item a {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;

@@ -71,6 +71,10 @@ NAVIGATION STYLES
 			}
 		}
 
+                &.current-menu-item a {
+                        border-bottom: 2px solid #000;
+                }
+
 		&:first-child {}
 		&:last-child {}
 
@@ -153,37 +157,43 @@ header nav[role=navigation] {
 }
 
 .nav.top-nav {
-        /* display: inline-block;
-        float: right;
-        width: auto; */
-	
+
 	li {
 		
 		a, a:hover, a:visited:hover, a:focus, a:visited:focus {
                     padding: 0;
                     margin: 2px 1em 0;
 		}
-	}
-        
-        li.menu-item-object-downloads {
 
-                a {
-                        margin-top: 5px;
-                        .border-radius(4px);
-                        display: inline-block;
-                        padding: 0 12px;
-                        line-height: 34px;
+                &.menu-item-object-downloads {
+                        a {
+                                margin-top: 5px;
+                                .border-radius(4px);
+                                display: inline-block;
+                                padding: 0 12px;
+                                line-height: 34px;
+                         
+                                &:hover, &:focus {
+                                        color: @white;
+                                        border: 1px solid darken(@bones-pink, 13%);
+                                        border-top-color: darken(@bones-pink, 20%);
+                                        border-left-color: darken(@bones-pink, 20%);
+                                        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+                                }
+                        }
 
-                        &:hover, &:focus {
-                                color: @white;
-                                border: 1px solid darken(@bones-pink, 13%);
-                                border-top-color: darken(@bones-pink, 20%);
-                                border-left-color: darken(@bones-pink, 20%);
-                                .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+                        &.current-menu-item  {
+                                a {
+                                        color: @white;
+                                        border: 1px solid darken(@bones-pink, 13%);
+                                        border-top-color: darken(@bones-pink, 20%);
+                                        border-left-color: darken(@bones-pink, 20%);
+                                        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+                                }
                         }
                 }
-
 	}
+
 }
 
 /*********************
