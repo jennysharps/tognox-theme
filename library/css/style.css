@@ -1201,25 +1201,41 @@ and moe scalable.
   font-weight: 400;
   text-transform: uppercase;
   height: 33px;
-  line-height: 32px;
-}
-.nav.top-nav li.menu-item-object-downloads a {
-  border: 1px solid #ce0802;
-  border-top-color: #ec0902;
-  border-left-color: #ec0902;
-  color: #ffffff;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  line-height: 40px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+.nav.top-nav li a:hover,
+.nav.top-nav li a:visited:hover,
+.nav.top-nav li a:focus,
+.nav.top-nav li a:visited:focus {
+  color: #000;
+}
+.nav.top-nav li.menu-item-object-downloads a,
+.nav.top-nav li.menu-item-object-downloads a:visited {
+  border: 1px solid #ce0802;
+  border-top-color: #ec0902;
+  border-left-color: #ec0902;
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   background-color: #f60902;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
   background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
   background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
   background-image: -o-linear-gradient(top, #fd1c15, #f60902);
   background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+}
+.nav.top-nav li.menu-item-object-downloads a:active,
+.nav.top-nav li.menu-item-object-downloads a:visited:active {
+  background-color: #fd1c15;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f60902), to(#fd1c15));
+  background-image: -webkit-linear-gradient(top, #f60902, #fd1c15);
+  background-image: -moz-linear-gradient(top, #f60902, #fd1c15);
+  background-image: -o-linear-gradient(top, #f60902, #fd1c15);
+  background-image: linear-gradient(to bottom, #f60902, #fd1c15);
 }
 /*********************
 08. POSTS & CONTENT STYLES
@@ -1824,16 +1840,11 @@ you can add resource intensive styles.
   
   }
   .nav li a {
-    border-bottom: 0;
-    /*
-  			you can use hover styles here even though this size
-  			has the possibility of being a mobile device.
-  			*/
-  
+    border-bottom: 2px solid transparent;
   }
   .nav li a:hover,
   .nav li a:focus {
-    background-color: #dedede;
+    border-bottom: 2px solid #000;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
@@ -1875,7 +1886,7 @@ you can add resource intensive styles.
   header nav[role=navigation] {
     position: absolute;
     right: 0;
-    bottom: .7em;
+    bottom: .5em;
   }
   .nav.top-nav {
     /* display: inline-block;
@@ -1883,15 +1894,35 @@ you can add resource intensive styles.
           width: auto; */
   
   }
-  .nav.top-nav li.menu-item-object-downloads {
-    margin-left: .75em;
+  .nav.top-nav li a,
+  .nav.top-nav li a:hover,
+  .nav.top-nav li a:visited:hover,
+  .nav.top-nav li a:focus,
+  .nav.top-nav li a:visited:focus {
+    padding: 0;
+    margin: 2px 1em 0;
   }
   .nav.top-nav li.menu-item-object-downloads a {
+    margin-top: 5px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     display: inline-block;
     padding: 0 12px;
+    line-height: 34px;
+  }
+  .nav.top-nav li.menu-item-object-downloads a:hover,
+  .nav.top-nav li.menu-item-object-downloads a:focus {
+    color: #ffffff;
+    border: 1px solid #ce0802;
+    border-top-color: #ab0701;
+    border-left-color: #ab0701;
+    background-color: #ab0701;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
+    background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
+    background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
+    background-image: -o-linear-gradient(top, #dd0902, #ab0701);
+    background-image: linear-gradient(to bottom, #dd0902, #ab0701);
   }
   /*********************
   SIDEBARS & ASIDES

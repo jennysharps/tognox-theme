@@ -64,15 +64,10 @@ NAVIGATION STYLES
 		position: relative;
 
 		a {
-			border-bottom: 0;
+			border-bottom: 2px solid transparent;
 
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
 			&:hover, &:focus {
-				background-color: #dedede;
-
+				border-bottom: 2px solid #000;
 			}
 		}
 
@@ -151,7 +146,7 @@ NAVIGATION STYLES
 header nav[role=navigation] {
         position: absolute;
         right: 0;
-        bottom: .7em;
+        bottom: .5em;
 
 	li:hover {
 	}
@@ -164,19 +159,29 @@ header nav[role=navigation] {
 	
 	li {
 		
-		a:hover, a:visited:hover, a:focus, a:visited:focus {
-
+		a, a:hover, a:visited:hover, a:focus, a:visited:focus {
+                    padding: 0;
+                    margin: 2px 1em 0;
 		}
 	}
         
         li.menu-item-object-downloads {
-                margin-left: .75em;
 
                 a {
+                        margin-top: 5px;
                         .border-radius(4px);
                         display: inline-block;
                         padding: 0 12px;
-                }      
+                        line-height: 34px;
+
+                        &:hover, &:focus {
+                                color: @white;
+                                border: 1px solid darken(@bones-pink, 13%);
+                                border-top-color: darken(@bones-pink, 20%);
+                                border-left-color: darken(@bones-pink, 20%);
+                                .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+                        }
+                }
 
 	}
 }
