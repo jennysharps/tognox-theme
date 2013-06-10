@@ -35,6 +35,7 @@ require_once('library/custom-post-main-projects.php');
 require_once('library/custom-post-publications.php');
 require_once('library/custom-post-downloads.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
+require_once('library/register-acf-fields.php');
 /*
 3. library/admin.php
     - removing some default WordPress dashboard widgets
@@ -52,6 +53,7 @@ require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
+add_image_size( 'homepage-carousel', 1140, 400, true );
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 /* 
@@ -170,4 +172,48 @@ function home_page_menu_args( $args ) {
 	return $args;
 }
 add_filter( 'wp_page_menu_args', 'home_page_menu_args' );
-?>
+
+
+// Disable Admin Bar for everyone
+if (!function_exists('df_disable_admin_bar')) {
+
+	function df_disable_admin_bar() {
+		
+		// for the admin page
+		remove_action('admin_footer', 'wp_admin_bar_render', 1000);
+		// for the front-end
+		remove_action('wp_footer', 'wp_admin_bar_render', 1000);
+	  	
+		// css override for the admin page
+		function remove_admin_bar_style_backend() { 
+			echo '<style>body.admin-bar #wpcontent, body.admin-bar #adminmenu { padding-top: 0px !important; }</style>';
+		}	  
+		add_filter('admin_head','remove_admin_bar_style_backend');
+		
+		// css override for the frontend
+		function remove_admin_bar_style_frontend() {
+			echo '<style type="text/css" media="screen">
+			html { margin-top: 0px !important; }
+			* html body { margin-top: 0px !important; }
+			</style>';
+		}
+		add_filter('wp_head','remove_admin_bar_style_frontend', 99);
+  	}
+}
+add_action('init','df_disable_admin_bar');
+
+
+add_action( 'init', 'register_tognox_scripts' );
+function register_tognox_scripts() {
+    wp_register_style( 'flex-slider', get_template_directory_uri() . '/library/css/flexslider.css' );
+    wp_register_script( 'flex-slider', get_template_directory_uri() . '/library/js/libs/jquery.flexslider.js', array( 'jquery' ) );
+}
+
+
+add_action( 'wp_enqueue_scripts', 'enqueue_tognox_scripts' );
+function enqueue_tognox_scripts() {
+    if( is_front_page() ) {
+        wp_enqueue_style( 'flex-slider' );
+        wp_enqueue_script( 'flex-slider' );
+    }
+}

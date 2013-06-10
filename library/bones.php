@@ -378,4 +378,33 @@ function bones_excerpt_more($more) {
 
 
 
-?>
+function remove_parent_classes($class) {
+  // check for current page classes, return false if they exist.
+	return ( $class == 'current_page_parent' ) ? FALSE : TRUE;
+}
+
+function remove_classes_wp_nav_menu( $classes ) {
+        switch ( get_post_type() ) {
+                case 'post':
+                break;
+        default:
+               $classes = array_filter( $classes, "remove_parent_classes" );
+                break;
+        }
+        return $classes;
+}
+add_filter( 'nav_menu_css_class', 'remove_classes_wp_nav_menu' );
+
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if(is_category() || is_tag() || is_home() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $post_type = get_query_var('post_type');
+	if($post_type) {
+	    $post_types = $post_type;
+        } else {
+            $post_types = get_post_types();
+        }
+    $query->set('post_type',$post_types);
+	return $query;
+    }
+}

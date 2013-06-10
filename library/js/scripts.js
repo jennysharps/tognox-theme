@@ -64,11 +64,11 @@ jQuery(document).ready(function($) {
     if (responsive_viewport > 1030) {
         
     }
+	
+    $('.flexslider').flexslider({
+            animation: "slide"
+    });
     
-	
-	// add all your scripts here
-	
- 
 }); /* end of as page load scripts */
 
 
