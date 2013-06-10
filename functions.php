@@ -200,7 +200,7 @@ if (!function_exists('df_disable_admin_bar')) {
 		add_filter('wp_head','remove_admin_bar_style_frontend', 99);
   	}
 }
-add_action('init','df_disable_admin_bar');
+// add_action('init','df_disable_admin_bar');
 
 
 add_action( 'init', 'register_tognox_scripts' );
