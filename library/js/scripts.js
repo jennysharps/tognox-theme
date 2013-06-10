@@ -64,10 +64,14 @@ jQuery(document).ready(function($) {
     if (responsive_viewport > 1030) {
         
     }
-	
-    $('.flexslider').flexslider({
+	    
+    var carousel = $('.flexslider');
+    
+    if( carousel.length > 0 ) {
+        $('.flexslider').flexslider({
             animation: "slide"
-    });
+        });
+    }
     
 }); /* end of as page load scripts */
 

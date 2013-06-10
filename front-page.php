@@ -22,8 +22,10 @@ if ($carousel_items):
                     $image_attributes = wp_get_attachment_image_src( $thumb_id, 'homepage-carousel' );
                     ?>
                     <li>
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            <img src="<?php echo $image_attributes[0]; ?>"/>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                <h2><?php the_title(); ?></h2>
+                                <img alt="<?php the_title_attribute(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
+                            </a>
                     </li>
                     <?php
                 }
