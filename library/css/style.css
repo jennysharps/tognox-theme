@@ -115,27 +115,27 @@ a:hover {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 1.67em 0 0;
 }
 h2 {
   font-size: 1.5em;
-  margin: 0.83em 0;
+  margin: 1.83em 0 0;
 }
 h3 {
   font-size: 1.17em;
-  margin: 1em 0;
+  margin: 2em 0 0;
 }
 h4 {
   font-size: 1em;
-  margin: 1.33em 0;
+  margin: 2.33em 0 0;
 }
 h5 {
   font-size: 0.83em;
-  margin: 1.67em 0;
+  margin: 2.67em 0;
 }
 h6 {
   font-size: 0.75em;
-  margin: 2.33em 0;
+  margin: 3.33em 0;
 }
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome.
@@ -1846,7 +1846,10 @@ you can add resource intensive styles.
   .nav li a:focus {
     border-bottom: 2px solid #000;
   }
-  .nav li.current-menu-item a {
+  .nav li.current-menu-item a,
+  .nav li.current-menu-parent a,
+  .nav li.current-menu-ancestor a,
+  .nav li.current_page_parent a {
     border-bottom: 2px solid #000;
   }
   .nav li ul.sub-menu,
@@ -1921,7 +1924,10 @@ you can add resource intensive styles.
     background-image: -o-linear-gradient(top, #dd0902, #ab0701);
     background-image: linear-gradient(to bottom, #dd0902, #ab0701);
   }
-  .nav.top-nav li.menu-item-object-downloads.current-menu-item a {
+  .nav.top-nav li.menu-item-object-downloads.current-menu-item a,
+  .nav.top-nav li.menu-item-object-downloads.current-menu-parent a,
+  .nav.top-nav li.menu-item-object-downloads.current-menu-ancestor a,
+  .nav.top-nav li.menu-item-object-downloads.current_page_parent a {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
