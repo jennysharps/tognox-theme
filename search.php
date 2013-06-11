@@ -21,7 +21,7 @@
 								</header> <!-- end article header -->
 					
 								<section class="entry-content">
-								    <?php the_excerpt('<span class="read-more">Read more &raquo;</span>'); ?>
+								    <?php the_excerpt(); ?>
 					
 								</section> <!-- end article section -->
 						

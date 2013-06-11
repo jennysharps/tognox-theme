@@ -1139,6 +1139,7 @@ h5,
   line-height: normal;
   margin: .3em 0 .1em;
   word-spacing: .2em;
+  white-space: nowrap;
 }
 .header #site-info .site-info-text h2 {
   line-height: normal;

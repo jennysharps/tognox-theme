@@ -39,7 +39,7 @@ taxonomy-shoes.php
 							
 								<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 							
-								<?php the_excerpt('<span class="read-more">Read More &raquo;</span>'); ?>
+								<?php the_excerpt(); ?>
 						
 							</section> <!-- end article section -->
 							

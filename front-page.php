@@ -1,7 +1,7 @@
 <?php
 /*
-Template Name: Front Page
-*/
+  Template Name: Front Page
+ */
 ?>
 
 <?php get_header(); ?>
@@ -16,16 +16,19 @@ if ($carousel_items):
             <?php foreach ($carousel_items as $post): // variable must be called $post (IMPORTANT) ?>
                 <?php
                 setup_postdata($post);
-                $thumb_id = get_post_thumbnail_id( get_the_ID() );
-            
+                $thumb_id = get_post_thumbnail_id(get_the_ID());
+
                 if ($thumb_id) {
-                    $image_attributes = wp_get_attachment_image_src( $thumb_id, 'homepage-carousel' );
+                    $image_attributes = wp_get_attachment_image_src($thumb_id, 'homepage-carousel');
                     ?>
                     <li>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                <h2><?php the_title(); ?></h2>
-                                <img alt="<?php the_title_attribute(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
-                            </a>
+                            <img alt="<?php the_title_attribute(); ?>" src="<?php echo $image_attributes[0]; ?>"/>
+                            <div class="item-text">
+                                <h2><?php echo get_the_title(); ?></h2>
+                                <p><?php echo get_the_excerpt(); ?></p>
+                            </div>
+                        </a>
                     </li>
                     <?php
                 }
