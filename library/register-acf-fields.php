@@ -20,7 +20,8 @@ function my_register_fields() {
  */
 
 if(function_exists("register_field_group")) {
-	register_field_group(array (
+	register_field_group(
+            array (
 		'id' => 'content-carousel',
 		'title' => 'Content Carousel',
 		'fields' => array (
@@ -58,5 +59,42 @@ if(function_exists("register_field_group")) {
 			),
 		),
 		'menu_order' => 0,
-	));
+            )
+        );
+        
+        register_field_group(
+            array (
+		'id' => 'acf_file-upload',
+		'title' => 'File Upload',
+		'fields' => array (
+			array (
+				'save_format' => 'object',
+				'library' => 'all',
+				'key' => 'field_51d5650761bbc',
+				'label' => 'Related File',
+				'name' => 'custom_attachment',
+				'type' => 'file',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'jls_citation',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+			),
+		),
+		'menu_order' => 0,
+            )
+        );
 }
