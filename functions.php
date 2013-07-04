@@ -32,7 +32,6 @@ require_once('library/bones.php'); // if you remove this, bones will break
 */
 require_once('library/multi-post-thumbnails.php');
 require_once('library/custom-post-main-projects.php');
-require_once('library/custom-post-publications.php');
 require_once('library/custom-post-downloads.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');

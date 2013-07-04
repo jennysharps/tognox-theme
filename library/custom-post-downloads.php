@@ -28,7 +28,7 @@ function custom_post_Downloads() {
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 9, // this is what order you want it to appear in on the left hand side menu 
-			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', // the icon for the custom post type menu
+			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/download.png', // the icon for the custom post type menu
 			'rewrite' => array( 'slug' => 'downloads', 'with_front' => false ),
 			'capability_type' => 'post',
 			'hierarchical' => false,
@@ -36,8 +36,8 @@ function custom_post_Downloads() {
 			'has_archive' => 'downloads',
 			//'register_meta_box_cb' => 'custom_Download_metaboxes',
 			// the next one is important, it tells what's enabled in the post editor
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky'),
-			'taxonomies' => array('post_tag')
+			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'sticky'),
+			'taxonomies' => array('category', 'post_tag')
 	 	) // end of options
 	); // end of register post type
 	
