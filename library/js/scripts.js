@@ -69,8 +69,7 @@ jQuery(document).ready(function($) {
     
     if( carousel.length > 0 ) {
         $('.flexslider').flexslider({
-            animation: "slide",
-            pauseOnHover: true
+            animation: "slide"
         });
     }
     
