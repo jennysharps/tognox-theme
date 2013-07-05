@@ -331,7 +331,7 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-.wrap {
+main, .wrap {
   max-width: 1140px; }
 
 /*********************

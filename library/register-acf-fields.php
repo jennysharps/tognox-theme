@@ -62,6 +62,48 @@ if(function_exists("register_field_group")) {
             )
         );
         
+        register_field_group(array (
+		'id' => 'acf_quotation',
+		'title' => 'Quotation',
+		'fields' => array (
+			array (
+				'default_value' => '',
+				'formatting' => 'html',
+				'key' => 'field_51d616f61572c',
+				'label' => 'Quote',
+				'name' => 'quote',
+				'type' => 'text',
+			),
+			array (
+				'default_value' => '',
+				'formatting' => 'html',
+				'key' => 'field_51d6170b1572d',
+				'label' => 'Attribution',
+				'name' => 'attribution',
+				'type' => 'text',
+				'instructions' => 'Who said this?',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'front-page.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+        
         register_field_group(
             array (
 		'id' => 'acf_file-upload',

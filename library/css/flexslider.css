@@ -76,7 +76,7 @@ html[xmlns] .slides {display: block;}
 }
 
 /* Custom Styles */
-.flexslider.wrap { margin: 30px auto 0; }
+.flexslider { margin: 30px auto 40px; }
 
 .flexslider .item-text {
     padding: 20px;
