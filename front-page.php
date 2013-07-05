@@ -39,14 +39,22 @@ if ($carousel_items):
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
 
-<?php $meta = get_post_meta( get_the_ID() ); ?>
+<?php
+$meta = get_post_meta( get_the_ID() );
+if( $meta['quote'][0] ) {
+?>
+
     <section class="eightcol first clearfix">
         <figure class="quotation long-quotation">
             <blockquote>
                 <p><?php echo $meta['quote'][0]; ?></p>
             </blockquote>
+        <?php if( $meta['attribution'][0] ) { ?>
             <figcaption><?php echo $meta['attribution'][0]; ?></figcaption>
+        <?php } ?>
         </figure>
     </section>
+
+<?php } ?>
 
 <?php get_footer(); ?>
