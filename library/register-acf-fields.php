@@ -79,6 +79,7 @@ if(function_exists("register_field_group")) {
 				'label' => 'Citations',
 				'name' => 'related_citations',
 				'type' => 'post_object',
+                                'instructions' => 'Choose all citations related to this project (Shift+click to select multiple citations).',
 			),
 		),
 		'location' => array (
