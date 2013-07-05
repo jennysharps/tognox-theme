@@ -41,7 +41,7 @@ if ($carousel_items):
 
 <?php
 $meta = get_post_meta( get_the_ID() );
-if( $meta['quote'][0] ) {
+if( isset( $meta['quote'][0] ) ) {
 ?>
 
     <section class="eightcol first clearfix">
@@ -49,7 +49,7 @@ if( $meta['quote'][0] ) {
             <blockquote>
                 <p><?php echo $meta['quote'][0]; ?></p>
             </blockquote>
-        <?php if( $meta['attribution'][0] ) { ?>
+        <?php if( isset( $meta['attribution'][0] ) ) { ?>
             <figcaption><?php echo $meta['attribution'][0]; ?></figcaption>
         <?php } ?>
         </figure>
