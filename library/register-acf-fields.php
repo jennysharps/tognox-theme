@@ -63,6 +63,45 @@ if(function_exists("register_field_group")) {
         );
         
         register_field_group(array (
+		'id' => 'acf_related-citations',
+		'title' => 'Related Citations',
+		'fields' => array (
+			array (
+				'post_type' => array (
+					0 => 'jls_citation',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'multiple' => 1,
+				'allow_null' => 0,
+				'key' => 'field_51d74ab1f271d',
+				'label' => 'Citations',
+				'name' => 'related_citations',
+				'type' => 'post_object',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'main_projects',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+        
+        register_field_group(array (
 		'id' => 'acf_quotation',
 		'title' => 'Quotation',
 		'fields' => array (
