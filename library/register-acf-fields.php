@@ -8,7 +8,7 @@ function my_register_fields() {
 	//include_once('add-ons/acf-flexible-content/flexible-content.php');
 }
 
-// Options Page 
+// Options Page
 //include_once( 'add-ons/acf-options-page/acf-options-page.php' );
 */
 
@@ -61,7 +61,7 @@ if(function_exists("register_field_group")) {
 		'menu_order' => 0,
             )
         );
-        
+
         register_field_group(array (
 		'id' => 'acf_related-citations',
 		'title' => 'Related Citations',
@@ -101,7 +101,7 @@ if(function_exists("register_field_group")) {
 		),
 		'menu_order' => 0,
 	));
-        
+
         register_field_group(array (
 		'id' => 'acf_quotation',
 		'title' => 'Quotation',
@@ -143,7 +143,7 @@ if(function_exists("register_field_group")) {
 		),
 		'menu_order' => 0,
 	));
-        
+
         register_field_group(
             array (
 		'id' => 'acf_file-upload',
@@ -179,4 +179,56 @@ if(function_exists("register_field_group")) {
 		'menu_order' => 0,
             )
         );
+
+        register_field_group(array (
+		'id' => 'acf_gallery-2',
+		'title' => 'Gallery',
+		'fields' => array (
+			array (
+				'default_value' => '',
+				'formatting' => 'none',
+				'key' => 'field_51d891920a55c',
+				'label' => 'Gallery Shortcode',
+				'name' => 'gallery_shortcode',
+				'type' => 'text',
+				'instructions' => 'After creating a gallery and inserting it into the content, click the \'html\' tab and copy the code that looks like this: [gallery link="file" ids="72,66"]',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'main_projects',
+					'order_no' => 0,
+					'group_no' => 2,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }

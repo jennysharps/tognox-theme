@@ -1,29 +1,29 @@
 <?php get_header(); ?>
-			
+
 			<div id="content">
-			
+
 				<div id="inner-content" class="wrap clearfix">
-			
+
 					<div id="main" class="col620 left first clearfix" role="main">
-					
+
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						
+
 						<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
+
 						<header>
-							
+
 							<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-							
+
 							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <data itemprop="datePublished" value="<?php echo the_time('Y-m-j'); ?>"><?php the_time('F jS, Y'); ?></data> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
-						
+
 						</header> <!-- end article header -->
-					
+
 						<section class="post_content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
-							
+
 							<?php //the_post_thumbnail( 'full' ); ?>
-							
-							
+
+
 							<?php
 							if (class_exists('MultiPostThumbnails')) {
 							    if (MultiPostThumbnails::has_post_thumbnail('main_projects', 'projects_slider_image')) {
@@ -31,22 +31,27 @@
 							  	}
 							 }
 							?>
+
+                                                        <?php
+                                                            $gallery_shortcode = get_field( 'gallery_shortcode', $post->ID );
+                                                            if( $gallery_shortcode ) { echo do_shortcode($gallery_shortcode); }
+                                                        ?>
 						</section> <!-- end article section -->
-						
+
 						<footer>
-			
+
 							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
-							
+
 						</footer> <!-- end article footer -->
-					
+
 					</article> <!-- end article -->
-						
+
 						<?php comments_template(); ?>
-						
-						<?php endwhile; ?>			
-						
+
+						<?php endwhile; ?>
+
 						<?php else : ?>
-						
+
 						<article id="post-not-found">
 						    <header>
 						    	<h1>Not Found</h1>
@@ -57,15 +62,15 @@
 						    <footer>
 						    </footer>
 						</article>
-						
+
 						<?php endif; ?>
-					
+
 					</div> <!-- end #main -->
-    				
+
 					<?php get_sidebar(); // sidebar 1 ?>
-    			
+
     			</div> <!-- #inner-content -->
-    			
+
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
