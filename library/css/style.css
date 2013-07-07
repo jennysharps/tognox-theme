@@ -1256,7 +1256,7 @@ and moe scalable.
 }
 .post-type-archive-main_projects article.type-main_projects header h1 {
   position: absolute;
-  bottom: 3px;
+  bottom: 0px;
   padding: 0.75em 1em;
   margin: 0;
   display: block;
@@ -1264,13 +1264,16 @@ and moe scalable.
   background: rgba(0, 0, 0, 0.6);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
-.post-type-archive-main_projects article.type-main_projects header a,
-.post-type-archive-main_projects article.type-main_projects header a:hover {
-  color: #FFF;
+.post-type-archive-main_projects article.type-main_projects header a {
+  display: block;
   position: relative;
   width: 720px;
   max-width: 100%;
   max-height: 253px;
+}
+.post-type-archive-main_projects article.type-main_projects header a,
+.post-type-archive-main_projects article.type-main_projects header a:hover {
+  color: #ffffff;
 }
 .post-type-archive-main_projects article.type-main_projects header:hover {
   -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
