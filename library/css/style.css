@@ -927,7 +927,7 @@ blockquote p:after {
 /* individual paged (i.e. body.paged-3) */
 #intro {
   border-bottom: 2px solid #000;
-  padding: .25em 0 1.5em;
+  padding-bottom: 1.5em;
   font-size: .95em;
   margin-bottom: 3em;
 }
