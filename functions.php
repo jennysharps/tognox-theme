@@ -56,7 +56,7 @@ require_once('library/widgets/custom-recent-posts-widget.php');
 add_image_size( 'homepage-carousel', 1140, 400, true );
 add_image_size( 'three-col', 720, 253, true );
 add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'bones-thumb-300', 300, 300, true );
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -229,10 +229,11 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 function custom_excerpt_more( $more ) {
-        if( is_front_page() ) {
+        if( is_front_page() || is_post_type_archive( 'main_projects' ) ) {
             return '...';
+        } else {
+            return $more;
         }
-        return $more;
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more', 999 );
 

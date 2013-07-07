@@ -531,6 +531,39 @@ and moe scalable.
 		.size-medium {}
 		.size-thumbnail {}
 
+article.type-main_projects {
+        margin-bottom: 2em;
+
+        header {
+                position: relative;
+                line-height: 0;
+
+                h1 {
+                        position: absolute;
+                        bottom: 0;
+                        padding: 0.75em 1em;
+                        margin: 0;
+                        display: block;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0.6);
+                }
+
+                a, a:hover {
+                        color: #FFF;
+                }
+
+                &:hover {
+                        -moz-box-shadow:    1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+                        -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+                        box-shadow:         1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+
+                        h1 {
+                                background: rgba(0, 0, 0, 0.7);
+                        }
+                }
+        }
+}
+
 /******************************************************************
 09. PAGE NAVI STYLES
 ******************************************************************/
