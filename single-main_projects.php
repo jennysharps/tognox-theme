@@ -31,11 +31,6 @@
 							  	}
 							 }
 							?>
-
-                                                        <?php
-                                                            $gallery_shortcode = get_field( 'gallery_shortcode', $post->ID );
-                                                            if( $gallery_shortcode ) { echo do_shortcode($gallery_shortcode); }
-                                                        ?>
 						</section> <!-- end article section -->
 
 						<footer>
