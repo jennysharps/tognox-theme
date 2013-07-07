@@ -54,6 +54,7 @@ require_once('library/widgets/custom-recent-posts-widget.php');
 
 // Thumbnail sizes
 add_image_size( 'homepage-carousel', 1140, 400, true );
+add_image_size( 'three-col', 720, 253, true );
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 /*
