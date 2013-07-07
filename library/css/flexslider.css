@@ -17,18 +17,18 @@
 .flexslider a:focus  {outline: none;}
 .slides,
 .flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
+*********************************/
 .flexslider {padding: 0; background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.8);}
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {width: 100%; display: block;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
-.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .slides {display: block;} 
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 
 /* No JavaScript Fallback */
@@ -88,11 +88,13 @@ html[xmlns] .slides {display: block;}
 .flexslider .item-text h2 {
     margin: 0 0 15px;
     font-weight: 700;
+    text-shadow: 2px 2px 3px rgba(0,0,0, .6);
 }
 
 .flexslider .item-text p {
     margin: 0;
     font-weight: 200;
+    text-shadow: 1px 1px 2px rgba(0,0,0, .6);
 }
 
 .flexslider a .item-text,

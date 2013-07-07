@@ -67,3 +67,4 @@
                 </header> <!-- end header -->
 
                 <main>
+                        <div class="wrap clearfix">

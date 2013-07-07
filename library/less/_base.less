@@ -39,7 +39,11 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: #222;
-	background: #f3ede1;
+        background: #cec9bf;
+}
+
+main {
+        background: #f3ede1;
 }
 
 img {
@@ -128,13 +132,13 @@ blockquote {
 03. LAYOUT & GRID STYLES
 *********************/
 
-main, .wrap {
+.wrap {
 	width: 96%;
 	margin: 0 auto;
 }
 
 main {
-    margin-top: 2.2em;
+        padding-top: 2.2em;
 }
 
 /*********************
@@ -551,11 +555,15 @@ and moe scalable.
                         display: block;
                         width: 100%;
                         background: rgba(0, 0, 0, 0.6);
+                        text-shadow: 2px 2px 3px rgba(0,0,0, .6);
                 }
 
                 a, a:hover {
                         color: #FFF;
                         position: relative;
+                        width: 720px;
+                        max-width: 100%;
+                        max-height: 253px;
                 }
 
                 &:hover {
@@ -984,7 +992,7 @@ and moe scalable.
 
 .widget.widget_recent_entries {
     .widgettitle {
-        margin-bottom: 0;
+        margin: 0;
      }
 
      ul li {
@@ -1008,7 +1016,7 @@ and moe scalable.
             text-transform: uppercase;
             width: 50px;
             height: 50px;
-            line-height: 25px;
+            line-height: 26px;
             background: @bones-pink;
             border: 1px solid @black;
             text-align: center;
@@ -1075,6 +1083,7 @@ figure.quotation {
 
 .footer {
 	clear: both;
+        border-bottom: 2px solid #000;
 }
 
 	/*

@@ -862,6 +862,9 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #222;
+  background: #cec9bf;
+}
+main {
   background: #f3ede1;
 }
 img {
@@ -938,13 +941,12 @@ blockquote p:after {
 /*********************
 03. LAYOUT & GRID STYLES
 *********************/
-main,
 .wrap {
   width: 96%;
   margin: 0 auto;
 }
 main {
-  margin-top: 2.2em;
+  padding-top: 2.2em;
 }
 /*********************
 04. LINK STYLES
@@ -1252,11 +1254,15 @@ and moe scalable.
   display: block;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .post-type-archive-main_projects article.type-main_projects header a,
 .post-type-archive-main_projects article.type-main_projects header a:hover {
   color: #FFF;
   position: relative;
+  width: 720px;
+  max-width: 100%;
+  max-height: 253px;
 }
 .post-type-archive-main_projects article.type-main_projects header:hover {
   -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
@@ -1540,7 +1546,7 @@ and moe scalable.
 
 }
 .widget.widget_recent_entries .widgettitle {
-  margin-bottom: 0;
+  margin: 0;
 }
 .widget.widget_recent_entries ul li {
   margin-bottom: 0;
@@ -1562,7 +1568,7 @@ and moe scalable.
   text-transform: uppercase;
   width: 50px;
   height: 50px;
-  line-height: 25px;
+  line-height: 26px;
   background: #fd1c15;
   border: 1px solid #000000;
   text-align: center;
@@ -1612,6 +1618,7 @@ figure.quotation figcaption {
 *********************/
 .footer {
   clear: both;
+  border-bottom: 2px solid #000;
 }
 /*
 	if you checked out the link above:
@@ -1830,7 +1837,6 @@ you can add resource intensive styles.
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  main,
   .wrap {
     max-width: 1140px;
   }
@@ -1982,7 +1988,7 @@ you can add resource intensive styles.
   }
   .widget {
     padding: 0 10px;
-    margin: 2.2em 0;
+    margin: 1em 0;
   }
   .widget ul li {
     margin-bottom: 0.75em;
