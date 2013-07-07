@@ -82,6 +82,10 @@ blockquote {
 
 }
 
+nav ul, nav ol {
+        padding: 0;
+}
+
 
 /********************
 02. WORDPRESS BODY CLASSES
@@ -1086,6 +1090,29 @@ figure.quotation {
 
 .footer {
 	clear: both;
+        color: rgba(0,0,0,.6);
+
+        nav {
+                ul {
+                        float: left;
+                        margin-top: 2em;
+                }
+
+                li a {
+                        padding: 0;
+                        margin-right: 2em;
+                        color: rgba(0,0,0,.6);
+
+                        &:hover {
+                                color: @black;
+                        }
+               }
+        }
+
+        p {
+                display: block;
+                clear: both;
+        }
 }
 
 	/*

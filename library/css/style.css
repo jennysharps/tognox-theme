@@ -897,6 +897,10 @@ blockquote p:after {
   content: "\201D";
   margin-top: -0.2em;
 }
+nav ul,
+nav ol {
+  padding: 0;
+}
 /********************
 02. WORDPRESS BODY CLASSES
     style a page via class
@@ -1621,6 +1625,23 @@ figure.quotation figcaption {
 13. FOOTER STYLES
 *********************/
 .footer {
+  clear: both;
+  color: rgba(0, 0, 0, 0.6);
+}
+.footer nav ul {
+  float: left;
+  margin-top: 2em;
+}
+.footer nav li a {
+  padding: 0;
+  margin-right: 2em;
+  color: rgba(0, 0, 0, 0.6);
+}
+.footer nav li a:hover {
+  color: #000000;
+}
+.footer p {
+  display: block;
   clear: both;
 }
 /*
