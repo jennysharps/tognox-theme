@@ -1232,32 +1232,38 @@ and moe scalable.
 /* image gallery styles */
 /* end .gallery */
 /* gallery caption styles */
-article.type-main_projects {
+.post-type-archive-main_projects article.type-main_projects {
   margin-bottom: 2em;
 }
-article.type-main_projects header {
-  position: relative;
+.post-type-archive-main_projects article.type-main_projects header {
   line-height: 0;
+  padding: 6px;
+  background: #FFF;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-article.type-main_projects header h1 {
+.post-type-archive-main_projects article.type-main_projects header h1 {
   position: absolute;
-  bottom: 0;
+  bottom: 3px;
   padding: 0.75em 1em;
   margin: 0;
   display: block;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
-article.type-main_projects header a,
-article.type-main_projects header a:hover {
+.post-type-archive-main_projects article.type-main_projects header a,
+.post-type-archive-main_projects article.type-main_projects header a:hover {
   color: #FFF;
+  position: relative;
 }
-article.type-main_projects header:hover {
-  -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+.post-type-archive-main_projects article.type-main_projects header:hover {
+  -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
 }
-article.type-main_projects header:hover h1 {
+.post-type-archive-main_projects article.type-main_projects header:hover h1 {
   background: rgba(0, 0, 0, 0.7);
 }
 /******************************************************************
