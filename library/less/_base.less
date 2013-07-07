@@ -171,7 +171,7 @@ a, a:visited {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
-	font-weight: 600;
+	font-weight: 400;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -186,6 +186,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.25em;
 	line-height: 1.333em;
+        font-weight: 600;
 }
 
 h2, .h2 {
@@ -804,13 +805,14 @@ and moe scalable.
 	.comment-reply-link {
 		text-decoration: none;
 		float: right;
-		background: #4598bb;
+		background: lighten(@black, 50%);
 		padding: 3px 5px;
 		color: #fff;
 		opacity: 0.65;
 		margin-bottom: 10px;
 		font-weight: 700;
 		font-size: 0.9em;
+                .border-radius(4px);
 
 		&:hover,
 		&:focus {
@@ -921,6 +923,8 @@ and moe scalable.
 	.widget {
 
 		ul {
+                        margin: 0;
+                        padding: 0;
 
 			li {
 
@@ -938,6 +942,38 @@ and moe scalable.
 		}
 
 	}
+
+.widget.widget_recent_entries {
+    .widgettitle {
+        margin-bottom: 0;
+     }
+
+     ul li {
+        margin-bottom: 0;
+    }
+}
+
+.post-meta-date {
+    display: block;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    .border-radius(45px);
+    width: 50px;
+    height: 50px;
+    line-height: 25px;
+    background: @bones-pink;
+    border: 2px solid @black;
+    text-align: center;
+    color: @white;
+    font-weight: 800;
+}
+
+.post-meta-date .post-meta-month {
+    display: block;
+    line-height: .75em;
+    font-weight: 400;
+    font-size: .75em;
+}
 
 /*********************
 13. HOMEPAGE STYLES

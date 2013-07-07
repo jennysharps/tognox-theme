@@ -120,15 +120,15 @@ h1 {
 }
 h2 {
   font-size: 1.5em;
-  margin: 1.83em 0;
+  margin: 1.22em 0 1.83em;
 }
 h3 {
   font-size: 1.17em;
-  margin: 2em 0;
+  margin: 1.33em 0 2em;
 }
 h4 {
   font-size: 1em;
-  margin: 2.33em 0;
+  margin: 1.55em 0 2.33em;
 }
 h5 {
   font-size: 0.83em;
@@ -493,12 +493,12 @@ dd {
   list-style: none;
 }
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Mixins & Constants Stylesheet
 
-This is where you can take advantage of LESS' great features: 
+This is where you can take advantage of LESS' great features:
 Mixins & Constants. I won't go in-depth on how they work exactly,
 there are a few articles below that will help do that. What I will
 tell you is that this will help speed up simple changes like
@@ -506,7 +506,7 @@ changing a color or adding CSS3 techniques like box shadow and
 border-radius.
 
 A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more. 
+remember less is more.
 
 ******************************************************************/
 /*********************
@@ -550,7 +550,7 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 /* 	To embed your own fonts, use this syntax
-	and place your fonts inside the 
+	and place your fonts inside the
 	library/fonts folder. For more information
 	on embedding fonts, go to:
 	http://www.fontsquirrel.com/
@@ -646,8 +646,8 @@ TYPOGRAPHY
   src: url("../fonts/247099_5_0.eot");
   src: url("../fonts/247099_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/247099_5_0.woff") format("woff"), url("../fonts/247099_5_0.ttf") format("truetype");
 }
-/* 
-use the best ampersand 
+/*
+use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
@@ -668,6 +668,7 @@ span.amp {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
+  background: #ebe16f;
 }
 .alert-help {
   margin: 10px;
@@ -680,6 +681,7 @@ span.amp {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
+  background: #ebe16f;
   border-color: #bfe4f4;
   background: #d5edf8;
 }
@@ -687,6 +689,7 @@ span.amp {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
+  background: #ebe16f;
   border-color: #f8cdce;
   background: #fbe3e4;
 }
@@ -694,17 +697,18 @@ span.amp {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
+  background: #ebe16f;
   border-color: #deeaae;
   background: #e6efc2;
 }
 /*********************
 BORDER RADIUS
 *********************/
-/* 
-NOTE: For older browser support (and some mobile), 
-don't use the shorthand to define *different* corners. 
+/*
+NOTE: For older browser support (and some mobile),
+don't use the shorthand to define *different* corners.
 
-USAGE: .border-radius(4px); 
+USAGE: .border-radius(4px);
 
 */
 /*********************
@@ -713,7 +717,7 @@ TRANISTION
 /* .transition(all,2s); */
 /*********************
 CSS3 GRADIENTS
-Be careful with these since they can 
+Be careful with these since they can
 really slow down your CSS. Don't overdo it.
 *********************/
 /* .css-gradient(#dfdfdf,#f8f8f8); */
@@ -985,7 +989,7 @@ h4,
 h5,
 .h5 {
   text-rendering: optimizelegibility;
-  font-weight: 600;
+  font-weight: 400;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1010,6 +1014,7 @@ h1,
 .h1 {
   font-size: 2.25em;
   line-height: 1.333em;
+  font-weight: 600;
 }
 h2,
 .h2 {
@@ -1399,13 +1404,16 @@ and moe scalable.
 .commentlist .comment-reply-link {
   text-decoration: none;
   float: right;
-  background: #4598bb;
+  background: #808080;
   padding: 3px 5px;
   color: #fff;
   opacity: 0.65;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 0.9em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .commentlist .comment-reply-link:hover,
 .commentlist .comment-reply-link:focus {
@@ -1489,9 +1497,41 @@ and moe scalable.
 /*********************
 12. SIDEBARS & ASIDES
 *********************/
+.widget ul {
+  margin: 0;
+  padding: 0;
+}
 .widget ul li {
   /* deep nesting */
 
+}
+.widget.widget_recent_entries .widgettitle {
+  margin-bottom: 0;
+}
+.widget.widget_recent_entries ul li {
+  margin-bottom: 0;
+}
+.post-meta-date {
+  display: block;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  width: 50px;
+  height: 50px;
+  line-height: 25px;
+  background: #fd1c15;
+  border: 2px solid #000000;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 800;
+}
+.post-meta-date .post-meta-month {
+  display: block;
+  line-height: .75em;
+  font-weight: 400;
+  font-size: .75em;
 }
 /*********************
 13. HOMEPAGE STYLES

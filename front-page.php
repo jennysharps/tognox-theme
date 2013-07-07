@@ -39,12 +39,11 @@ if ($carousel_items):
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
 
+    <div class="eightcol first clearfix">
 <?php
 $meta = get_post_meta( get_the_ID() );
 if( isset( $meta['quote'][0] ) ) {
 ?>
-
-    <section class="eightcol first clearfix">
         <figure class="quotation long-quotation">
             <blockquote>
                 <p><?php echo $meta['quote'][0]; ?></p>
@@ -53,8 +52,13 @@ if( isset( $meta['quote'][0] ) ) {
             <figcaption><?php echo $meta['attribution'][0]; ?></figcaption>
         <?php } ?>
         </figure>
-    </section>
+
 
 <?php } ?>
+    </div>
+
+    <div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
+        <?php if ( dynamic_sidebar('home_right') ) : else : endif; ?>
+    </div>
 
 <?php get_footer(); ?>

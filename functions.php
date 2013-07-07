@@ -35,6 +35,7 @@ require_once('library/custom-post-main-projects.php');
 require_once('library/custom-post-downloads.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');
+require_once('library/widgets/custom-recent-posts-widget.php');
 /*
 3. library/admin.php
     - removing some default WordPress dashboard widgets
@@ -233,3 +234,16 @@ function custom_excerpt_more( $more ) {
         return $more;
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more', 999 );
+
+function tognox_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Home Right Sidebar',
+		'id' => 'home_right',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'tognox_widgets_init' );
