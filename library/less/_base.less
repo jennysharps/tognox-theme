@@ -953,38 +953,52 @@ and moe scalable.
         padding: .75em;
 
         a {
-            display: inline-block;
-            width: 100%;
-            padding-left: 60px;
             text-decoration: none;
         }
 
         h4 {
             margin: .7em 0;
+            display: inline-block;
+            width: 100%;
+            padding-left: 60px;
         }
-    }
-}
 
-.post-meta-date {
-    display: inline-block;
-    font-size: 1.25em;
-    text-transform: uppercase;
-    .border-radius(45px);
-    width: 50px;
-    height: 50px;
-    line-height: 25px;
-    background: @bones-pink;
-    border: 2px solid @black;
-    text-align: center;
-    color: @white;
-    font-weight: 800;
-    position: absolute;
+        .post-meta-date, .thumbnail {
+            display: inline-block;
+            font-size: 1.25em;
+            text-transform: uppercase;
+            width: 50px;
+            height: 50px;
+            line-height: 25px;
+            background: @bones-pink;
+            border: 2px solid @black;
+            text-align: center;
+            color: @white;
+            font-weight: 800;
+            position: absolute;
+        }
 
-    .post-meta-month {
-        display: block;
-        line-height: .75em;
-        font-weight: 400;
-        font-size: .75em;
+        .post-meta-date {
+            .border-radius(45px);
+        }
+
+        .post-meta-month {
+            display: block;
+            line-height: .75em;
+            font-weight: 400;
+            font-size: .75em;
+        }
+
+        .thumbnail a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+       img {
+            max-width: 100%;
+        }
+
     }
 }
 

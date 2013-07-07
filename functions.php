@@ -240,9 +240,9 @@ function tognox_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Home Right Sidebar',
 		'id' => 'home_right',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="widget widget_recent_entries">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
+		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => '</h2>',
 	) );
 }

@@ -1513,21 +1513,19 @@ and moe scalable.
   padding: .75em;
 }
 .widget.widget_recent_entries ul li a {
-  display: inline-block;
-  width: 100%;
-  padding-left: 60px;
   text-decoration: none;
 }
 .widget.widget_recent_entries ul li h4 {
   margin: .7em 0;
+  display: inline-block;
+  width: 100%;
+  padding-left: 60px;
 }
-.post-meta-date {
+.widget.widget_recent_entries ul li .post-meta-date,
+.widget.widget_recent_entries ul li .thumbnail {
   display: inline-block;
   font-size: 1.25em;
   text-transform: uppercase;
-  -webkit-border-radius: 45px;
-  -moz-border-radius: 45px;
-  border-radius: 45px;
   width: 50px;
   height: 50px;
   line-height: 25px;
@@ -1538,11 +1536,24 @@ and moe scalable.
   font-weight: 800;
   position: absolute;
 }
-.post-meta-date .post-meta-month {
+.widget.widget_recent_entries ul li .post-meta-date {
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+}
+.widget.widget_recent_entries ul li .post-meta-month {
   display: block;
   line-height: .75em;
   font-weight: 400;
   font-size: .75em;
+}
+.widget.widget_recent_entries ul li .thumbnail a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.widget.widget_recent_entries ul li img {
+  max-width: 100%;
 }
 /*********************
 13. HOMEPAGE STYLES

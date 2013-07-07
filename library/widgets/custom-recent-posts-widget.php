@@ -16,6 +16,8 @@ Class Custom_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 		if( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
 			$number = 5;
 
+                $show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+
 		$r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true ) ) );
 
                 if( $r->have_posts() ) {
@@ -26,7 +28,13 @@ Class Custom_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 
 				<?php while( $r->have_posts() ) : $r->the_post(); ?>
 				<li>
-                                    <span class="post-meta-date"><?php the_time( 'j' ); ?><span class="post-meta-month"><?php the_time( 'M' ); ?></span></span>
+                                    <?php if( $show_date ) { ?>
+                                        <span class="post-meta-date"><?php the_time( 'j' ); ?><span class="post-meta-month"><?php the_time( 'M' ); ?></span></span>
+                                    <?php } else { ?>
+                                        <div class="thumbnail">
+                                            <a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
+                                        </div>
+                                    <?php } ?>
                                     <a href="<?php the_permalink(); ?>" title="Read <?php the_title(); ?>"><h4><?php the_title(); ?></h4></a>
                                 </li>
 				<?php endwhile; ?>
