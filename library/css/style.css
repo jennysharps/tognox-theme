@@ -857,6 +857,10 @@ and will be used across all viewports.
 /*********************
 01. GENERAL STYLES
 *********************/
+html {
+  border-bottom: 2px solid #000;
+  min-height: 100%;
+}
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 100%;
@@ -1618,7 +1622,6 @@ figure.quotation figcaption {
 *********************/
 .footer {
   clear: both;
-  border-bottom: 2px solid #000;
 }
 /*
 	if you checked out the link above:
