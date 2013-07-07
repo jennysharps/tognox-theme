@@ -1638,13 +1638,17 @@ figure.quotation figcaption {
   color: rgba(0, 0, 0, 0.6);
 }
 .footer nav ul {
-  float: left;
   margin-top: 2em;
 }
+.footer nav li {
+  float: none;
+}
 .footer nav li a {
-  padding: 0;
-  margin-right: 2em;
+  padding: .5em 0;
+  margin: 0;
   color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  font-size: .75em;
 }
 .footer nav li a:hover {
   color: #000000;
