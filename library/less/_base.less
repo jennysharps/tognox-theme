@@ -950,11 +950,23 @@ and moe scalable.
 
      ul li {
         margin-bottom: 0;
+        padding: .75em;
+
+        a {
+            display: inline-block;
+            width: 100%;
+            padding-left: 60px;
+            text-decoration: none;
+        }
+
+        h4 {
+            margin: .7em 0;
+        }
     }
 }
 
 .post-meta-date {
-    display: block;
+    display: inline-block;
     font-size: 1.25em;
     text-transform: uppercase;
     .border-radius(45px);
@@ -966,14 +978,16 @@ and moe scalable.
     text-align: center;
     color: @white;
     font-weight: 800;
+    position: absolute;
+
+    .post-meta-month {
+        display: block;
+        line-height: .75em;
+        font-weight: 400;
+        font-size: .75em;
+    }
 }
 
-.post-meta-date .post-meta-month {
-    display: block;
-    line-height: .75em;
-    font-weight: 400;
-    font-size: .75em;
-}
 
 /*********************
 13. HOMEPAGE STYLES

@@ -1510,9 +1510,19 @@ and moe scalable.
 }
 .widget.widget_recent_entries ul li {
   margin-bottom: 0;
+  padding: .75em;
+}
+.widget.widget_recent_entries ul li a {
+  display: inline-block;
+  width: 100%;
+  padding-left: 60px;
+  text-decoration: none;
+}
+.widget.widget_recent_entries ul li h4 {
+  margin: .7em 0;
 }
 .post-meta-date {
-  display: block;
+  display: inline-block;
   font-size: 1.25em;
   text-transform: uppercase;
   -webkit-border-radius: 45px;
@@ -1526,6 +1536,7 @@ and moe scalable.
   text-align: center;
   color: #ffffff;
   font-weight: 800;
+  position: absolute;
 }
 .post-meta-date .post-meta-month {
   display: block;
