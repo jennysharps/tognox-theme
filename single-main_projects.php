@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap clearfix">
 
-					<div id="main" class="col620 left first clearfix" role="main">
+					<div id="main" class="eightcol first clearfixx" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -14,11 +14,10 @@
 
 							<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <data itemprop="datePublished" value="<?php echo the_time('Y-m-j'); ?>"><?php the_time('F jS, Y'); ?></data> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
-
 						</header> <!-- end article header -->
 
 						<section class="post_content clearfix" itemprop="articleBody">
+                                                        <?php the_post_thumbnail( 'three-col' ); ?>
 							<?php the_content(); ?>
 
 							<?php //the_post_thumbnail( 'full' ); ?>
