@@ -20,9 +20,6 @@
                                                         <?php the_post_thumbnail( 'three-col' ); ?>
 							<?php the_content(); ?>
 
-							<?php //the_post_thumbnail( 'full' ); ?>
-
-
 							<?php
 							if (class_exists('MultiPostThumbnails')) {
 							    if (MultiPostThumbnails::has_post_thumbnail('main_projects', 'projects_slider_image')) {
@@ -39,8 +36,6 @@
 						</footer> <!-- end article footer -->
 
 					</article> <!-- end article -->
-
-						<?php comments_template(); ?>
 
 						<?php endwhile; ?>
 
