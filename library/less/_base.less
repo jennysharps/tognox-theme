@@ -545,6 +545,10 @@ and moe scalable.
 .post-type-archive-main_projects article.type-main_projects {
         margin-bottom: 2em;
 
+        &:last-child {
+                margin-bottom: 0;
+        }
+
         header {
                 line-height: 0;
                 padding: 6px;
@@ -585,6 +589,10 @@ and moe scalable.
                         h1 {
                                 background: rgba(0, 0, 0, 0.7);
                         }
+                }
+
+                img {
+                        max-height: 100%;
                 }
         }
 }

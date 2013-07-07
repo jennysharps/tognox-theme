@@ -1245,6 +1245,9 @@ and moe scalable.
 .post-type-archive-main_projects article.type-main_projects {
   margin-bottom: 2em;
 }
+.post-type-archive-main_projects article.type-main_projects:last-child {
+  margin-bottom: 0;
+}
 .post-type-archive-main_projects article.type-main_projects header {
   line-height: 0;
   padding: 6px;
@@ -1282,6 +1285,9 @@ and moe scalable.
 }
 .post-type-archive-main_projects article.type-main_projects header:hover h1 {
   background: rgba(0, 0, 0, 0.7);
+}
+.post-type-archive-main_projects article.type-main_projects header img {
+  max-height: 100%;
 }
 /******************************************************************
 09. PAGE NAVI STYLES
