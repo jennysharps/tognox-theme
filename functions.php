@@ -30,12 +30,14 @@ require_once('library/bones.php'); // if you remove this, bones will break
     - example custom taxonomy (like categories)
     - example custom taxonomy (like tags)
 */
+require_once('library/theme-options/theme-options.php');
 require_once('library/multi-post-thumbnails.php');
 require_once('library/custom-post-main-projects.php');
 require_once('library/custom-post-downloads.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');
 require_once('library/widgets/custom-recent-posts-widget.php');
+require_once('library/widgets/custom-twitter-feed-widget.php');
 /*
 3. library/admin.php
     - removing some default WordPress dashboard widgets
@@ -81,15 +83,36 @@ you like. Enjoy!
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
+
+    register_sidebar( array(
+            'id' => 'home_right',
+            'name' => 'Home Right Sidebar',
+            'description' => 'The right part of the homepage.',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>',
+    ) );
+
     register_sidebar(array(
     	'id' => 'sidebar1',
-    	'name' => 'Sidebar 1',
-    	'description' => 'The first (primary) sidebar.',
+    	'name' => 'General Sidebar',
+    	'description' => 'The primary sidebar.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
+    	'before_title' => '<h2 class="widgettitle">',
+    	'after_title' => '</h2>',
     ));
+
+    register_sidebar( array(
+            'id' => 'footer_middle',
+            'name' => 'Footer Middle',
+            'description' => 'The center section of the footer.',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widgettitle">',
+            'after_title' => '</h2>',
+    ) );
 
     /*
     to add more sidebars or widgetized areas, just copy
@@ -206,16 +229,16 @@ if (!function_exists('df_disable_admin_bar')) {
 
 add_action( 'init', 'register_tognox_scripts' );
 function register_tognox_scripts() {
-    wp_register_style( 'flex-slider', get_template_directory_uri() . '/library/css/flexslider.css' );
-    wp_register_script( 'flex-slider', get_template_directory_uri() . '/library/js/libs/jquery.flexslider.js', array( 'jquery' ) );
+    wp_register_style( 'flexslider', get_template_directory_uri() . '/library/css/flexslider.css' );
+    wp_register_script( 'flexslider', get_template_directory_uri() . '/library/js/libs/jquery.flexslider.js', array( 'jquery' ) );
 }
 
 
 add_action( 'wp_enqueue_scripts', 'enqueue_tognox_scripts' );
 function enqueue_tognox_scripts() {
     if( is_front_page() ) {
-        wp_enqueue_style( 'flex-slider' );
-        wp_enqueue_script( 'flex-slider' );
+        wp_enqueue_style( 'flexslider' );
+        wp_enqueue_script( 'flexslider' );
     }
 }
 
@@ -236,16 +259,3 @@ function custom_excerpt_more( $more ) {
         }
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more', 999 );
-
-function tognox_widgets_init() {
-
-	register_sidebar( array(
-		'name' => 'Home Right Sidebar',
-		'id' => 'home_right',
-		'before_widget' => '<div class="widget widget_recent_entries">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'tognox_widgets_init' );

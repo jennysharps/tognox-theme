@@ -9,7 +9,13 @@
                                     <?php bones_footer_links(); ?>
                                 </nav>
 
+                                <div class="footer-middle sixcol clearfix">
+                                    <?php if( is_front_page() ) { if ( dynamic_sidebar('footer_middle') ) : else : endif; } ?>
+                                </div>
+
                                 <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+
+                                <?php // the_widget( 'Custom_Twitter_Feed_Widget', 'Title of Twit Widget' ); ?>
 
                         </div> <!-- end #inner-footer -->
 

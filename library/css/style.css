@@ -1924,7 +1924,8 @@ you can add resource intensive styles.
   .nav li.current-menu-parent a,
   .nav li.current-menu-ancestor a,
   .nav li.current_page_parent a {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000000;
+    color: #000000;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {

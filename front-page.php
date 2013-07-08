@@ -11,7 +11,7 @@ $carousel_items = get_field('carousel_items');
 
 if ($carousel_items):
     ?>
-    <section class="flexslider">
+    <section id="carousel" class="flexslider">
         <ul class="slides">
             <?php foreach ($carousel_items as $post): // variable must be called $post (IMPORTANT) ?>
                 <?php
