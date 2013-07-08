@@ -20,7 +20,7 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
         public function widget( $args, $instance ) {
 
              extract( $args );
-             $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'From Twitter' ) : $instance['title'], $instance, $this->id_base );
+             $title = apply_filters( 'widget_title', empty( $instance['title'] ) ?  '' : $instance['title'], $instance, $this->id_base );
 
              if ( empty( $instance['number'] ) || !$number = absint( $instance['number'] ) )
                  $number = 3;
@@ -35,11 +35,15 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
 
                 echo $before_widget;
 
+                if( $title ) {
+                    echo $before_title . $title . $after_title;
+                }
+
                 $this->enqueue_scripts( $instance );
 
                 ?>
 
-                <ul class="slides"<?php echo $instance['display']; ?>>
+                <ul class="<?php echo $instance['display']; ?>">
                  <?php foreach ( $this->tweets as $tweet ) { ?>
 
                     <li>
@@ -60,7 +64,7 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                          if ( is_array( $tweet['entities']['user_mentions'] ) ) {
                              foreach ( $tweet['entities']['user_mentions'] as $key => $user_mention ) {
                                  $the_tweet = preg_replace(
-                                         '/@' . $user_mention['screen_name'] . '/i', '<a href="http://www.twitter.com/' . $user_mention['screen_name'] . '" target="_blank">@' . $user_mention['screen_name'] . '</a>', $the_tweet );
+                                         '/@' . $user_mention['screen_name'] . '/i', '<a class="user-mention" href="http://www.twitter.com/' . $user_mention['screen_name'] . '" target="_blank">@' . $user_mention['screen_name'] . '</a>', $the_tweet );
                              }
                          }
 
@@ -68,7 +72,7 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                          if ( is_array( $tweet['entities']['hashtags'] ) ) {
                              foreach ( $tweet['entities']['hashtags'] as $key => $hashtag ) {
                                  $the_tweet = preg_replace(
-                                         '/#' . $hashtag['text'] . '/i', '<a href="https://twitter.com/search?q=%23' . $hashtag['text'] . '&src=hash" target="_blank">#' . $hashtag['text'] . '</a>', $the_tweet );
+                                         '/#' . $hashtag['text'] . '/i', '<a class="hashtag" href="https://twitter.com/search?q=%23' . $hashtag['text'] . '&src=hash" target="_blank">#' . $hashtag['text'] . '</a>', $the_tweet );
                              }
                          }
 
@@ -77,7 +81,7 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                          if ( is_array( $tweet['entities']['urls'] ) ) {
                              foreach ( $tweet['entities']['urls'] as $key => $link ) {
                                  $the_tweet = preg_replace(
-                                         '`' . $link['url'] . '`', '<a href="' . $link['url'] . '" target="_blank">' . $link['url'] . '</a>', $the_tweet );
+                                         '`' . $link['url'] . '`', '<a class="link-url" href="' . $link['url'] . '" target="_blank">' . $link['url'] . '</a>', $the_tweet );
                              }
                          }
 
@@ -89,11 +93,11 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                          //    No other social or 3rd party actions similar to Follow, Reply, Retweet and Favorite may be attached to a Tweet.
                          // get the sprite or images from twitter's developers resource and update your stylesheet
                          echo '
-             <div class="twitter_intents">
-                 <a class="reply" href="https://twitter.com/intent/tweet?in_reply_to=' . $tweet['id_str'] . '">Reply</a>
-                 <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id=' . $tweet['id_str'] . '">Retweet</a>
-                 <a class="favorite" href="https://twitter.com/intent/favorite?tweet_id=' . $tweet['id_str'] . '">Favorite</a>
-             </div>';
+                        <div class="twitter_intents">
+                            <a class="reply" href="https://twitter.com/intent/tweet?in_reply_to=' . $tweet['id_str'] . '">Reply</a>
+                            <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id=' . $tweet['id_str'] . '">Retweet</a>
+                            <a class="favorite" href="https://twitter.com/intent/favorite?tweet_id=' . $tweet['id_str'] . '">Favorite</a>
+                        </div>';
 
 
                          // 4. Tweet Timestamp
@@ -171,13 +175,26 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                     wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/library/css/flexslides.css' );
 
                     wp_enqueue_script( 'custom-twitter-widget', get_template_directory_uri() . '/library/widgets/js/custom-twitter-feed-widget.js', array( 'flexslider', 'jquery' ) );
-                    wp_enqueue_style( 'custom-twitter-widget', get_template_directory_uri() . '/library/widgets/css/custom-twitter-feed-widget.css', array( 'flexslider' ) );
+                    // wp_enqueue_style( 'custom-twitter-widget', get_template_directory_uri() . '/library/widgets/css/custom-twitter-feed-widget.css', array( 'flexslider' ) );
+
+                    add_action( 'wp_print_footer_scripts', array( &$this, 'print_twitter_slider_base_css' ) );
                 }
 
                 wp_enqueue_script( 'twitter-widgets', '//platform.twitter.com/widgets.js' );
 
                 return;
         }
+
+        public function print_twitter_slider_base_css() { ?>
+
+            <style>
+            .widget.widget_custom_twitter_feed_widget ul.slides li {
+                height: 210px;
+                margin: 0;
+            }
+            </style>
+
+        <?php }
 }
 
 add_action( 'widgets_init', function(){

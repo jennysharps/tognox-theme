@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
             animation: "slide",
             slideshowSpeed: 6000,
             direction: "vertical",
+            directionNav: false,
             controlNav: false,
             pauseOnHover: true
         });

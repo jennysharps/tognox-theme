@@ -1,7 +1,3 @@
-footer .widget_custom_twitter_feed_widget {
-    height: 200px;
-}
-
-footer .widget_custom_twitter_feed_widget .slides {
-    height: 200px;
+.widget_custom_twitter_feed_widget .slides li {
+    height: 175px;
 }

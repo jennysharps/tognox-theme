@@ -62,8 +62,8 @@
 
                                                         <li class="citation citation-<?php the_ID(); ?>">
                                                             <?php if( function_exists( 'get_citation' ) ) {
-                                                                echo get_citation( get_the_ID() ); }
-                                                            ?>
+                                                                echo get_citation( get_the_ID() );
+                                                            } ?>
                                                         </li>
 
                                                         <?php $prev_year = $this_year; ?>
