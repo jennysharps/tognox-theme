@@ -1177,6 +1177,9 @@ and moe scalable.
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
+.hentry a {
+  text-decoration: none;
+}
 /* end .hentry */
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
