@@ -1644,6 +1644,9 @@ figure.quotation figcaption {
   clear: both;
   color: rgba(0, 0, 0, 0.6);
 }
+.footer nav {
+  margin-top: 15px;
+}
 .footer nav li {
   float: none;
 }
