@@ -1127,6 +1127,7 @@ the navs on the site and our css is cleaner
 and moe scalable.
 */
 .nav {
+  clear: both;
   border: 1px solid #ccc;
   border-bottom: 0;
   /* end .menu li */
@@ -1830,15 +1831,15 @@ tweeners.
 */
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author:
   
   Stylesheet: 481px and Up Stylesheet
   
-  This stylesheet is loaded for larger devices. It's set to 
+  This stylesheet is loaded for larger devices. It's set to
   481px because at 480px it would load on a landscaped iPhone.
   This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection. 
+  extra styles on that same mobile connection.
   
   A word of warning. This size COULD be a larger mobile device,
   so you still want to keep it pretty light and simply expand
@@ -2040,6 +2041,7 @@ you can add resource intensive styles.
   }
   .header #site-info {
     min-width: 488px;
+    padding-left: 1.25em;
   }
   .header #site-info .site-info-logo,
   .header #site-info .site-info-text {
@@ -2123,9 +2125,8 @@ you can add resource intensive styles.
   }
   /* end .nav */
   header nav[role=navigation] {
-    position: absolute;
-    right: 0;
-    bottom: .5em;
+    clear: both;
+    margin-top: .5em;
   }
   .nav.top-nav .sub-menu {
     background: #FFF;
@@ -2242,15 +2243,20 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author:
   
   Stylesheet: Desktop Stylsheet
   
   This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop. 
+  be seen on the Desktop.
   
   ******************************************************************/
+  header nav[role=navigation] {
+    clear: none;
+    float: right;
+    margin-top: .5em;
+  }
 }
 /*
 LARGE VIEWING SIZE
