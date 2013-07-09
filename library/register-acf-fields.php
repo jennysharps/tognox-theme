@@ -179,4 +179,37 @@ if(function_exists("register_field_group")) {
 		'menu_order' => 0,
             )
         );
+
+        register_field_group(array (
+		'id' => 'acf_github-info',
+		'title' => 'GitHub Info',
+		'fields' => array (
+			array (
+				'key' => 'field_51dbdf720cf88',
+				'label' => 'URL to related GitHub Repo',
+				'name' => 'github_repo',
+				'type' => 'text',
+				'default_value' => '',
+				'formatting' => 'default',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'main_projects',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }

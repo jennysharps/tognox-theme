@@ -63,6 +63,21 @@
                                         </div>
                                 </div>
 
+                                <?php
+                                $defaults = array(
+                                        'theme_location'  => 'social_buttons_header',
+                                        'container'       => 'div',
+                                        'menu_class'      => 'social-menu',
+                                        'echo'            => true,
+                                        'fallback_cb'     => '',
+                                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                        'depth'           => 1,
+                                        'walker'          => ''
+                                );
+
+                                wp_nav_menu( $defaults );
+                                ?>
+
                                 <nav role="navigation">
                                         <?php bones_main_nav(); ?>
                                 </nav>

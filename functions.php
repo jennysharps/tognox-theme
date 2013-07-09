@@ -261,3 +261,6 @@ function custom_excerpt_more( $more ) {
         }
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more', 999 );
+
+register_nav_menu( 'social_buttons_header', 'Social Buttons in Header' );
+register_nav_menu( 'social_buttons_footer', 'Social Buttons in Footer' );

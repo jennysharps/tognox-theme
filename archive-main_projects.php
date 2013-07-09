@@ -25,6 +25,16 @@
 							    <?php the_excerpt(); ?> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read more &raquo;</a>
                                                     </p>
 
+                                                    <?php
+                                                    $meta = get_post_meta( get_the_ID() );
+                                                    $github_url = isset( $meta['github_repo'] ) ?  $meta['github_repo'][0] : '';
+                                                    if ( $github_url ) {
+                                                    ?>
+                                                    <div class="git-link">
+                                                            <a href="<?php echo $github_url; ?>" target="_blank">View Related Code on GitHub</a>
+                                                    </div>
+                                                    <?php } ?>
+
 						    <?php /* <footer class="article-footer">
 
 						    </footer> <!-- end article footer --> */ ?>

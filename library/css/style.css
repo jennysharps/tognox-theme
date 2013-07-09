@@ -1086,6 +1086,36 @@ h5,
   line-height: 1.4em;
   margin: 0 0 0.375em;
 }
+.header .social-menu {
+  float: right;
+  margin-right: 1.25%;
+}
+.header .social-menu .menu-item {
+  display: inline-block;
+  padding: 3px;
+}
+.header .social-menu .menu-item a {
+  display: block;
+  width: 22px;
+  height: 22px;
+  text-indent: -9999px;
+  background: url(../images/social-22x22.png) no-repeat transparent;
+}
+.header .social-menu .menu-item a:hover {
+  opacity: .7;
+}
+.header .social-menu .menu-item.linkedin a {
+  background-position: center top;
+}
+.header .social-menu .menu-item.twitter a {
+  background-position: center -22px;
+}
+.header .social-menu .menu-item.gplus a {
+  background-position: center -44px;
+}
+.header .social-menu .menu-item.github a {
+  background-position: center -66px;
+}
 /*********************
 07. NAVIGATION STYLES
 *********************/
@@ -1181,9 +1211,6 @@ and moe scalable.
 /*********************
 08. POSTS & CONTENT STYLES
 *********************/
-.hentry a {
-  text-decoration: none;
-}
 /* end .hentry */
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1218,6 +1245,14 @@ and moe scalable.
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
+}
+.entry-content .alignleft,
+.entry-content img.alignleft {
+  margin-top: 1.25em;
+}
+.entry-content .alignright,
+.entry-content img.alignright {
+  margin-top: 1.25em;
 }
 .entry-content video,
 .entry-content object {
@@ -1570,7 +1605,7 @@ and moe scalable.
 
 }
 .widget.widget_recent_entries .widgettitle {
-  margin: 0;
+  margin-bottom: 0;
 }
 .widget.widget_recent_entries ul li {
   margin-bottom: 0;
@@ -1665,6 +1700,7 @@ and moe scalable.
   background-image: linear-gradient(to bottom, #fd1c15, #f60902);
   display: table-cell;
   vertical-align: middle;
+  word-spacing: .12em;
 }
 .widget_custom_recent_projects_widget li .ribbon .ribbon-tail {
   border-color: transparent #a12c25 transparent transparent;
@@ -1745,6 +1781,36 @@ figure.quotation figcaption {
 .footer p {
   display: block;
   clear: both;
+}
+.footer .social-menu {
+  float: left;
+  padding-left: 0;
+}
+.footer .social-menu .menu-item {
+  display: inline-block;
+  padding: 3px;
+}
+.footer .social-menu .menu-item a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  background: url(../images/social-48x48.png) no-repeat transparent;
+}
+.footer .social-menu .menu-item a:hover {
+  opacity: .7;
+}
+.footer .social-menu .menu-item.linkedin a {
+  background-position: left top;
+}
+.footer .social-menu .menu-item.twitter a {
+  background-position: left -48px;
+}
+.footer .social-menu .menu-item.gplus a {
+  background-position: left -96px;
+}
+.footer .social-menu .menu-item.github a {
+  background-position: left -144px;
 }
 /*
 	if you checked out the link above:
@@ -2043,7 +2109,7 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
-    padding-left: 10px;
+    padding-left: 0;
     border-right: 0;
     display: block;
   }
@@ -2060,6 +2126,12 @@ you can add resource intensive styles.
     position: absolute;
     right: 0;
     bottom: .5em;
+  }
+  .nav.top-nav .sub-menu {
+    background: #FFF;
+  }
+  .nav.top-nav .sub-menu li {
+    text-indent: 0;
   }
   .nav.top-nav li a,
   .nav.top-nav li a:hover,

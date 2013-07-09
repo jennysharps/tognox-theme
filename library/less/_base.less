@@ -268,6 +268,50 @@ h5, .h5 {
                 }
 	}
 
+        .social-menu {
+
+                float: right;
+                margin-right: 1.25%;
+
+                .menu-item {
+
+                        display: inline-block;
+                        padding: 3px;
+
+
+                        a {
+                                display: block;
+                                width: 22px;
+                                height: 22px;
+                                text-indent: -9999px;
+                                background: url(../images/social-22x22.png) no-repeat transparent;
+
+                                &:hover {
+                                        opacity: .7;
+                                }
+                        }
+
+                        &.linkedin a {
+                                background-position: center top;
+                        }
+
+                        &.twitter a {
+                                background-position: center -22px;
+                        }
+
+                        &.gplus a {
+                                background-position: center -44px;
+                        }
+
+                        &.github a {
+                                background-position: center -66px;
+                        }
+
+                }
+
+        }
+
+
 }
 
 	#logo {}
@@ -395,10 +439,6 @@ and moe scalable.
 
 		.hentry {
 
-                        a{
-                                text-decoration: none;
-                        }
-
 			header {}
 
 			footer {}
@@ -486,8 +526,8 @@ and moe scalable.
 			and floating images at the next breakpoint,
 			but it's up to you. Feel free to change it up.
 			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
+			.alignleft, img.alignleft { margin-top: 1.25em; }
+			.alignright, img.alignright { margin-top: 1.25em; }
 			.aligncenter, img.aligncenter {}
 
 			video, object {
@@ -1015,7 +1055,7 @@ and moe scalable.
 
 .widget.widget_recent_entries {
     .widgettitle {
-        margin: 0;
+        margin-bottom: 0;
      }
 
      ul li {
@@ -1118,6 +1158,7 @@ and moe scalable.
                                 .css-gradient(@bones-pink,darken(@bones-pink, 5%));
                                 display: table-cell;
                                 vertical-align: middle;
+                                word-spacing: .12em;
                         }
 
                         .ribbon-tail {
@@ -1212,6 +1253,49 @@ figure.quotation {
         p {
                 display: block;
                 clear: both;
+        }
+
+        .social-menu {
+
+                float: left;
+                padding-left: 0;
+
+                .menu-item {
+
+                        display: inline-block;
+                        padding: 3px;
+
+
+                        a {
+                                display: block;
+                                width: 48px;
+                                height: 48px;
+                                text-indent: -9999px;
+                                background: url(../images/social-48x48.png) no-repeat transparent;
+
+                                &:hover {
+                                        opacity: .7;
+                                }
+                        }
+
+                        &.linkedin a {
+                                background-position: left top;
+                        }
+
+                        &.twitter a {
+                                background-position: left -48px;
+                        }
+
+                        &.gplus a {
+                                background-position: left -96px;
+                        }
+
+                        &.github a {
+                                background-position: left -144px;
+                        }
+
+                }
+
         }
 }
 
