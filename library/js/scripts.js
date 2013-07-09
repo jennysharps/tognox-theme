@@ -70,7 +70,8 @@ jQuery(document).ready(function($) {
     if( carousel.length > 0 ) {
         carousel.flexslider({
             animation: "slide",
-            pauseOnHover: true
+            pauseOnHover: true,
+            useCSS: false
         });
     }
 

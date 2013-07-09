@@ -9,7 +9,8 @@ jQuery(document).ready(function($) {
             direction: "vertical",
             directionNav: false,
             controlNav: false,
-            pauseOnHover: true
+            pauseOnHover: true,
+            useCSS: false
         });
     }
 
