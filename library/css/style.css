@@ -1852,6 +1852,10 @@ input[type="color"],
   margin-bottom: 1em;
   padding: 0 1em;
 }
+.help-inline {
+  color: red;
+  margin-bottom: .5em;
+}
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
