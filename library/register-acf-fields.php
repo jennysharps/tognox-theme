@@ -190,7 +190,7 @@ if(function_exists("register_field_group")) {
 				'name' => 'github_repo',
 				'type' => 'text',
 				'default_value' => '',
-				'formatting' => 'default',
+				'formatting' => 'none',
 			),
 		),
 		'location' => array (
@@ -206,7 +206,7 @@ if(function_exists("register_field_group")) {
 		),
 		'options' => array (
 			'position' => 'normal',
-			'layout' => 'no_box',
+			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
 		),
