@@ -27,6 +27,13 @@
 							  	}
 							 }
 							?>
+                                                        <?php
+                                                        $meta = get_post_meta( get_the_ID() );
+                                                        $github_url = isset( $meta['github_repo'] ) ?  $meta['github_repo'][0] : '';
+                                                        if ( $github_url ) {
+                                                        ?>
+                                                            <a class="button git-link" href="<?php echo $github_url; ?>" target="_blank">View Related Code on GitHub</a>
+                                                        <?php } ?>
 						</section> <!-- end article section -->
 
 						<footer>

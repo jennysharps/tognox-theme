@@ -22,18 +22,20 @@
                                                     </header> <!-- end article header -->
 
 						    <p class=""entry-content">
-							    <?php the_excerpt(); ?> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read more &raquo;</a>
+							    <?php the_excerpt(); ?>
                                                     </p>
 
+                                                    <div class="utility">
                                                     <?php
                                                     $meta = get_post_meta( get_the_ID() );
                                                     $github_url = isset( $meta['github_repo'] ) ?  $meta['github_repo'][0] : '';
                                                     if ( $github_url ) {
                                                     ?>
-                                                    <div class="git-link">
-                                                            <a href="<?php echo $github_url; ?>" target="_blank">View Related Code on GitHub</a>
-                                                    </div>
+                                                        <a class="button git-link" href="<?php echo $github_url; ?>" target="_blank">View Related Code on GitHub</a>
                                                     <?php } ?>
+
+                                                        <a class="button" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read more &raquo;</a>
+                                                    </div>
 
 						    <?php /* <footer class="article-footer">
 
