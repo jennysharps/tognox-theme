@@ -729,7 +729,8 @@ BOX SHADOW
 BUTTONS
 *********************/
 .button,
-.button:visited {
+.button:visited,
+button[type='submit'] {
   border: 1px solid #ce0802;
   border-top-color: #ec0902;
   border-left-color: #ec0902;
@@ -760,8 +761,10 @@ BUTTONS
 }
 .button:hover,
 .button:visited:hover,
+button[type='submit']:hover,
 .button:focus,
-.button:visited:focus {
+.button:visited:focus,
+button[type='submit']:focus {
   color: #ffffff;
   border: 1px solid #ce0802;
   border-top-color: #ab0701;
@@ -774,7 +777,8 @@ BUTTONS
   background-image: linear-gradient(to bottom, #f60902, #dd0902);
 }
 .button:active,
-.button:visited:active {
+.button:visited:active,
+button[type='submit']:active {
   background-color: #fd1c15;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f60902), to(#fd1c15));
   background-image: -webkit-linear-gradient(top, #f60902, #fd1c15);
@@ -1839,10 +1843,13 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-.uneditable-input {
+.uneditable-input,
+.input-xlarge {
   width: 100%;
   height: auto;
+  min-height: 40px;
   line-height: 2.5em;
+  margin-bottom: 1em;
 }
 /*
 LARGER MOBILE DEVICES
