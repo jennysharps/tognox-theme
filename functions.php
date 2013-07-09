@@ -37,6 +37,7 @@ require_once('library/custom-post-downloads.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');
 require_once('library/widgets/custom-recent-posts-widget.php');
+require_once('library/widgets/custom-recent-projects-widget.php');
 require_once('library/widgets/custom-twitter-feed-widget.php');
 /*
 3. library/admin.php
@@ -57,6 +58,7 @@ require_once('library/widgets/custom-twitter-feed-widget.php');
 // Thumbnail sizes
 add_image_size( 'homepage-carousel', 1140, 400, true );
 add_image_size( 'three-col', 720, 253, true );
+add_image_size( 'wide-thumb', 340, 120, true );
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 300, true );
 /*

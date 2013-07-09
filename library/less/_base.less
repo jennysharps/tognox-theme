@@ -1072,6 +1072,86 @@ and moe scalable.
     }
 }
 
+.widget_custom_recent_projects_widget {
+        li {
+                position: relative;
+
+                a {
+                        color: @white;
+                        text-shadow: 0 1px rgba(0,0,0, .75);
+                }
+
+                img {
+                        padding: 0 10px;
+                        line-height: 0;
+                        padding: 5px;
+                        background: #FFF;
+                        border: 1px solid #CCC;
+                        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+
+                }
+
+                &:hover img {
+                                -moz-box-shadow:    1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+                                -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+                                box-shadow:         1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+                        }
+
+                .ribbon {
+                        width: 250px;
+                        height: 42px;
+                        display: table;
+                        position: absolute;
+                        bottom: 23px;
+                        line-height: 16px;
+                        font-size: .9em;
+                        text-transform: uppercase;
+                        margin-left: -15px;
+
+                        h4 {
+                                padding: 4px 15px 2px 30px;
+                                border: 1px solid darken(@bones-pink, 13%);
+                                border-top-color: darken(@bones-pink, 7%);
+                                border-left-color: darken(@bones-pink, 7%);
+                                .css-gradient(@bones-pink,darken(@bones-pink, 5%));
+                                display: table-cell;
+                                vertical-align: middle;
+                        }
+
+                        .ribbon-tail {
+                                border-color: transparent #a12c25 transparent transparent;
+                                border-style: solid;
+                                border-width: 0 15px 10px 0;
+                                height: 0;
+                                left: 0px;
+                                bottom: -10px;
+                                position: absolute;
+                                width: 0;
+                                z-index: 1;
+                        }
+                }
+
+                &:hover .ribbon-tail {
+                                border-color: transparent darken(#a12c25, 15%) transparent transparent;
+                }
+
+                &:hover .ribbon h4, &:focus .ribbon h4 {
+                        color: @white;
+                        border: 1px solid darken(@bones-pink, 13%);
+                        border-top-color: darken(@bones-pink, 20%);
+                        border-left-color: darken(@bones-pink, 20%);
+                        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+                }
+
+                &:active .ribbon h4 {
+                        .css-gradient(@bones-pink,darken(@bones-pink, 10%));
+                }
+
+        }
+}
+
 
 /*********************
 13. HOMEPAGE STYLES
@@ -1109,7 +1189,7 @@ figure.quotation {
         color: rgba(0,0,0,.6);
 
         nav {
-                margin-top: 15px;
+                margin-top: 16px;
 
                 li {
 

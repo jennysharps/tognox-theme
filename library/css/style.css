@@ -1619,6 +1619,88 @@ and moe scalable.
 .widget.widget_recent_entries ul li img {
   max-width: 100%;
 }
+.widget_custom_recent_projects_widget li {
+  position: relative;
+}
+.widget_custom_recent_projects_widget li a {
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+}
+.widget_custom_recent_projects_widget li img {
+  padding: 0 10px;
+  line-height: 0;
+  padding: 5px;
+  background: #FFF;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.widget_custom_recent_projects_widget li:hover img {
+  -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.3);
+}
+.widget_custom_recent_projects_widget li .ribbon {
+  width: 250px;
+  height: 42px;
+  display: table;
+  position: absolute;
+  bottom: 23px;
+  line-height: 16px;
+  font-size: .9em;
+  text-transform: uppercase;
+  margin-left: -15px;
+}
+.widget_custom_recent_projects_widget li .ribbon h4 {
+  padding: 4px 15px 2px 30px;
+  border: 1px solid #ce0802;
+  border-top-color: #ec0902;
+  border-left-color: #ec0902;
+  background-color: #f60902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+  background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+  display: table-cell;
+  vertical-align: middle;
+}
+.widget_custom_recent_projects_widget li .ribbon .ribbon-tail {
+  border-color: transparent #a12c25 transparent transparent;
+  border-style: solid;
+  border-width: 0 15px 10px 0;
+  height: 0;
+  left: 0px;
+  bottom: -10px;
+  position: absolute;
+  width: 0;
+  z-index: 1;
+}
+.widget_custom_recent_projects_widget li:hover .ribbon-tail {
+  border-color: transparent #631b17 transparent transparent;
+}
+.widget_custom_recent_projects_widget li:hover .ribbon h4,
+.widget_custom_recent_projects_widget li:focus .ribbon h4 {
+  color: #ffffff;
+  border: 1px solid #ce0802;
+  border-top-color: #ab0701;
+  border-left-color: #ab0701;
+  background-color: #ab0701;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
+  background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
+  background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
+  background-image: -o-linear-gradient(top, #dd0902, #ab0701);
+  background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+}
+.widget_custom_recent_projects_widget li:active .ribbon h4 {
+  background-color: #dd0902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#dd0902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #dd0902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #dd0902);
+  background-image: -o-linear-gradient(top, #fd1c15, #dd0902);
+  background-image: linear-gradient(to bottom, #fd1c15, #dd0902);
+}
 /*********************
 13. HOMEPAGE STYLES
 *********************/
@@ -1645,7 +1727,7 @@ figure.quotation figcaption {
   color: rgba(0, 0, 0, 0.6);
 }
 .footer nav {
-  margin-top: 15px;
+  margin-top: 16px;
 }
 .footer nav li {
   float: none;
