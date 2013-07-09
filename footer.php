@@ -10,7 +10,7 @@
                                 </nav>
 
                                 <div class="footer-middle sixcol clearfix">
-                                    <?php if( is_front_page() ) { if ( dynamic_sidebar('footer_middle') ) : else : endif; } ?>
+                                    <?php if ( dynamic_sidebar('footer_middle') ) : else : endif; ?>
                                 </div>
 
                                 <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
