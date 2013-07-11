@@ -724,7 +724,7 @@ really slow down your CSS. Don't overdo it.
 /*********************
 BOX SHADOW
 *********************/
-/* .boxShadow(0,0,4px,#444); */
+/* .boxShadow(0,0,4px,4px,#444); */
 /*********************
 BUTTONS
 *********************/
@@ -1463,8 +1463,8 @@ and moe scalable.
   margin-top: 1.1em;
 }
 .commentlist li.depth-1 {
-  margin-left: 0;
-  margin-top: 0;
+  margin: 0;
+  border-bottom: 2px solid #000;
 }
 .commentlist li:not(.depth-1) {
   margin-right: -10px;
@@ -1529,6 +1529,13 @@ and moe scalable.
   opacity: 1;
 }
 /* end .commentlist */
+.git-link {
+  margin-right: .25em;
+}
+.resume-section:after {
+  content: '';
+  display: block;
+}
 /******************************************************************
 11. COMMENT FORM STYLES
 ******************************************************************/
@@ -1664,8 +1671,13 @@ and moe scalable.
 .widget.widget_recent_entries ul li img {
   max-width: 100%;
 }
+.widget_custom_recent_projects_widget h2 {
+  margin-bottom: 1em;
+}
 .widget_custom_recent_projects_widget li {
+  display: inline-block;
   position: relative;
+  margin-bottom: 1em;
 }
 .widget_custom_recent_projects_widget li a {
   color: #ffffff;
@@ -1702,15 +1714,18 @@ and moe scalable.
   border: 1px solid #ce0802;
   border-top-color: #ec0902;
   border-left-color: #ec0902;
+  display: table-cell;
+  vertical-align: middle;
+  word-spacing: .12em;
   background-color: #f60902;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
   background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
   background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
   background-image: -o-linear-gradient(top, #fd1c15, #f60902);
   background-image: linear-gradient(to bottom, #fd1c15, #f60902);
-  display: table-cell;
-  vertical-align: middle;
-  word-spacing: .12em;
+  -webkit-box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
 }
 .widget_custom_recent_projects_widget li .ribbon .ribbon-tail {
   border-color: transparent #a12c25 transparent transparent;

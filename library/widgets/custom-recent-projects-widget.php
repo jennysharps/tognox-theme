@@ -48,7 +48,7 @@ function widget($args, $instance) {
 		<?php while ( $r->have_posts() ) : $r->the_post(); ?>
 			<li>
 				<a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?>">
-                                    <?php echo get_the_post_thumbnail( get_the_ID(), 'wide-thumb' ); ?>
+                                    <?php echo get_the_post_thumbnail( get_the_ID(), 'three-col' ); ?>
                                     <div class="ribbon">
                                         <h4><?php if ( get_the_title() ) the_title(); else the_ID(); ?></h4>
                                         <span class="ribbon-tail"></span>

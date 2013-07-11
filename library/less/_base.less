@@ -816,8 +816,8 @@ and moe scalable.
 	}
 
 	li.depth-1 {
-		margin-left: 0;
-		margin-top: 0;
+		margin: 0;
+                border-bottom: 2px solid #000;
 	}
 
 	li:not(.depth-1) {
@@ -937,6 +937,15 @@ and moe scalable.
 	} /* end .commentlist .comment-reply-link */
 
 } /* end .commentlist */
+
+.git-link {
+        margin-right: .25em;
+}
+
+.resume-section:after {
+    content: '';
+    display: block;
+}
 
 /******************************************************************
 11. COMMENT FORM STYLES
@@ -1118,8 +1127,14 @@ and moe scalable.
 }
 
 .widget_custom_recent_projects_widget {
+        h2 {
+            margin-bottom: 1em;
+        }
+
         li {
+                display: inline-block;
                 position: relative;
+                margin-bottom: 1em;
 
                 a {
                         color: @white;
@@ -1160,10 +1175,11 @@ and moe scalable.
                                 border: 1px solid darken(@bones-pink, 13%);
                                 border-top-color: darken(@bones-pink, 7%);
                                 border-left-color: darken(@bones-pink, 7%);
-                                .css-gradient(@bones-pink,darken(@bones-pink, 5%));
                                 display: table-cell;
                                 vertical-align: middle;
                                 word-spacing: .12em;
+                                .css-gradient(@bones-pink,darken(@bones-pink, 5%));
+                                .boxShadow(2px,3px,5px,1px);
                         }
 
                         .ribbon-tail {
