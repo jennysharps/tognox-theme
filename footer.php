@@ -32,7 +32,6 @@
                                     <div>
                                         <h2>Francesco Tonini</h2>
                                         <p>Statistician specialized in GIS</p>
-                                        <a href="tel: 3053018338">(305) 301-8338</a>
                                     </div>
                                </div>
 
