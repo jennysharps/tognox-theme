@@ -1336,6 +1336,11 @@ and moe scalable.
 .post-type-archive-main_projects article.type-main_projects header img {
   max-height: 100%;
 }
+.fb-comments,
+.fb-comments span,
+.fb-comments iframe {
+  width: 100% !important;
+}
 /******************************************************************
 09. PAGE NAVI STYLES
 ******************************************************************/

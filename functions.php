@@ -264,3 +264,18 @@ add_filter( 'excerpt_more', 'custom_excerpt_more', 999 );
 
 register_nav_menu( 'social_buttons_header', 'Social Buttons in Header' );
 register_nav_menu( 'social_buttons_footer', 'Social Buttons in Footer' );
+
+
+function social_header_scripts() { ?>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<?php echo get_option( 'fb_app_id' ); ?>";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<?php }
+ add_action( 'wp_head', 'social_header_scripts' );

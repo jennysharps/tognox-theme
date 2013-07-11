@@ -14,6 +14,7 @@ function register_and_build_fields() {
 
    add_settings_field('ga_id', 'Google Analytics ID:', 'ga_id_setting', __FILE__, 'general_section');
    add_settings_field('twitter_username', 'Twitter Username:', 'twitter_username_setting', __FILE__, 'general_section');
+   add_settings_field('fb_app_id', 'Facebook App ID:', 'fb_app_id_setting', __FILE__, 'general_section');
 
 }
 
@@ -35,16 +36,19 @@ function options_page_fn() {
 <?php
 }
 
-// Color Scheme
 function ga_id_setting() {
    $options = get_option('theme_options');
    echo "<input type='text' name='theme_options[ga_id]' value='{$options['ga_id']}'>";
 }
 
-// Advertising info
 function twitter_username_setting() {
    $options = get_option('theme_options');
    echo "<input type='text' name='theme_options[twitter_username]' value='{$options['twitter_username']}'>";
+}
+
+function fb_app_id_setting() {
+   $options = get_option('theme_options');
+   echo "<input type='text' name='theme_options[fb_app_id]' value='{$options['fb_app_id']}'>";
 }
 
 
