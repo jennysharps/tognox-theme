@@ -18,7 +18,7 @@ The comments page for Bones
 
 <!-- You can start editing here. -->
 
-<?php if ( have_comments() ) : /* ?>
+<?php if ( have_comments() ) : ?>
 
 	<h3 id="comments" class="h2"><?php comments_number('<span>No</span> Responses', '<span>One</span> Response', '<span>%</span> Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
@@ -52,10 +52,10 @@ The comments page for Bones
 
 	<?php endif; ?>
 
-<?php */ endif; ?>
+<?php endif; ?>
 
 
-<?php if ( comments_open() ) : /* ?>
+<?php if ( comments_open() ) : ?>
 
 <section id="respond" class="respond-form">
 
@@ -119,9 +119,6 @@ The comments page for Bones
 	<?php endif; // If registration required and not logged in ?>
 </section>
 
-<?php */
-?>
+<?php endif; // if you delete this the sky will fall on your head
 
-<div class="fb-comments" data-href="<?php echo get_permalink(); ?>" data-num-posts="10"></div>
-
-<?php endif; // if you delete this the sky will fall on your head ?>
+/* <div class="fb-comments" data-href="<?php echo get_permalink(); ?>" data-num-posts="10"></div> */
