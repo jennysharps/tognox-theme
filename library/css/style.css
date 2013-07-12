@@ -1535,7 +1535,14 @@ and moe scalable.
 }
 .resume-section:after {
   content: '';
+  clear: both;
   display: block;
+}
+.resume-section a {
+  display: block;
+  width: auto;
+  float: left;
+  padding-right: 1em;
 }
 /******************************************************************
 11. COMMENT FORM STYLES

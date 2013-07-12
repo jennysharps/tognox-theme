@@ -212,4 +212,61 @@ if(function_exists("register_field_group")) {
 		),
 		'menu_order' => 0,
 	));
+
+        register_field_group(array (
+		'id' => 'acf_attached-files',
+		'title' => 'Attached Files',
+		'fields' => array (
+			array (
+				'key' => 'field_51df77196c34c',
+				'label' => 'File 1 Name',
+				'name' => 'file_1_name',
+				'type' => 'text',
+				'default_value' => 'Resume',
+				'formatting' => 'html',
+			),
+			array (
+				'key' => 'field_51df77e66c34d',
+				'label' => 'File 1',
+				'name' => 'file_1',
+				'type' => 'file',
+				'save_format' => 'url',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_51df7a026c34e',
+				'label' => 'File 2 Name',
+				'name' => 'file_2_name',
+				'type' => 'text',
+				'default_value' => 'CV',
+				'formatting' => 'html',
+			),
+			array (
+				'key' => 'field_51df7a336c34f',
+				'label' => 'File 2',
+				'name' => 'file_2',
+				'type' => 'file',
+				'save_format' => 'url',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-template-about.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'normal',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
 }
