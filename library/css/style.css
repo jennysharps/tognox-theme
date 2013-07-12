@@ -1291,6 +1291,7 @@ and moe scalable.
 /* gallery caption styles */
 .post-type-archive-main_projects article.type-main_projects {
   margin-bottom: 2em;
+  display: block;
 }
 .post-type-archive-main_projects article.type-main_projects:last-child {
   margin-bottom: 0;
@@ -1675,7 +1676,6 @@ and moe scalable.
   margin-bottom: 1em;
 }
 .widget_custom_recent_projects_widget li {
-  display: inline-block;
   position: relative;
   margin-bottom: 1em;
 }
