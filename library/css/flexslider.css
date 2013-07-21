@@ -97,8 +97,9 @@ html[xmlns] .slides {display: block;}
     text-shadow: 1px 1px 2px rgba(0,0,0, .6);
 }
 
-.flexslider a .item-text,
-.flexslider a:visited .item-text {
+.flexslider a,
+.flexslider a:visited,
+.flexslider a:hover {
     text-decoration: none;
     color: #FFF;
 }

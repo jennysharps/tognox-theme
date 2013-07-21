@@ -1342,8 +1342,6 @@ and moe scalable.
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .post-type-archive-main_projects article.type-main_projects header h1 {
-  position: absolute;
-  bottom: 0px;
   padding: 0.75em 1em;
   margin: 0;
   display: block;
@@ -1354,9 +1352,9 @@ and moe scalable.
 .post-type-archive-main_projects article.type-main_projects header a {
   display: block;
   position: relative;
-  width: 720px;
+  width: 730px;
   max-width: 100%;
-  max-height: 253px;
+  text-decoration: none;
 }
 .post-type-archive-main_projects article.type-main_projects header a,
 .post-type-archive-main_projects article.type-main_projects header a:hover {
@@ -1372,6 +1370,7 @@ and moe scalable.
 }
 .post-type-archive-main_projects article.type-main_projects header img {
   max-height: 100%;
+  width: 100%;
 }
 .fb-comments,
 .fb-comments span,
@@ -2489,6 +2488,10 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
     background-image: -o-linear-gradient(top, #dd0902, #ab0701);
     background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+  }
+  .post-type-archive-main_projects article.type-main_projects header h1 {
+    position: absolute;
+    bottom: 0px;
   }
   /*********************
   SIDEBARS & ASIDES
