@@ -2054,7 +2054,8 @@ Specific mobile styles
     color: #000000;
   }
   .header nav .nav.top-nav > li.menu-item-object-downloads,
-  .header nav .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
+  .header nav .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
+  .header nav .nav.top-nav > li.menu-item-194 {
     margin-top: 0;
   }
   .header nav.expanded li {
@@ -2554,7 +2555,8 @@ you can add resource intensive styles.
     margin-right: -1em;
   }
   header .nav.top-nav > li.menu-item-object-downloads,
-  header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
+  header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
+  header .nav.top-nav > li.menu-item-194 {
     position: absolute;
     margin-top: 0;
     top: 10px;
