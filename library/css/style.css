@@ -2053,6 +2053,10 @@ Specific mobile styles
   .header nav .nav.top-nav a:visited:focus {
     color: #000000;
   }
+  .header nav .nav.top-nav > li.menu-item-object-downloads,
+  .header nav .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
+    margin-top: 0;
+  }
   .header nav.expanded li {
     height: auto;
   }
@@ -2096,6 +2100,10 @@ tweeners.
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+  }
+  .nav.top-nav li.menu-item-object-downloads,
+  .nav.top-nav li.menu-item-194 {
+    margin-top: -10px;
   }
   .nav.top-nav li.menu-item-object-downloads a,
   .nav.top-nav li.menu-item-194 a,
@@ -2548,6 +2556,7 @@ you can add resource intensive styles.
   header .nav.top-nav > li.menu-item-object-downloads,
   header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
     position: absolute;
+    margin-top: 0;
     top: 10px;
     right: 0;
   }
@@ -2586,7 +2595,7 @@ This is for the larger monitors and possibly full screen viewers.
   header .nav.top-nav > li.menu-item-object-downloads,
   header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
     position: relative;
-    top: auto;
+    top: -10px;
     right: auto;
   }
 }
