@@ -9,32 +9,55 @@ Stylesheet: Only Smaller Devices
         padding: 10px;
 }
 
-#site-info:before {
-    content: '|||';
-    width: 17px;
-    height: 22px;
-    position: absolute;
-    z-index: 99999;
-    padding: .5em;
-    top: 15px;
-    right: 20px;
-    margin: 0;
-    color: @white;
-    border: 1px solid darken(@bones-pink, 13%);
-    border-top-color: darken(@bones-pink, 20%);
-    border-left-color: darken(@bones-pink, 20%);
-    .css-horz-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
-    border-radius: 4px;
-    text-align: center;
-    display: inline-block;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
 
 .header {
+
+        .toggle-menu-mobile {
+                display: block;
+
+                &.toggle-menu-open {
+                        position: absolute;
+                        z-index: 998;
+                        padding: .25em .5em .2em;
+                        width: 35px;
+                        height: 35px;
+                        top: 17px;
+                        right: 15px;
+                        margin: 0;
+                        color: @white;
+                        border: 1px solid darken(@bones-pink, 13%);
+                        border-top-color: darken(@bones-pink, 20%);
+                        border-left-color: darken(@bones-pink, 20%);
+                        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+                        border-radius: 4px;
+                        font-weight: bold;
+
+                        span {
+                                text-align: center;
+                                display: inline-block;
+                                -webkit-transform: rotate(90deg);
+                                -moz-transform: rotate(90deg);
+                                -o-transform: rotate(90deg);
+                                -ms-transform: rotate(90deg);
+                                transform: rotate(90deg);
+                        }
+                }
+
+                &:hover {
+                        cursor: pointer;
+                }
+
+                &.toggle-menu-close {
+                        text-align: center;
+                        color: @white;
+                        background: @black;
+                }
+
+                &:hover a, a:visited:hover, a:focus, a:visited:focus {
+                        color: #000;
+                }
+
+        }
 
 
         #site-info {
@@ -67,40 +90,52 @@ Stylesheet: Only Smaller Devices
                         margin: .5em 1em 0;
                 }
         }
-}
 
-.nav.top-nav {
-        margin: 0 auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-        border-top: 10px solid @bones-pink;
-        display: block;
 
-	li {
-                display: none;
+        nav {
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                border-top: 10px solid @bones-pink;
+                display: block;
 
-                ul {
-                    margin: 0;
+                .nav.top-nav, .toggle-menu-close {
+                        display: none;
                 }
 
-		a {
-			letter-spacing: .1em;
-			padding: .75em 1em .5em;
-			font-size: 1.1em;
-			font-weight: 400;
-			text-transform: uppercase;
-                        .transition();
-                        .css-gradient(@bones-pink,darken(@bones-pink, 5%));
-                        color: @white;
+                &.open > .nav.top-nav, &.open > .toggle-menu-close {
+                        display: block;
+                }
 
-		}
+                .nav.top-nav {
+                        margin-top: -10px;
 
-	}
+                        ul {
+                                margin: 0;
+                        }
 
-        &.expanded li {
-                height: auto;
+                        a {
+                                letter-spacing: .1em;
+                                padding: .75em 1em .5em;
+                                font-size: 1.1em;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                .transition();
+                                .css-gradient(@bones-pink,darken(@bones-pink, 5%));
+                                color: @white;
+
+                                &:hover, &:visited:hover, &:focus, &:visited:focus {
+                                        color: @black;
+                                }
+                        }
+
+                }
+
+                &.expanded li {
+                        height: auto;
+                }
         }
 }

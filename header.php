@@ -77,9 +77,10 @@
 
                                 wp_nav_menu( $defaults );
                                 ?>
-
+                                <a class="toggle-menu-mobile toggle-menu-open"><span class="icon">|||</span></a>
                                 <nav role="navigation">
                                         <?php bones_main_nav(); ?>
+                                    <div class="toggle-menu-mobile toggle-menu-close"><span class="icon">&#9650;</span></div>
                                 </nav>
 
                         </div> <!-- end #inner-header -->

@@ -75,7 +75,12 @@ jQuery(document).ready(function($) {
         });
     }
 
-    var navigation = $("#inner-header nav");
+    var responsiveNavToggler = $(".toggle-menu-mobile"),
+        mainNav = $('#menu-top-nav');
+    responsiveNavToggler.click( function() {
+            mainNav.parent().toggleClass('open');
+    });
+
 }); /* end of as page load scripts */
 
 

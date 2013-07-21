@@ -1059,6 +1059,9 @@ h5,
 .header {
   background: #fcf8ee;
 }
+.header .toggle-menu-mobile {
+  display: none;
+}
 .header .inner-header {
   position: relative;
 }
@@ -1930,27 +1933,32 @@ Specific mobile styles
   .wrap {
     padding: 10px;
   }
-  #site-info:before {
-    content: '|||';
-    width: 17px;
-    height: 22px;
+  .header .toggle-menu-mobile {
+    display: block;
+  }
+  .header .toggle-menu-mobile.toggle-menu-open {
     position: absolute;
-    z-index: 99999;
-    padding: .5em;
-    top: 15px;
-    right: 20px;
+    z-index: 998;
+    padding: .25em .5em .2em;
+    width: 35px;
+    height: 35px;
+    top: 17px;
+    right: 15px;
     margin: 0;
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
     border-left-color: #ab0701;
     background-color: #ab0701;
-    background-image: -moz-linear-gradient(left, #dd0902, #ab0701);
-    background-image: -ms-linear-gradient(left, #dd0902, #ab0701);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #dd0902), color-stop(100%, #ab0701));
-    background-image: -webkit-linear-gradient(left, #dd0902, #ab0701);
-    background-image: linear-gradient(left, #dd0902, #ab0701);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
+    background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
+    background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
+    background-image: -o-linear-gradient(top, #dd0902, #ab0701);
+    background-image: linear-gradient(to bottom, #dd0902, #ab0701);
     border-radius: 4px;
+    font-weight: bold;
+  }
+  .header .toggle-menu-mobile.toggle-menu-open span {
     text-align: center;
     display: inline-block;
     -webkit-transform: rotate(90deg);
@@ -1958,6 +1966,20 @@ Specific mobile styles
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+  .header .toggle-menu-mobile:hover {
+    cursor: pointer;
+  }
+  .header .toggle-menu-mobile.toggle-menu-close {
+    text-align: center;
+    color: #ffffff;
+    background: #000000;
+  }
+  .header .toggle-menu-mobile:hover a,
+  .header .toggle-menu-mobile a:visited:hover,
+  .header .toggle-menu-mobile a:focus,
+  .header .toggle-menu-mobile a:visited:focus {
+    color: #000;
   }
   .header #site-info {
     margin: 2.75em auto 0;
@@ -1982,7 +2004,7 @@ Specific mobile styles
   .header .social-menu li {
     margin: .5em 1em 0;
   }
-  .nav.top-nav {
+  .header nav {
     margin: 0 auto;
     position: absolute;
     top: 0;
@@ -1992,13 +2014,21 @@ Specific mobile styles
     border-top: 10px solid #fd1c15;
     display: block;
   }
-  .nav.top-nav li {
+  .header nav .nav.top-nav,
+  .header nav .toggle-menu-close {
     display: none;
   }
-  .nav.top-nav li ul {
+  .header nav.open > .nav.top-nav,
+  .header nav.open > .toggle-menu-close {
+    display: block;
+  }
+  .header nav .nav.top-nav {
+    margin-top: -10px;
+  }
+  .header nav .nav.top-nav ul {
     margin: 0;
   }
-  .nav.top-nav li a {
+  .header nav .nav.top-nav a {
     letter-spacing: .1em;
     padding: .75em 1em .5em;
     font-size: 1.1em;
@@ -2017,7 +2047,13 @@ Specific mobile styles
     background-image: linear-gradient(to bottom, #fd1c15, #f60902);
     color: #ffffff;
   }
-  .nav.top-nav.expanded li {
+  .header nav .nav.top-nav a:hover,
+  .header nav .nav.top-nav a:visited:hover,
+  .header nav .nav.top-nav a:focus,
+  .header nav .nav.top-nav a:visited:focus {
+    color: #000000;
+  }
+  .header nav.expanded li {
     height: auto;
   }
 }
@@ -2051,23 +2087,15 @@ tweeners.
   }
   .nav.top-nav li a {
     letter-spacing: .1em;
-    padding: 2px 1em 0;
+    padding: 5px 1em;
     font-size: .9em;
     font-weight: 400;
     text-transform: uppercase;
-    height: 33px;
-    line-height: 40px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-  }
-  .nav.top-nav li a:hover,
-  .nav.top-nav li a:visited:hover,
-  .nav.top-nav li a:focus,
-  .nav.top-nav li a:visited:focus {
-    color: #000;
   }
   .nav.top-nav li.menu-item-object-downloads a,
   .nav.top-nav li.menu-item-194 a,
@@ -2553,7 +2581,7 @@ This is for the larger monitors and possibly full screen viewers.
     margin-right: 0;
   }
   header .nav.top-nav {
-    margin-right: -1em;
+    margin-right: 0;
   }
   header .nav.top-nav > li.menu-item-object-downloads,
   header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
