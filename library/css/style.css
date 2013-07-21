@@ -2409,9 +2409,15 @@ you can add resource intensive styles.
     display: block;
   }
   /* end .nav */
-  header nav[role=navigation] {
+  .header nav[role=navigation] {
     clear: both;
     margin-top: .5em;
+  }
+  .header #site-info {
+    width: 525px;
+  }
+  .header #site-info .site-info-text {
+    width: 84%;
   }
   .nav.top-nav .sub-menu {
     background: #FFF;
@@ -2545,8 +2551,9 @@ you can add resource intensive styles.
     width: 1000px;
   }
   header nav[role=navigation] {
-    clear: none;
-    float: right;
+    position: absolute;
+    top: 60px;
+    right: 0;
   }
   header .social-menu {
     margin-right: 150px;
@@ -2558,8 +2565,7 @@ you can add resource intensive styles.
   header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
   header .nav.top-nav > li.menu-item-194 {
     position: absolute;
-    margin-top: 0;
-    top: 10px;
+    top: -53px;
     right: 0;
   }
 }
