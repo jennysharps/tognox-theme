@@ -76,9 +76,9 @@ jQuery(document).ready(function($) {
     }
 
     var responsiveNavToggler = $(".toggle-menu-mobile"),
-        mainNav = $('#menu-top-nav');
+        mainContainer = $('body');
     responsiveNavToggler.click( function() {
-            mainNav.parent().toggleClass('open');
+            mainContainer.toggleClass('nav-open');
     });
 
 }); /* end of as page load scripts */

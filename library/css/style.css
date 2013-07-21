@@ -1930,6 +1930,19 @@ Specific mobile styles
   Stylesheet: Only Smaller Devices
   
   ******************************************************************/
+  body {
+    -webkit-transition: margin 0.5s ease-in-out 0;
+    -moz-transition: margin 0.5s ease-in-out 0;
+    -o-transition: margin 0.5s ease-in-out 0;
+    -ms-transition: margin 0.5s ease-in-out 0;
+    transition: margin 0.5s ease-in-out 0;
+  }
+  body.nav-open {
+    margin-top: 330px;
+  }
+  body.nav-open header nav {
+    max-height: 9999px;
+  }
   .wrap {
     padding: 10px;
   }
@@ -2013,14 +2026,13 @@ Specific mobile styles
     z-index: 999;
     border-top: 10px solid #fd1c15;
     display: block;
-  }
-  .header nav .nav.top-nav,
-  .header nav .toggle-menu-close {
-    display: none;
-  }
-  .header nav.open > .nav.top-nav,
-  .header nav.open > .toggle-menu-close {
-    display: block;
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 0.75s ease-in-out 0;
+    -moz-transition: max-height 0.75s ease-in-out 0;
+    -o-transition: max-height 0.75s ease-in-out 0;
+    -ms-transition: max-height 0.75s ease-in-out 0;
+    transition: max-height 0.75s ease-in-out 0;
   }
   .header nav .nav.top-nav {
     margin-top: -10px;
@@ -2031,7 +2043,6 @@ Specific mobile styles
   .header nav .nav.top-nav a {
     letter-spacing: .1em;
     padding: .75em 1em .5em;
-    font-size: 1.1em;
     font-weight: 400;
     text-transform: uppercase;
     -webkit-transition: all 0.2s ease-in-out;

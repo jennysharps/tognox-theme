@@ -5,6 +5,22 @@ Author: Jenny Sharps
 Stylesheet: Only Smaller Devices
 
 ******************************************************************/
+body {
+        -webkit-transition: margin .5s ease-in-out 0;
+        -moz-transition: margin .5s ease-in-out 0;
+        -o-transition: margin .5s ease-in-out 0;
+        -ms-transition: margin .5s ease-in-out 0;
+        transition: margin .5s ease-in-out 0;
+
+        &.nav-open {
+                margin-top: 330px;
+
+                header nav {
+                        max-height: 9999px;
+                }
+        }
+}
+
 .wrap {
         padding: 10px;
 }
@@ -101,14 +117,15 @@ Stylesheet: Only Smaller Devices
                 z-index: 999;
                 border-top: 10px solid @bones-pink;
                 display: block;
+                overflow: hidden;
+                max-height: 0;
+                -webkit-transition: max-height .75s ease-in-out 0;
+                -moz-transition: max-height .75s ease-in-out 0;
+                -o-transition: max-height .75s ease-in-out 0;
+                -ms-transition: max-height .75s ease-in-out 0;
+                transition: max-height .75s ease-in-out 0;
 
-                .nav.top-nav, .toggle-menu-close {
-                        display: none;
-                }
 
-                &.open > .nav.top-nav, &.open > .toggle-menu-close {
-                        display: block;
-                }
 
                 .nav.top-nav {
                         margin-top: -10px;
@@ -120,7 +137,6 @@ Stylesheet: Only Smaller Devices
                         a {
                                 letter-spacing: .1em;
                                 padding: .75em 1em .5em;
-                                font-size: 1.1em;
                                 font-weight: 400;
                                 text-transform: uppercase;
                                 .transition();
