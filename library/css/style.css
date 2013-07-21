@@ -1987,6 +1987,7 @@ Specific mobile styles
     text-align: center;
     color: #ffffff;
     background: #000000;
+    padding: 0.5em;
   }
   .header .toggle-menu-mobile:hover a,
   .header .toggle-menu-mobile a:visited:hover,
@@ -2024,10 +2025,10 @@ Specific mobile styles
     left: 0;
     width: 100%;
     z-index: 999;
-    border-top: 10px solid #fd1c15;
     display: block;
     overflow: hidden;
-    max-height: 0;
+    max-height: 10px;
+    background: #fd1c15;
     -webkit-transition: max-height 0.75s ease-in-out 0;
     -moz-transition: max-height 0.75s ease-in-out 0;
     -o-transition: max-height 0.75s ease-in-out 0;
@@ -2035,7 +2036,7 @@ Specific mobile styles
     transition: max-height 0.75s ease-in-out 0;
   }
   .header nav .nav.top-nav {
-    margin-top: -10px;
+    border: 0;
   }
   .header nav .nav.top-nav ul {
     margin: 0;

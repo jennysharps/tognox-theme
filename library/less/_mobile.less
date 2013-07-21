@@ -67,6 +67,7 @@ body {
                         text-align: center;
                         color: @white;
                         background: @black;
+                        padding: .5em
                 }
 
                 &:hover a, a:visited:hover, a:focus, a:visited:focus {
@@ -115,10 +116,10 @@ body {
                 left: 0;
                 width: 100%;
                 z-index: 999;
-                border-top: 10px solid @bones-pink;
                 display: block;
                 overflow: hidden;
-                max-height: 0;
+                max-height: 10px;
+                background: @bones-pink;
                 -webkit-transition: max-height .75s ease-in-out 0;
                 -moz-transition: max-height .75s ease-in-out 0;
                 -o-transition: max-height .75s ease-in-out 0;
@@ -128,7 +129,7 @@ body {
 
 
                 .nav.top-nav {
-                        margin-top: -10px;
+                        border: 0;
 
                         ul {
                                 margin: 0;
