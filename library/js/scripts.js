@@ -75,6 +75,7 @@ jQuery(document).ready(function($) {
         });
     }
 
+    var navigation = $("#inner-header nav");
 }); /* end of as page load scripts */
 
 

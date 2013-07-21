@@ -140,8 +140,9 @@ nav ul, nav ol {
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
+        padding: 0 5px;
 }
 
 main {
@@ -234,11 +235,59 @@ h5, .h5 {
         }
 
 	#site-info {
+
+                margin-top: 20px;
+                width: 490px;
+                float: left;
+                max-width: 100%;
+
+                .site-info-logo, .site-info-text {
+                        float: left;
+                }
+
+                .site-info-logo {
+                        margin-top: 2px;
+                }
+
+                .site-info-text {
+                        padding-left: 2.25%;
+                        width: 82%;
+
+                        a {
+                                text-decoration: none;
+                                text-transform: uppercase;
+
+                                h1 {
+                                        font-size: 2.25em;
+                                        font-weight: 900;
+                                        letter-spacing: 0.075em;
+                                        line-height: normal;
+                                        margin: .3em 0 .1em;
+                                        word-spacing: .2em;
+                                }
+                        }
+
+                        .site-description {
+                                font-size: 1.15em;
+                                line-height: 1.4em;
+                                margin: 0 0 0.375em;
+                        }
+                }
+
+                /* display: inline-block;
                 margin: 1.5em 0 0 0;
                 float: left;
 
+                .site-info-logo {
+                        width: 20%;
+                        float: left;
+                }
+
                 .site-info-text {
-                        margin-left: 1em;
+                        display: block;
+                        width: 79%;
+                        float: left;
+                        margin-left: 1%;
 
                         a {
                             text-decoration: none;
@@ -251,7 +300,6 @@ h5, .h5 {
                                 line-height: normal;
                                 margin: .3em 0 .1em;
                                 word-spacing: .2em;
-                                white-space: nowrap;
                             }
                         }
 
@@ -265,13 +313,12 @@ h5, .h5 {
                                 margin: 0 0 0.375em;
                         }
 
-                }
+                } */
 	}
 
         .social-menu {
 
                 float: right;
-                margin-right: 1.25%;
 
                 .menu-item {
 
@@ -340,7 +387,7 @@ and moe scalable.
 			color: #222;
 			text-decoration: none;
 			padding: 10px 10px;
-			border-bottom: 1px solid #ccc;
+			border-bottom: 1px solid @white;
 
 			&:hover, &:focus {
 
@@ -364,7 +411,6 @@ and moe scalable.
 			li {
 
 				a {
-					padding-left: 30px;
 
 					&:hover,
 					&:focus {}
@@ -402,17 +448,11 @@ and moe scalable.
 
 		a {
 			letter-spacing: .1em;
-			padding: 2px 1em 0;
 			font-size: .9em;
 			font-weight: 400;
 			text-transform: uppercase;
-                        height: 33px;
-                        line-height: 40px;
                         .transition();
 
-                        &:hover, &:visited:hover, &:focus, &:visited:focus {
-                                color: #000;
-                        }
 		}
         }
 

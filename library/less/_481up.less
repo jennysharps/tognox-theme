@@ -21,6 +21,44 @@ upon your base.less styles.
 NAVIGATION STYLES
 *********************/
 
+.nav.top-nav {
+	margin: 0 auto;
+
+	li {
+
+		a {
+			letter-spacing: .1em;
+			padding: 2px 1em 0;
+			font-size: .9em;
+			font-weight: 400;
+			text-transform: uppercase;
+                        height: 33px;
+                        line-height: 40px;
+                        .transition();
+
+                        &:hover, &:visited:hover, &:focus, &:visited:focus {
+                                color: #000;
+                        }
+		}
+        }
+
+        li.menu-item-object-downloads, li.menu-item-194 {
+                a, a:visited {
+                        border: 1px solid darken(@bones-pink, 13%);
+                        border-top-color: darken(@bones-pink, 7%);
+                        border-left-color: darken(@bones-pink, 7%);
+                        color: @white;
+                        text-shadow: 0 1px rgba(0,0,0, .75);
+                        .css-gradient(@bones-pink,darken(@bones-pink, 5%));
+
+                        &:active {
+                                .css-gradient(darken(@bones-pink, 5%),@bones-pink);
+                        }
+                }
+
+	}
+}
+
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {

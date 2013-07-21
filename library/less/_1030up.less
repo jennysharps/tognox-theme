@@ -9,8 +9,32 @@ be seen on the Desktop.
 
 ******************************************************************/
 
-header nav[role=navigation] {
-        clear: none;
-        float: right;
-        margin-top: .5em;
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+        width: 1000px;
+}
+
+header {
+        nav[role=navigation] {
+                clear: none;
+                float: right;
+
+        }
+
+        .social-menu {
+                margin-right: 150px;
+        }
+
+        .nav.top-nav {
+                margin-right: -1em;
+
+               & > li.menu-item-object-downloads, & > li.nav.top-nav li.menu-item-object-downloads {
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                }
+        }
 }

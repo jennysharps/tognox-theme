@@ -336,6 +336,15 @@ really slow down your CSS. Don't overdo it.
 	background-image: linear-gradient(to bottom, @from, @to);
 }
 
+.css-horz-gradient(@from: #dfdfdf, @to: #f8f8f8) {
+        background-color: @to;
+        background-image: -moz-linear-gradient(left, @from, @to);
+        background-image: -ms-linear-gradient(left, @from, @to);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @from), color-stop(100%, @to));
+        background-image: -webkit-linear-gradient(left, @from, @to);
+        background-image: linear-gradient(left, @from, @to);
+}
+
 
 /*********************
 BOX SHADOW

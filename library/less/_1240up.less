@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author:
 
 Stylesheet: Super Large Monitor Stylesheet
 
@@ -9,3 +9,33 @@ on larger screens.
 
 ******************************************************************/
 
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+        width: 1140px;
+}
+
+header {
+        nav[role=navigation] {
+                clear: none;
+                float: right;
+
+        }
+
+        .social-menu {
+                margin-right: 0;
+        }
+
+        .nav.top-nav {
+                margin-right: -1em;
+
+                & > li.menu-item-object-downloads, & > li.nav.top-nav li.menu-item-object-downloads {
+                        position: relative;
+                        top: auto;
+                        right: auto;
+                }
+        }
+}

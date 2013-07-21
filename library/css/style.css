@@ -954,8 +954,9 @@ nav ol {
 03. LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 5px;
 }
 main {
   padding: 2.2em 0;
@@ -1062,11 +1063,62 @@ h5,
   position: relative;
 }
 .header #site-info {
-  margin: 1.5em 0 0 0;
+  margin-top: 20px;
+  width: 490px;
+  float: left;
+  max-width: 100%;
+  /* display: inline-block;
+                margin: 1.5em 0 0 0;
+                float: left;
+
+                .site-info-logo {
+                        width: 20%;
+                        float: left;
+                }
+
+                .site-info-text {
+                        display: block;
+                        width: 79%;
+                        float: left;
+                        margin-left: 1%;
+
+                        a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+
+                            h1 {
+                                font-size: 2.25em;
+                                font-weight: 900;
+                                letter-spacing: 0.075em;
+                                line-height: normal;
+                                margin: .3em 0 .1em;
+                                word-spacing: .2em;
+                            }
+                        }
+
+                        h2 {
+                                line-height: normal;
+                                margin: 0;
+                        }
+                        .site-description {
+                                font-size: 1.15em;
+                                line-height: 1.4em;
+                                margin: 0 0 0.375em;
+                        }
+
+                } */
+
+}
+.header #site-info .site-info-logo,
+.header #site-info .site-info-text {
   float: left;
 }
+.header #site-info .site-info-logo {
+  margin-top: 2px;
+}
 .header #site-info .site-info-text {
-  margin-left: 1em;
+  padding-left: 2.25%;
+  width: 82%;
 }
 .header #site-info .site-info-text a {
   text-decoration: none;
@@ -1079,11 +1131,6 @@ h5,
   line-height: normal;
   margin: .3em 0 .1em;
   word-spacing: .2em;
-  white-space: nowrap;
-}
-.header #site-info .site-info-text h2 {
-  line-height: normal;
-  margin: 0;
 }
 .header #site-info .site-info-text .site-description {
   font-size: 1.15em;
@@ -1092,7 +1139,6 @@ h5,
 }
 .header .social-menu {
   float: right;
-  margin-right: 1.25%;
 }
 .header .social-menu .menu-item {
   display: inline-block;
@@ -1156,11 +1202,7 @@ and moe scalable.
   color: #222;
   text-decoration: none;
   padding: 10px 10px;
-  border-bottom: 1px solid #ccc;
-}
-.nav li ul.sub-menu li a,
-.nav li ul.children li a {
-  padding-left: 30px;
+  border-bottom: 1px solid #ffffff;
 }
 /* end .nav */
 .nav.top-nav {
@@ -1168,23 +1210,14 @@ and moe scalable.
 }
 .nav.top-nav li a {
   letter-spacing: .1em;
-  padding: 2px 1em 0;
   font-size: .9em;
   font-weight: 400;
   text-transform: uppercase;
-  height: 33px;
-  line-height: 40px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-.nav.top-nav li a:hover,
-.nav.top-nav li a:visited:hover,
-.nav.top-nav li a:focus,
-.nav.top-nav li a:visited:focus {
-  color: #000;
 }
 .nav.top-nav li.menu-item-object-downloads a,
 .nav.top-nav li.menu-item-194 a,
@@ -1883,8 +1916,112 @@ input[type="color"],
   color: red;
   margin-bottom: .5em;
 }
-/*
-LARGER MOBILE DEVICES
+/*MOBILE
+Specific mobile styles
+*/
+@media only screen and (max-width: 767px) {
+  /******************************************************************
+  Site Name: Tognox
+  Author: Jenny Sharps
+  
+  Stylesheet: Only Smaller Devices
+  
+  ******************************************************************/
+  .wrap {
+    padding: 10px;
+  }
+  #site-info:before {
+    content: '|||';
+    width: 17px;
+    height: 22px;
+    position: absolute;
+    z-index: 99999;
+    padding: .5em;
+    top: 15px;
+    right: 20px;
+    margin: 0;
+    color: #ffffff;
+    border: 1px solid #ce0802;
+    border-top-color: #ab0701;
+    border-left-color: #ab0701;
+    background-color: #ab0701;
+    background-image: -moz-linear-gradient(left, #dd0902, #ab0701);
+    background-image: -ms-linear-gradient(left, #dd0902, #ab0701);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #dd0902), color-stop(100%, #ab0701));
+    background-image: -webkit-linear-gradient(left, #dd0902, #ab0701);
+    background-image: linear-gradient(left, #dd0902, #ab0701);
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .header #site-info {
+    margin: 2.75em auto 0;
+    float: none;
+  }
+  .header #site-info .site-info-logo {
+    max-width: 18%;
+    padding-left: 5px;
+  }
+  .header #site-info .site-info-text a h1 {
+    font-size: 2em;
+  }
+  .header #site-info .site-info-text .site-description {
+    font-size: 1em;
+  }
+  .header .social-menu {
+    float: none;
+    clear: both;
+    text-align: center;
+    padding: 0;
+  }
+  .header .social-menu li {
+    margin: .5em 1em 0;
+  }
+  .nav.top-nav {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border-top: 10px solid #fd1c15;
+    display: block;
+  }
+  .nav.top-nav li {
+    display: none;
+  }
+  .nav.top-nav li ul {
+    margin: 0;
+  }
+  .nav.top-nav li a {
+    letter-spacing: .1em;
+    padding: .75em 1em .5em;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-color: #f60902;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+    background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+    background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+    background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+    background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+    color: #ffffff;
+  }
+  .nav.top-nav.expanded li {
+    height: auto;
+  }
+}
+/*LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
@@ -1909,6 +2046,56 @@ tweeners.
   /*********************
   NAVIGATION STYLES
   *********************/
+  .nav.top-nav {
+    margin: 0 auto;
+  }
+  .nav.top-nav li a {
+    letter-spacing: .1em;
+    padding: 2px 1em 0;
+    font-size: .9em;
+    font-weight: 400;
+    text-transform: uppercase;
+    height: 33px;
+    line-height: 40px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .nav.top-nav li a:hover,
+  .nav.top-nav li a:visited:hover,
+  .nav.top-nav li a:focus,
+  .nav.top-nav li a:visited:focus {
+    color: #000;
+  }
+  .nav.top-nav li.menu-item-object-downloads a,
+  .nav.top-nav li.menu-item-194 a,
+  .nav.top-nav li.menu-item-object-downloads a:visited,
+  .nav.top-nav li.menu-item-194 a:visited {
+    border: 1px solid #ce0802;
+    border-top-color: #ec0902;
+    border-left-color: #ec0902;
+    color: #ffffff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+    background-color: #f60902;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+    background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+    background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+    background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+    background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+  }
+  .nav.top-nav li.menu-item-object-downloads a:active,
+  .nav.top-nav li.menu-item-194 a:active,
+  .nav.top-nav li.menu-item-object-downloads a:visited:active,
+  .nav.top-nav li.menu-item-194 a:visited:active {
+    background-color: #fd1c15;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f60902), to(#fd1c15));
+    background-image: -webkit-linear-gradient(top, #f60902, #fd1c15);
+    background-image: -moz-linear-gradient(top, #f60902, #fd1c15);
+    background-image: -o-linear-gradient(top, #f60902, #fd1c15);
+    background-image: linear-gradient(to bottom, #f60902, #fd1c15);
+  }
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */
@@ -2092,6 +2279,7 @@ you can add resource intensive styles.
   *********************/
   .wrap {
     max-width: 1140px;
+    width: 750px;
   }
   /*********************
   HEADER SYTLES
@@ -2100,13 +2288,13 @@ you can add resource intensive styles.
     padding-bottom: 1em;
   }
   .header #site-info {
-    min-width: 488px;
-    padding-left: 1.25em;
-  }
-  .header #site-info .site-info-logo,
-  .header #site-info .site-info-text {
-    display: block;
-    float: left;
+    /* min-width: 511px;
+  
+  		.site-info-logo, .site-info-text {
+  			display: block;
+  			float: left;
+  		} */
+  
   }
   .header #inner-header {
     position: relative;
@@ -2204,6 +2392,7 @@ you can add resource intensive styles.
   }
   .nav.top-nav li.menu-item-object-downloads a,
   .nav.top-nav li.menu-item-194 a {
+    margin-right: 0;
     margin-top: 5px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -2312,10 +2501,27 @@ you can add resource intensive styles.
   be seen on the Desktop.
   
   ******************************************************************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  .wrap {
+    width: 1000px;
+  }
   header nav[role=navigation] {
     clear: none;
     float: right;
-    margin-top: .5em;
+  }
+  header .social-menu {
+    margin-right: 150px;
+  }
+  header .nav.top-nav {
+    margin-right: -1em;
+  }
+  header .nav.top-nav > li.menu-item-object-downloads,
+  header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
+    position: absolute;
+    top: 10px;
+    right: 0;
   }
 }
 /*
@@ -2324,8 +2530,8 @@ This is for the larger monitors and possibly full screen viewers.
 */
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author:
   
   Stylesheet: Super Large Monitor Stylesheet
   
@@ -2333,6 +2539,28 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
+  /*********************
+  LAYOUT & GRID STYLES
+  *********************/
+  .wrap {
+    width: 1140px;
+  }
+  header nav[role=navigation] {
+    clear: none;
+    float: right;
+  }
+  header .social-menu {
+    margin-right: 0;
+  }
+  header .nav.top-nav {
+    margin-right: -1em;
+  }
+  header .nav.top-nav > li.menu-item-object-downloads,
+  header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)
