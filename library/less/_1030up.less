@@ -38,5 +38,52 @@ header {
                         top: -53px;
                         right: 0;
                 }
+
+                li.menu-parent-item {
+                    &>a {
+                        display: block;
+                    }
+
+                    ul.sub-menu,
+                    ul.children {
+                            border: 1px solid #ccc;
+                            border-top: 0;
+                            position: absolute;
+                            display: none;
+                            z-index: 8999;
+                            margin: -2px 0 0;
+                            border-top: 2px solid @black;
+                            margin-left: -2em;
+
+                            li {
+                                margin-top: 0;
+                                display: block;
+                                float: none;
+                                border-bottom: 2px solid white;
+
+                                &:hover {
+                                    border-bottom: 2px solid #000;
+
+                                    a {
+                                        color: @bones-pink;
+                                    }
+                                }
+                            }
+
+                            a, a:hover, &.current-menu-item a, &.current-menu-parent a,
+                            &.current-menu-ancestor a, &.current_page_parent a {
+                                padding: .5em 1em .25em;
+                                border-bottom: 0;
+                                margin: 0;
+                            }
+                    }
+
+                    /* showing sub-menus */
+                    &:hover ul, &.open ul {
+                            top: auto;
+                            display: block;
+                    }
+
+                }
         }
 }

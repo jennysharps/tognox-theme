@@ -1222,6 +1222,9 @@ and moe scalable.
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+.nav.top-nav li.menu-parent-item > a {
+  display: none;
+}
 .nav.top-nav li.menu-item-object-downloads a,
 .nav.top-nav li.menu-item-194 a,
 .nav.top-nav li.menu-item-object-downloads a:visited,
@@ -2101,10 +2104,6 @@ tweeners.
   .nav.top-nav {
     margin: 0 auto;
   }
-  .nav.top-nav li {
-    /* showing sub-menus */
-  
-  }
   .nav.top-nav li a {
     letter-spacing: .1em;
     padding: 5px 1em;
@@ -2116,11 +2115,6 @@ tweeners.
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-  }
-  .nav.top-nav li:hover ul,
-  .nav.top-nav li.open ul {
-    top: auto;
-    display: block;
   }
   .nav.top-nav li.menu-item-object-downloads,
   .nav.top-nav li.menu-item-194 {
@@ -2392,12 +2386,10 @@ you can add resource intensive styles.
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
-    border: 1px solid #ccc;
-    border-top: 0;
-    position: absolute;
-    display: none;
-    z-index: 8999;
-    margin: 0;
+    border: 0;
+    /* position: absolute; */
+  
+    font-size: .9em;
     /* highlight sub-menu current page */
   
   }
@@ -2425,7 +2417,8 @@ you can add resource intensive styles.
   /* end .nav */
   .header nav[role=navigation] {
     clear: both;
-    margin-top: .5em;
+    margin-top: .75em;
+    text-align: center;
   }
   .header #site-info {
     width: 525px;
@@ -2433,11 +2426,27 @@ you can add resource intensive styles.
   .header #site-info .site-info-text {
     width: 84%;
   }
+  .nav.top-nav {
+    display: inline-block;
+    margin-top: 1em;
+  }
   .nav.top-nav .sub-menu {
     background: #FFF;
   }
   .nav.top-nav .sub-menu li {
     text-indent: 0;
+    display: inline-block;
+    width: auto;
+    margin-top: -1em;
+  }
+  .nav.top-nav .sub-menu li a,
+  .nav.top-nav .sub-menu li a:hover,
+  .nav.top-nav .sub-menu li.current-menu-item a,
+  .nav.top-nav .sub-menu li.current-menu-parent a,
+  .nav.top-nav .sub-menu li.current-menu-ancestor a,
+  .nav.top-nav .sub-menu li.current_page_parent a {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #000;
   }
   .nav.top-nav li a,
   .nav.top-nav li a:hover,
@@ -2445,7 +2454,8 @@ you can add resource intensive styles.
   .nav.top-nav li a:focus,
   .nav.top-nav li a:visited:focus {
     padding: 0;
-    margin: 2px 1em 0;
+    margin: 2px 1.2em 0;
+    color: #000;
   }
   .nav.top-nav li.menu-item-object-downloads a,
   .nav.top-nav li.menu-item-194 a {
@@ -2586,6 +2596,60 @@ you can add resource intensive styles.
     top: -53px;
     right: 0;
   }
+  header .nav.top-nav li.menu-parent-item {
+    /* showing sub-menus */
+  
+  }
+  header .nav.top-nav li.menu-parent-item > a {
+    display: block;
+  }
+  header .nav.top-nav li.menu-parent-item ul.sub-menu,
+  header .nav.top-nav li.menu-parent-item ul.children {
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    display: none;
+    z-index: 8999;
+    margin: -2px 0 0;
+    border-top: 2px solid #000000;
+    margin-left: -2em;
+  }
+  header .nav.top-nav li.menu-parent-item ul.sub-menu li,
+  header .nav.top-nav li.menu-parent-item ul.children li {
+    margin-top: 0;
+    display: block;
+    float: none;
+    border-bottom: 2px solid white;
+  }
+  header .nav.top-nav li.menu-parent-item ul.sub-menu li:hover,
+  header .nav.top-nav li.menu-parent-item ul.children li:hover {
+    border-bottom: 2px solid #000;
+  }
+  header .nav.top-nav li.menu-parent-item ul.sub-menu li:hover a,
+  header .nav.top-nav li.menu-parent-item ul.children li:hover a {
+    color: #fd1c15;
+  }
+  header .nav.top-nav li.menu-parent-item ul.sub-menu a,
+  header .nav.top-nav li.menu-parent-item ul.children a,
+  header .nav.top-nav li.menu-parent-item ul.sub-menu a:hover,
+  header .nav.top-nav li.menu-parent-item ul.children a:hover,
+  header .nav.top-nav li.menu-parent-item ul.sub-menu.current-menu-item a,
+  header .nav.top-nav li.menu-parent-item ul.children.current-menu-item a,
+  header .nav.top-nav li.menu-parent-item ul.sub-menu.current-menu-parent a,
+  header .nav.top-nav li.menu-parent-item ul.children.current-menu-parent a,
+  header .nav.top-nav li.menu-parent-item ul.sub-menu.current-menu-ancestor a,
+  header .nav.top-nav li.menu-parent-item ul.children.current-menu-ancestor a,
+  header .nav.top-nav li.menu-parent-item ul.sub-menu.current_page_parent a,
+  header .nav.top-nav li.menu-parent-item ul.children.current_page_parent a {
+    padding: .5em 1em .25em;
+    border-bottom: 0;
+    margin: 0;
+  }
+  header .nav.top-nav li.menu-parent-item:hover ul,
+  header .nav.top-nav li.menu-parent-item.open ul {
+    top: auto;
+    display: block;
+  }
 }
 /*
 LARGE VIEWING SIZE
@@ -2622,7 +2686,7 @@ This is for the larger monitors and possibly full screen viewers.
   header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
   header .nav.top-nav > li.menu-item-194 {
     position: relative;
-    top: -10px;
+    top: 0;
     right: auto;
   }
 }
