@@ -36,16 +36,20 @@ function widget($args, $instance) {
 
 		$title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Projects') : $instance['title'], $instance, $this->id_base);
 		if ( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
- 			$number = 10;
+ 			$number = 3;
 		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 
-		$r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true, 'post_type' => 'main_projects' ) ) );
-		if ($r->have_posts()) :
-?>
-		<?php echo $before_widget; ?>
+                $query_args = array(
+                    'posts_per_page' => $number,
+                    'post_type' => 'main_projects'
+                );
+
+                query_posts( $query_args );
+
+                echo $before_widget; ?>
 		<?php if ( $title ) echo $before_title . $title . $after_title; ?>
 		<ul>
-		<?php while ( $r->have_posts() ) : $r->the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 			<li>
 				<a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?>">
                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'three-col' ); ?>
@@ -57,12 +61,12 @@ function widget($args, $instance) {
 			</li>
 		<?php endwhile; ?>
 		</ul>
-		<?php echo $after_widget; ?>
-<?php
-		// Reset the global $the_post as this query will have stomped on it
-		wp_reset_postdata();
 
-		endif;
+                <?php
+                echo $after_widget;
+
+		wp_reset_query();
+                wp_reset_postdata();
 
 		$cache[$args['widget_id']] = ob_get_flush();
 		wp_cache_set('widget_recent_posts', $cache, 'widget');
