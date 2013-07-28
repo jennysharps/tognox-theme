@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
             mainContainer.toggleClass('nav-open');
     });
 
-    $( '#nav li:has(ul)' ).doubleTapToGo();
+    $( '.menu-top-nav li:has(ul)' ).doubleTapToGo();
 
 }); /* end of as page load scripts */
 
