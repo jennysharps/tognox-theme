@@ -2454,7 +2454,7 @@ you can add resource intensive styles.
   .nav.top-nav li a:focus,
   .nav.top-nav li a:visited:focus {
     padding: 0;
-    margin: 2px 1.2em 0;
+    margin: 2px 1.1em 0;
     color: #000;
   }
   .nav.top-nav li.menu-item-object-downloads a,
