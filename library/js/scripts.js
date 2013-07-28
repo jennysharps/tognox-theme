@@ -81,7 +81,46 @@ jQuery(document).ready(function($) {
             mainContainer.toggleClass('nav-open');
     });
 
-    $( '.menu-top-nav li:has(ul)' ).doubleTapToGo();
+
+    // see whether device supports touch events (a bit simplistic, but...)
+    var hasTouch = ("ontouchstart" in window);
+    var iOS5 = /iPad|iPod|iPhone/.test(navigator.platform) && "matchMedia" in window;
+
+    // hook touch events for drop-down menus
+    // NB: if has touch events, then has standards event handling too
+    // but we don't want to run this code on iOS5+
+    if (hasTouch && document.querySelectorAll && !iOS5) {
+        var i, len, element,
+            dropdowns = document.querySelectorAll("#menu-top-nav li.menu-parent-item > a");
+
+        function menuTouch(event) {
+            // toggle flag for preventing click for this link
+            var i, len, noclick = !(this.dataNoclick);
+
+            // reset flag on all links
+            for (i = 0, len = dropdowns.length; i < len; ++i) {
+                dropdowns[i].dataNoclick = false;
+            }
+
+            // set new flag value and focus on dropdown menu
+            this.dataNoclick = noclick;
+            this.focus();
+        }
+
+        function menuClick(event) {
+            // if click isn't wanted, prevent it
+            if (this.dataNoclick) {
+                event.preventDefault();
+            }
+        }
+
+        for (i = 0, len = dropdowns.length; i < len; ++i) {
+            element = dropdowns[i];
+            element.dataNoclick = false;
+            element.addEventListener("touchstart", menuTouch, false);
+            element.addEventListener("click", menuClick, false);
+        }
+    }
 
 }); /* end of as page load scripts */
 
@@ -120,43 +159,3 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
-
-
-(function( $, window, document, undefined )
-{
-	$.fn.doubleTapToGo = function( params )
-	{
-		if( !( 'ontouchstart' in window ) &&
-			!navigator.msMaxTouchPoints &&
-			!navigator.userAgent.toLowerCase().match( /windows phone os 7/i ) ) return false;
-
-		this.each( function()
-		{
-			var curItem = false;
-
-			$( this ).on( 'click', function( e )
-			{
-				var item = $( this );
-				if( item[ 0 ] != curItem[ 0 ] )
-				{
-					e.preventDefault();
-					curItem = item;
-				}
-			});
-
-			$( document ).on( 'click touchstart MSPointerDown', function( e )
-			{
-				var resetItem = true,
-					parents	  = $( e.target ).parents();
-
-				for( var i = 0; i < parents.length; i++ )
-					if( parents[ i ] == curItem[ 0 ] )
-						resetItem = false;
-
-				if( resetItem )
-					curItem = false;
-			});
-		});
-		return this;
-	};
-})( jQuery, window, document );

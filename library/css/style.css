@@ -2101,6 +2101,10 @@ tweeners.
   .nav.top-nav {
     margin: 0 auto;
   }
+  .nav.top-nav li {
+    /* showing sub-menus */
+  
+  }
   .nav.top-nav li a {
     letter-spacing: .1em;
     padding: 5px 1em;
@@ -2112,6 +2116,11 @@ tweeners.
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+  }
+  .nav.top-nav li:hover ul,
+  .nav.top-nav li.open ul {
+    top: auto;
+    display: block;
   }
   .nav.top-nav li.menu-item-object-downloads,
   .nav.top-nav li.menu-item-194 {
@@ -2366,8 +2375,6 @@ you can add resource intensive styles.
   		plan your menus and drop-downs wisely.
   		*/
   
-    /* showing sub-menus */
-  
   }
   .nav li a {
     border-bottom: 2px solid transparent;
@@ -2414,10 +2421,6 @@ you can add resource intensive styles.
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
-  }
-  .nav li:hover ul {
-    top: auto;
-    display: block;
   }
   /* end .nav */
   .header nav[role=navigation] {
