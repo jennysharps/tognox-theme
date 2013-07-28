@@ -65,7 +65,7 @@ NAVIGATION STYLES
 		position: relative;
 
 		a {
-			border-bottom: 2px solid transparent;
+                        border: 0;
 
 			&:hover, &:focus {
 				border-bottom: 2px solid #000;
@@ -73,7 +73,7 @@ NAVIGATION STYLES
 		}
 
                 &.current-menu-item, &.current-menu-parent, &.current-menu-ancestor, &.current_page_parent {
-                        a{
+                        &>a{
                                 border-bottom: 2px solid @black;
                                 color: @black;
                          }
@@ -111,7 +111,6 @@ NAVIGATION STYLES
 				&:last-child {
 
 					a {
-						border-bottom: 0;
 					}
 				}
 
@@ -174,9 +173,13 @@ NAVIGATION STYLES
                         width: auto;
                         margin-top: -1em;
 
-                        a, a:hover, &.current-menu-item a, &.current-menu-parent a,
+                        a, &.current-menu-parent a,
                         &.current-menu-ancestor a, &.current_page_parent a {
                             padding-bottom: 2px;
+                        }
+
+                        a:hover, &.current-menu-parent>a,
+                        &.current-menu-ancestor>a, &.current_page_parent>a {
                             border-bottom: 2px solid #000;
                         }
 
@@ -212,7 +215,7 @@ NAVIGATION STYLES
                         }
 
                         &.current-menu-item, &.current-menu-parent, &.current-menu-ancestor, &.current_page_parent  {
-                                a {
+                                &>a {
                                         color: @white;
                                         border: 1px solid darken(@bones-pink, 13%);
                                         border-top-color: darken(@bones-pink, 20%);

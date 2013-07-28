@@ -1940,7 +1940,7 @@ Specific mobile styles
     transition: margin 0.5s ease-in-out 0;
   }
   body.nav-open {
-    margin-top: 330px;
+    margin-top: 290px;
   }
   body.nav-open header nav {
     max-height: 9999px;
@@ -2371,16 +2371,16 @@ you can add resource intensive styles.
   
   }
   .nav li a {
-    border-bottom: 2px solid transparent;
+    border: 0;
   }
   .nav li a:hover,
   .nav li a:focus {
     border-bottom: 2px solid #000;
   }
-  .nav li.current-menu-item a,
-  .nav li.current-menu-parent a,
-  .nav li.current-menu-ancestor a,
-  .nav li.current_page_parent a {
+  .nav li.current-menu-item > a,
+  .nav li.current-menu-parent > a,
+  .nav li.current-menu-ancestor > a,
+  .nav li.current_page_parent > a {
     border-bottom: 2px solid #000000;
     color: #000000;
   }
@@ -2410,10 +2410,6 @@ you can add resource intensive styles.
     border-right: 0;
     display: block;
   }
-  .nav li ul.sub-menu li:last-child a,
-  .nav li ul.children li:last-child a {
-    border-bottom: 0;
-  }
   /* end .nav */
   .header nav[role=navigation] {
     clear: both;
@@ -2440,12 +2436,15 @@ you can add resource intensive styles.
     margin-top: -1em;
   }
   .nav.top-nav .sub-menu li a,
-  .nav.top-nav .sub-menu li a:hover,
-  .nav.top-nav .sub-menu li.current-menu-item a,
   .nav.top-nav .sub-menu li.current-menu-parent a,
   .nav.top-nav .sub-menu li.current-menu-ancestor a,
   .nav.top-nav .sub-menu li.current_page_parent a {
     padding-bottom: 2px;
+  }
+  .nav.top-nav .sub-menu li a:hover,
+  .nav.top-nav .sub-menu li.current-menu-parent > a,
+  .nav.top-nav .sub-menu li.current-menu-ancestor > a,
+  .nav.top-nav .sub-menu li.current_page_parent > a {
     border-bottom: 2px solid #000;
   }
   .nav.top-nav li a,
@@ -2483,14 +2482,14 @@ you can add resource intensive styles.
     background-image: -o-linear-gradient(top, #dd0902, #ab0701);
     background-image: linear-gradient(to bottom, #dd0902, #ab0701);
   }
-  .nav.top-nav li.menu-item-object-downloads.current-menu-item a,
-  .nav.top-nav li.menu-item-194.current-menu-item a,
-  .nav.top-nav li.menu-item-object-downloads.current-menu-parent a,
-  .nav.top-nav li.menu-item-194.current-menu-parent a,
-  .nav.top-nav li.menu-item-object-downloads.current-menu-ancestor a,
-  .nav.top-nav li.menu-item-194.current-menu-ancestor a,
-  .nav.top-nav li.menu-item-object-downloads.current_page_parent a,
-  .nav.top-nav li.menu-item-194.current_page_parent a {
+  .nav.top-nav li.menu-item-object-downloads.current-menu-item > a,
+  .nav.top-nav li.menu-item-194.current-menu-item > a,
+  .nav.top-nav li.menu-item-object-downloads.current-menu-parent > a,
+  .nav.top-nav li.menu-item-194.current-menu-parent > a,
+  .nav.top-nav li.menu-item-object-downloads.current-menu-ancestor > a,
+  .nav.top-nav li.menu-item-194.current-menu-ancestor > a,
+  .nav.top-nav li.menu-item-object-downloads.current_page_parent > a,
+  .nav.top-nav li.menu-item-194.current_page_parent > a {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
@@ -2588,6 +2587,7 @@ you can add resource intensive styles.
   }
   header .nav.top-nav {
     margin-right: -1em;
+    margin-top: 0;
   }
   header .nav.top-nav > li.menu-item-object-downloads,
   header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
