@@ -1844,6 +1844,7 @@ figure.quotation figcaption {
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   font-size: .75em;
+  border-bottom: 1px solid #000000;
 }
 .footer nav li a:hover {
   color: #000000;
@@ -2074,6 +2075,9 @@ Specific mobile styles
   }
   .header nav.expanded li {
     height: auto;
+  }
+  footer nav li a {
+    border-bottom: 1px solid #000000;
   }
 }
 /*LARGER MOBILE DEVICES
@@ -2454,7 +2458,7 @@ you can add resource intensive styles.
   .nav.top-nav li.menu-item-object-downloads a,
   .nav.top-nav li.menu-item-194 a {
     margin-right: 0;
-    margin-top: 5px;
+    margin-top: 2px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -2539,6 +2543,9 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
+  .footer nav li a {
+    border-bottom: 0;
+  }
   .footer-links ul li {
     /*
   			be careful with the depth of your menus.
