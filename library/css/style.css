@@ -2116,6 +2116,14 @@ tweeners.
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
+  .nav.top-nav li ul,
+  .nav.top-nav li li {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
   .nav.top-nav li.menu-item-object-downloads,
   .nav.top-nav li.menu-item-194 {
     margin-top: -10px;
@@ -2353,7 +2361,7 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  .nav {
+  .nav.top-nav {
     border: 0;
     /* end .menu ul li */
   
@@ -2362,7 +2370,7 @@ you can add resource intensive styles.
     /* end current highlighters */
   
   }
-  .nav li {
+  .nav.top-nav li {
     float: left;
     position: relative;
     /*
@@ -2370,43 +2378,30 @@ you can add resource intensive styles.
   		*/
   
   }
-  .nav li a {
+  .nav.top-nav li a {
     border: 0;
   }
-  .nav li a:hover,
-  .nav li a:focus {
-    border-bottom: 2px solid #000;
-  }
-  .nav li.current-menu-item > a,
-  .nav li.current-menu-parent > a,
-  .nav li.current-menu-ancestor > a,
-  .nav li.current_page_parent > a {
+  .nav.top-nav li.current-menu-item > a,
+  .nav.top-nav li.current-menu-parent > a,
+  .nav.top-nav li.current-menu-ancestor > a,
+  .nav.top-nav li.current_page_parent > a {
     border-bottom: 2px solid #000000;
     color: #000000;
   }
-  .nav li ul.sub-menu,
-  .nav li ul.children {
+  .nav.top-nav li:hover > a,
+  .nav.top-nav li:focus > a {
+    border-bottom: 2px solid #000;
+  }
+  .nav.top-nav li ul.sub-menu,
+  .nav.top-nav li ul.children {
     border: 0;
     /* position: absolute; */
   
     font-size: .9em;
-    /* highlight sub-menu current page */
-  
   }
-  .nav li ul.sub-menu li,
-  .nav li ul.children li {
-    display: block;
-    width: 100%;
-    /*
-  				if you need to go deeper, go nuts
-  				just remember deeper menus suck
-  				for usability. k, bai.
-  				*/
-  
-  }
-  .nav li ul.sub-menu li a,
-  .nav li ul.children li a {
-    padding-left: 0;
+  .nav.top-nav li ul.sub-menu li a,
+  .nav.top-nav li ul.children li a {
+    padding: 0 0 2px;
     border-right: 0;
     display: block;
   }
@@ -2441,7 +2436,7 @@ you can add resource intensive styles.
   .nav.top-nav .sub-menu li.current_page_parent a {
     padding-bottom: 2px;
   }
-  .nav.top-nav .sub-menu li a:hover,
+  .nav.top-nav .sub-menu li:hover a,
   .nav.top-nav .sub-menu li.current-menu-parent > a,
   .nav.top-nav .sub-menu li.current-menu-ancestor > a,
   .nav.top-nav .sub-menu li.current_page_parent > a {
@@ -2453,7 +2448,7 @@ you can add resource intensive styles.
   .nav.top-nav li a:focus,
   .nav.top-nav li a:visited:focus {
     padding: 0;
-    margin: 2px 1.1em 0;
+    margin: 0 1.1em;
     color: #000;
   }
   .nav.top-nav li.menu-item-object-downloads a,
@@ -2596,6 +2591,12 @@ you can add resource intensive styles.
     top: -53px;
     right: 0;
   }
+  header .nav.top-nav li:hover.menu-parent-item > a {
+    border-bottom: 0;
+  }
+  header .nav.top-nav li:hover.menu-parent-item ul.sub-menu {
+    border-top: 2px solid #000;
+  }
   header .nav.top-nav li.menu-parent-item {
     /* showing sub-menus */
   
@@ -2610,14 +2611,19 @@ you can add resource intensive styles.
     position: absolute;
     display: none;
     z-index: 8999;
-    margin: -2px 0 0;
-    border-top: 2px solid #000000;
+    margin: 0;
     margin-left: -2em;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   header .nav.top-nav li.menu-parent-item ul.sub-menu li,
   header .nav.top-nav li.menu-parent-item ul.children li {
     margin-top: 0;
     display: block;
+    width: 100%;
     float: none;
     border-bottom: 2px solid white;
   }

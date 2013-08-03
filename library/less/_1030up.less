@@ -33,11 +33,24 @@ header {
                 margin-right: -1em;
                 margin-top: 0;
 
-               & > li.menu-item-object-downloads, & > li.nav.top-nav li.menu-item-object-downloads,
-               & > li.menu-item-194 {
+                & > li.menu-item-object-downloads, & > li.nav.top-nav li.menu-item-object-downloads,
+                & > li.menu-item-194 {
                         position: absolute;
                         top: -53px;
                         right: 0;
+                }
+
+                li:hover {
+
+                        &.menu-parent-item {
+                                &>a {
+                                        border-bottom: 0;
+                                }
+
+                                ul.sub-menu {
+                                        border-top: 2px solid #000;
+                                }
+                        }
                 }
 
                 li.menu-parent-item {
@@ -52,13 +65,14 @@ header {
                             position: absolute;
                             display: none;
                             z-index: 8999;
-                            margin: -2px 0 0;
-                            border-top: 2px solid @black;
+                            margin: 0;
                             margin-left: -2em;
+                             .transition();
 
                             li {
                                 margin-top: 0;
                                 display: block;
+                                width: 100%;
                                 float: none;
                                 border-bottom: 2px solid white;
 

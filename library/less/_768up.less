@@ -57,19 +57,15 @@ HEADER SYTLES
 NAVIGATION STYLES
 *********************/
 
-.nav {
+.nav.top-nav {
 	border: 0;
 
 	li {
 		float: left;
 		position: relative;
 
-		a {
+                a {
                         border: 0;
-
-			&:hover, &:focus {
-				border-bottom: 2px solid #000;
-			}
 		}
 
                 &.current-menu-item, &.current-menu-parent, &.current-menu-ancestor, &.current_page_parent {
@@ -79,8 +75,11 @@ NAVIGATION STYLES
                          }
                 }
 
-		&:first-child {}
-		&:last-child {}
+                &:hover, &:focus {
+                        &>a {
+                                border-bottom: 2px solid #000;
+                        }
+                }
 
 		/*
 		plan your menus and drop-downs wisely.
@@ -92,42 +91,14 @@ NAVIGATION STYLES
                         font-size: .9em;
 
 			li {
-                                display: block;
-                                width: 100%;
 
 				a {
-					padding-left: 0;
+                                        padding: 0 0 2px;
 					border-right: 0;
 					display: block;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
 				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-					}
-				}
-
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {}
 			}
 
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current-page-ancestor {
-				a {}
-			}
 		}
 
 
@@ -178,7 +149,7 @@ NAVIGATION STYLES
                             padding-bottom: 2px;
                         }
 
-                        a:hover, &.current-menu-parent>a,
+                        &:hover a, &.current-menu-parent>a,
                         &.current-menu-ancestor>a, &.current_page_parent>a {
                             border-bottom: 2px solid #000;
                         }
@@ -190,7 +161,7 @@ NAVIGATION STYLES
 
 		a, a:hover, a:visited:hover, a:focus, a:visited:focus {
                     padding: 0;
-                    margin: 2px 1.1em 0;
+                    margin: 0 1.1em;
                     color: #000;
 		}
 
