@@ -99,7 +99,9 @@ html[xmlns] .slides {display: block;}
 
 .flexslider a,
 .flexslider a:visited,
-.flexslider a:hover {
+.flexslider a:hover,
+.flexslider a:visited:hover,
+.flexslider a:visited:focus {
     text-decoration: none;
     color: #FFF;
 }
