@@ -905,6 +905,9 @@ nav ul,
 nav ol {
   padding: 0;
 }
+.publication-list li {
+  margin: 1em 0;
+}
 /********************
 02. WORDPRESS BODY CLASSES
     style a page via class

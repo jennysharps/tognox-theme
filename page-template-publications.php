@@ -38,6 +38,7 @@
                                                             )
                                                     )
                                             );
+
                                             $publications_query = new WP_Query( $args );
 
                                             if ( $publications_query->have_posts() ) :
@@ -54,9 +55,9 @@
 
                                                         <?php } ?>
 
-                                                    <section class="<?php echo $this_year; ?>">
+                                                    <section class="<?php echo ' ' . $this_year; ?>">
                                                         <h1><?php echo $this_year; ?></h1>
-                                                        <ul>
+                                                        <ul class="publication-list">
 
                                                     <?php } ?>
 
