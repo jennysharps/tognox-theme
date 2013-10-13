@@ -905,10 +905,10 @@ nav ul,
 nav ol {
   padding: 0;
 }
-.publication-list {
+#main ul {
   padding: 0 0 0 1em;
 }
-.publication-list li {
+#main ul li {
   margin: 1em 0;
 }
 /********************
