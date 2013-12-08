@@ -27,8 +27,36 @@
 							  	}
 							 }
 							?>
+                                                        <?php $meta = get_post_meta( get_the_ID() ); ?>
+
                                                         <?php
-                                                        $meta = get_post_meta( get_the_ID() );
+                                                        if( isset( $meta['related_citations'] ) ) {
+                                                            $related_citation_ids = ( unserialize( $meta['related_citations'][0] ) );
+
+                                                            if( function_exists( 'get_citation' ) && $related_citation_ids ) { ?>
+                                                                    <h4>Literature</h4>
+                                                                    <ul>
+                                                                    <?php foreach( $related_citation_ids as $citation_id ) { ?>
+                                                                        <li class="citation"><?php echo get_citation( $citation_id ); ?></li>
+                                                                    <?php } ?>
+                                                                    </ul>
+                                                            <?php }
+                                                        }
+
+                                                        if( isset( $meta['presentation'] ) ) {
+                                                            $presentation_ids = unserialize( $meta['presentation'][0] );
+                                                            $presentation_id = $presentation_ids[0];
+
+                                                            if( function_exists( 'get_citation' ) ) {
+                                                                if( $presentation_id ) { ?>
+                                                                    <h4>Presentation</h4>
+
+                                                                    <p><?php echo get_citation( $presentation_id ); ?></p>
+
+                                                                <?php }
+                                                            }
+                                                        }
+
                                                         $github_url = isset( $meta['github_repo'] ) ?  $meta['github_repo'][0] : '';
                                                         if ( $github_url ) {
                                                         ?>

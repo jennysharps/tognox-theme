@@ -63,46 +63,6 @@ if(function_exists("register_field_group")) {
         );
 
         register_field_group(array (
-		'id' => 'acf_related-citations',
-		'title' => 'Related Citations',
-		'fields' => array (
-			array (
-				'post_type' => array (
-					0 => 'jls_citation',
-				),
-				'taxonomy' => array (
-					0 => 'all',
-				),
-				'multiple' => 1,
-				'allow_null' => 0,
-				'key' => 'field_51d74ab1f271d',
-				'label' => 'Citations',
-				'name' => 'related_citations',
-				'type' => 'post_object',
-                                'instructions' => 'Choose all citations related to this project (Shift+click to select multiple citations).',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'main_projects',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-
-        register_field_group(array (
 		'id' => 'acf_quotation',
 		'title' => 'Quotation',
 		'fields' => array (
@@ -269,4 +229,110 @@ if(function_exists("register_field_group")) {
 		),
 		'menu_order' => 0,
 	));
+
+	register_field_group(array (
+		'id' => 'acf_download-fields',
+		'title' => 'Download Fields',
+		'fields' => array (
+			array (
+				'key' => 'field_52878bed45b1c',
+				'label' => 'Download Type',
+				'name' => 'download_type',
+				'type' => 'taxonomy',
+				'required' => 1,
+				'taxonomy' => 'attachment_types',
+				'field_type' => 'select',
+				'allow_null' => 0,
+				'load_save_terms' => 1,
+				'return_format' => 'object',
+				'multiple' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'downloads',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'side',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+	register_field_group(array (
+		'id' => 'acf_related-citations',
+		'title' => 'Related Citations',
+		'fields' => array (
+			array (
+				'key' => 'field_52a4f83e8418a',
+				'label' => 'Citations',
+				'name' => 'related_citations',
+				'type' => 'relationship',
+				'instructions' => 'Choose all related citations',
+				'return_format' => 'id',
+				'post_type' => array (
+					0 => 'jls_citation',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_title',
+				),
+				'max' => '',
+			),
+                        array (
+                            'key' => 'field_52a4fd73094c1',
+                            'label' => 'Presentation',
+                            'name' => 'presentation',
+                            'type' => 'relationship',
+                            'instructions' => 'Choose related presentation',
+                            'return_format' => 'id',
+                            'post_type' => array (
+                                    0 => 'jls_citation',
+                            ),
+                            'taxonomy' => array (
+                                    0 => 'all',
+                            ),
+                            'filters' => array (
+                                    0 => 'search',
+                            ),
+                            'result_elements' => array (
+                                    0 => 'post_title',
+                            ),
+                            'max' => 1,
+                    )
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'main_projects',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
 }

@@ -41,15 +41,35 @@ function custom_post_Downloads() {
 	 	) // end of options
 	); // end of register post type
 
-
-	// this ads your post categories to your custom post type
-	// register_taxonomy_for_object_type('category', 'main_Downloads');
-	// this ads your post tags to your custom post type
-	//register_taxonomy_for_object_type('post_tag', 'main_Downloads');
-
 }
 // adding the function to the Wordpress init
 add_action( 'init', 'custom_post_Downloads');
+
+// now let's add custom tags (these act like categories)
+register_taxonomy( 'attachment_types', 
+	array('downloads'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,    /* if this is false, it acts like tags */
+		'label' => __( 'Download Type' ),             
+		'labels' => array(
+			'name' => __( 'Download Type' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Download Type' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Download Types' ), /* search title for taxomony */
+			'popular_items' => __( 'Most Used Download Types' ),
+			'all_items' => __( 'All Download Types' ), /* all title for taxonomies */
+			'edit_item' => __( 'Edit Download Type' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Download Type' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Download Type' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Download Type Name' ) /* name title for taxonomy */,
+			'add_or_remove_items' => __( 'Add or remove download type' ),
+			'choose_from_most_used' => __( 'Choose from the most used download types' ),
+			'menu_name' => __( 'Types' ),
+		),
+		'show_ui' => false,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'type', 'with_front' => false )
+	)
+); 
+	
 
 /*
 // Define additional "post thumbnails". Relies on MultiPostThumbnails to work
