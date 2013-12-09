@@ -36,9 +36,11 @@ require_once('library/custom-post-main-projects.php');
 require_once('library/custom-post-downloads.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');
+require_once('library/citation-extensions.php');
 require_once('library/widgets/custom-recent-posts-widget.php');
 require_once('library/widgets/custom-recent-projects-widget.php');
 require_once('library/widgets/custom-twitter-feed-widget.php');
+
 /*
 3. library/admin.php
     - removing some default WordPress dashboard widgets

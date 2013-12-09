@@ -47,11 +47,11 @@
                                                             $presentation_ids = unserialize( $meta['presentation'][0] );
                                                             $presentation_id = $presentation_ids[0];
 
-                                                            if( function_exists( 'get_citation' ) ) {
+                                                            if( function_exists( 'get_extended_citation' ) ) {
                                                                 if( $presentation_id ) { ?>
                                                                     <h4>Presentation</h4>
 
-                                                                    <p><?php echo get_citation( $presentation_id ); ?></p>
+                                                                    <p><?php echo get_extended_citation( $presentation_id ); ?></p>
 
                                                                 <?php }
                                                             }
