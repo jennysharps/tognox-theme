@@ -1,7 +1,7 @@
 <?php
 class Post_Type_Archive_Menu_Links {
 
-	public function load(){
+    function __construct(){
           //Hook function to add the metabox to the Menu page
           add_action( 'admin_init', array(__CLASS__,'add_meta_box'));
 
@@ -48,7 +48,7 @@ class Post_Type_Archive_Menu_Links {
           if( 'nav-menus.php' != $hook )
                return;
 
-          //On Appearance>Menu page, enqueue script: 
+          //On Appearance>Menu page, enqueue script:
           wp_enqueue_script( 'my-post-type-archive-links_metabox', get_stylesheet_directory_uri().'/library/post-type-archive-menu-links/metabox.js', array('jquery'));
 
           //Add nonce variable
@@ -63,7 +63,7 @@ class Post_Type_Archive_Menu_Links {
           check_ajax_referer('my-add-post-type-archive-links','posttypearchive_nonce');
 
           require_once ABSPATH . 'wp-admin/includes/nav-menu.php';
-          
+
           if(empty($_POST['post_types']))
                exit;
 
@@ -82,7 +82,7 @@ class Post_Type_Archive_Menu_Links {
 			'menu-item-url' => get_post_type_archive_link($post_type),
 		);
 
-		//Collect the items' IDs. 
+		//Collect the items' IDs.
 		$item_ids[] = wp_update_nav_menu_item(0, 0, $menu_item_data );
           }
 
@@ -175,4 +175,5 @@ class Post_Type_Archive_Menu_Links {
 
 }
 
-Post_Type_Archive_Menu_Links::load();
+
+new Post_Type_Archive_Menu_Links;
