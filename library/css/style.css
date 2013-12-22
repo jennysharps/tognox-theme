@@ -1933,6 +1933,8 @@ a.file {
   text-indent: -999px;
   background: url(../images/icon-download.png) no-repeat transparent;
   margin: 0 5px;
+  width: 25px;
+  height: 25px;
 }
 a.file.application-pdf {
   background: url(../images/icon-pdf.png) no-repeat transparent;
