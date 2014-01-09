@@ -25,7 +25,7 @@ var downloadsPostType = {
         self.downloadTypeSelect.change( function() {
             self.chosenDownloadType = jQuery(this).find('select :selected').text();
 
-            self.showCurrent(self.chosenDownloadType);
+            self.showCurrentFields(self.chosenDownloadType);
 
         });
     },
