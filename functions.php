@@ -246,6 +246,12 @@ function enqueue_tognox_scripts() {
     }
 }
 
+add_action( 'admin_enqueue_scripts', 'enqueue_tognox_admin_scripts' );
+function enqueue_tognox_admin_scripts() {
+	wp_enqueue_style( 'admin-styles', get_template_directory_uri() . '/library/css/admin.css' );
+	wp_enqueue_script( 'admin-scripts', get_template_directory_uri() . '/library/js/admin.js', array( 'jquery' ) );
+}
+
 function custom_excerpt_length( $length ) {
 	if( is_front_page() ) {
             return 30;

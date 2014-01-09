@@ -1,0 +1,8 @@
+#acf_acf_download-options .field {
+    display: none;
+}
+
+#acf_acf_download-options #acf-download_type.field,
+#acf_acf_download-options .current.field {
+    display: block;
+}
