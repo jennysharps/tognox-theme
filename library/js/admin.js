@@ -17,7 +17,7 @@ var downloadsPostType = {
             this.downloadFields = jQuery('#acf_acf_download-options .field');
 
             this.attachEvents();
-            this.showCurrent(chosenDownloadType);
+            this.showCurrentFields(chosenDownloadType);
         }
     },
     attachEvents: function() {
@@ -25,12 +25,13 @@ var downloadsPostType = {
         self.downloadTypeSelect.change( function() {
             self.chosenDownloadType = jQuery(this).find('select :selected').text();
 
-            self.downloadFields.removeClass('current');
             self.showCurrent(self.chosenDownloadType);
 
         });
     },
-    showCurrent: function(current) {
+    showCurrentFields: function(current) {
+        this.downloadFields.removeClass('current');
+
         switch(current) {
             case ' gist':
                 jQuery('#acf-gist-id').addClass('current');
