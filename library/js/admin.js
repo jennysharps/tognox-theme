@@ -32,11 +32,11 @@ var downloadsPostType = {
     showCurrentFields: function(current) {
         this.downloadFields.removeClass('current');
 
-        switch(current) {
-            case ' gist':
+        switch(current.trim().toLowerCase()) {
+            case 'gist':
                 jQuery('#acf-gist-id').addClass('current');
                 break;
-            case ' github':
+            case 'github':
                 jQuery('#acf-github-url').addClass('current');
                 break;
             default:
