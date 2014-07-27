@@ -45,8 +45,10 @@ function custom_post_Downloads() {
 // adding the function to the Wordpress init
 add_action( 'init', 'custom_post_Downloads');
 
+
 // now let's add custom tags (these act like categories)
-register_taxonomy( 'attachment_types',
+function downloads_taxonomies() {
+    register_taxonomy( 'attachment_types',
 	array('downloads'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 	array('hierarchical' => true,    /* if this is false, it acts like tags */
 		'label' => __( 'Download Type' ),
@@ -68,7 +70,9 @@ register_taxonomy( 'attachment_types',
 		'query_var' => true,
 		'rewrite' => array( 'slug' => 'type', 'with_front' => false )
 	)
-);
+    );
+}
+add_action( 'init', 'downloads_taxonomies', 0 );
 
 /*
 // Define additional "post thumbnails". Relies on MultiPostThumbnails to work

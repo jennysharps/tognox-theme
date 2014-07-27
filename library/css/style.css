@@ -1158,6 +1158,7 @@ h5,
   width: 22px;
   height: 22px;
   text-indent: -9999px;
+  color: transparent;
   background: url(../images/social-22x22.png) no-repeat transparent;
 }
 .header .social-menu .menu-item a:hover {
@@ -1872,6 +1873,7 @@ figure.quotation figcaption {
   width: 48px;
   height: 48px;
   text-indent: -9999px;
+  color: transparent;
   background: url(../images/social-48x48.png) no-repeat transparent;
 }
 .footer .social-menu .menu-item a:hover {
@@ -1930,7 +1932,8 @@ input[type="color"],
 }
 a.file {
   display: inline-block;
-  text-indent: -999px;
+  text-indent: -9999px;
+  color: transparent;
   background: url(../images/icon-download.png) no-repeat transparent;
   margin: 0 5px;
   width: 25px;
