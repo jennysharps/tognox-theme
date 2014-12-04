@@ -1147,7 +1147,7 @@ h5,
   margin: 0 0 0.375em;
 }
 .header .social-menu {
-  float: right;
+  margin: 1.5em 0 -0.5em;
 }
 .header .social-menu .menu-item {
   display: inline-block;
@@ -1838,6 +1838,7 @@ figure.quotation figcaption {
 .footer {
   clear: both;
   color: rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 .footer nav {
   margin-top: 16px;
@@ -1861,7 +1862,6 @@ figure.quotation figcaption {
   clear: both;
 }
 .footer .social-menu {
-  float: left;
   padding-left: 0;
 }
 .footer .social-menu .menu-item {
@@ -2570,6 +2570,9 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
+  .footer {
+    text-align: left;
+  }
   .footer nav li a {
     border-bottom: 0;
   }
