@@ -1147,7 +1147,7 @@ h5,
   margin: 0 0 0.375em;
 }
 .header .social-menu {
-  margin: 1.5em 0 -0.5em;
+  float: right;
 }
 .header .social-menu .menu-item {
   display: inline-block;
