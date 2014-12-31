@@ -31,14 +31,22 @@ Template Name: About Page
                                                     ?>
 
 						    <section class="entry-content">
-                                                            <div class="resume-section">
-                                                            <?php if( $file_one_url ) { ?>
-                                                                    <a target="_blank" class="icon icon-large resume" href="<?php echo $file_one_url; ?>"><?php echo $file_one_text; ?></a>
-                                                            <?php } ?>
-                                                            <?php if( $file_two_url ) { ?>
-                                                                    <a target="_blank" class="icon icon-large cv" href="<?php echo $file_two_url; ?>"><?php echo $file_two_text; ?></a>
-                                                            <?php } ?>
+                                                    <div class="resume-section">
+                                                    <?php if( $file_one_url ) { ?>
+                                                        <a target="_blank" class="icon icon-large resume" href="<?php echo $file_one_url; ?>">
+                                                            <div class="ribbon">
+                                                                <h4><?php echo $file_one_text; ?></h4>
                                                             </div>
+                                                        </a>
+                                                    <?php } ?>
+                                                    <?php if( $file_two_url ) { ?>
+                                                        <a target="_blank" class="icon icon-large cv" href="<?php echo $file_two_url; ?>">
+                                                            <div class="ribbon">
+                                                                <h4><?php echo $file_two_text; ?></h4>
+                                                            </div>
+                                                        </a>
+                                                    <?php } ?>
+                                                    </div>
 
 							    <?php the_content(); ?>
 						    </section> <!-- end article section -->

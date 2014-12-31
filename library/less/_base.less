@@ -1006,9 +1006,53 @@ and moe scalable.
 
 .resume-section a {
         display: block;
-        width: auto;
         float: left;
-        padding-right: 1em;
+        margin-right: 1.5em;
+        background: url(../images/pdf-large-icon.png) no-repeat transparent;
+        height: 112px;
+        width: 112px;
+        position: relative;
+        color: white;
+
+        .ribbon {
+            width: 70%;
+            height: 28px;
+            display: table;
+            position: absolute;
+            top: 10px;
+            line-height: 16px;
+            font-size: 1em;
+            text-transform: uppercase;
+            margin-left: -10px;
+
+            h4 {
+                padding: 3px 10px 0;
+
+                color: @white;
+                border: 1px solid darken(@bones-pink, 20%);
+                border-top-color: darken(@bones-pink, 27%);
+                border-left-color: darken(@bones-pink, 27%);
+                .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 27%));
+
+                display: table-cell;
+                vertical-align: middle;
+                word-spacing: .12em;
+                .boxShadow(0, 1px, 3px, 0, rgba(0,0,0,0.25));
+                text-align: center;
+            }
+        }
+
+        &:hover .ribbon h4, &:focus .ribbon h4 {
+            color: @white;
+            border: 1px solid darken(@bones-pink, 13%);
+            border-top-color: darken(@bones-pink, 20%);
+            border-left-color: darken(@bones-pink, 20%);
+            .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
+        }
+
+        &:active .ribbon h4 {
+            .css-gradient(@bones-pink,darken(@bones-pink, 10%));
+        }
 }
 
 /******************************************************************

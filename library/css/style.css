@@ -1585,9 +1585,65 @@ and moe scalable.
 }
 .resume-section a {
   display: block;
-  width: auto;
   float: left;
-  padding-right: 1em;
+  margin-right: 1.5em;
+  background: url(../images/pdf-large-icon.png) no-repeat transparent;
+  height: 112px;
+  width: 112px;
+  position: relative;
+  color: white;
+}
+.resume-section a .ribbon {
+  width: 70%;
+  height: 28px;
+  display: table;
+  position: absolute;
+  top: 10px;
+  line-height: 16px;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-left: -10px;
+}
+.resume-section a .ribbon h4 {
+  padding: 3px 10px 0;
+  color: #ffffff;
+  border: 1px solid #ab0701;
+  border-top-color: #870501;
+  border-left-color: #870501;
+  background-color: #870501;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#870501));
+  background-image: -webkit-linear-gradient(top, #dd0902, #870501);
+  background-image: -moz-linear-gradient(top, #dd0902, #870501);
+  background-image: -o-linear-gradient(top, #dd0902, #870501);
+  background-image: linear-gradient(to bottom, #dd0902, #870501);
+  display: table-cell;
+  vertical-align: middle;
+  word-spacing: .12em;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.resume-section a:hover .ribbon h4,
+.resume-section a:focus .ribbon h4 {
+  color: #ffffff;
+  border: 1px solid #ce0802;
+  border-top-color: #ab0701;
+  border-left-color: #ab0701;
+  background-color: #ab0701;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
+  background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
+  background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
+  background-image: -o-linear-gradient(top, #dd0902, #ab0701);
+  background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+}
+.resume-section a:active .ribbon h4 {
+  background-color: #dd0902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#dd0902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #dd0902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #dd0902);
+  background-image: -o-linear-gradient(top, #fd1c15, #dd0902);
+  background-image: linear-gradient(to bottom, #fd1c15, #dd0902);
 }
 /******************************************************************
 11. COMMENT FORM STYLES
