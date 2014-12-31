@@ -1880,16 +1880,16 @@ figure.quotation figcaption {
   opacity: .7;
 }
 .footer .social-menu .menu-item.linkedin a {
-  background-position: left top;
+  background-position: -48px top;
 }
 .footer .social-menu .menu-item.twitter a {
-  background-position: left -48px;
+  background-position: -48px -48px;
 }
 .footer .social-menu .menu-item.gplus a {
-  background-position: left -96px;
+  background-position: -48px -96px;
 }
 .footer .social-menu .menu-item.github a {
-  background-position: left -144px;
+  background-position: -48px -144px;
 }
 /*
 	if you checked out the link above:
