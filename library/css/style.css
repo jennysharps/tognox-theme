@@ -1232,10 +1232,10 @@ and moe scalable.
 .nav.top-nav li.menu-parent-item > a {
   display: none;
 }
-.nav.top-nav li.menu-item-object-downloads a,
-.nav.top-nav li.menu-item-194 a,
-.nav.top-nav li.menu-item-object-downloads a:visited,
-.nav.top-nav li.menu-item-194 a:visited {
+.nav.top-nav li.menu-item-object-resources a,
+.nav.top-nav .download-button a,
+.nav.top-nav li.menu-item-object-resources a:visited,
+.nav.top-nav .download-button a:visited {
   border: 1px solid #ce0802;
   border-top-color: #ec0902;
   border-left-color: #ec0902;
@@ -1248,10 +1248,10 @@ and moe scalable.
   background-image: -o-linear-gradient(top, #fd1c15, #f60902);
   background-image: linear-gradient(to bottom, #fd1c15, #f60902);
 }
-.nav.top-nav li.menu-item-object-downloads a:active,
-.nav.top-nav li.menu-item-194 a:active,
-.nav.top-nav li.menu-item-object-downloads a:visited:active,
-.nav.top-nav li.menu-item-194 a:visited:active {
+.nav.top-nav li.menu-item-object-resources a:active,
+.nav.top-nav .download-button a:active,
+.nav.top-nav li.menu-item-object-resources a:visited:active,
+.nav.top-nav .download-button a:visited:active {
   background-color: #fd1c15;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f60902), to(#fd1c15));
   background-image: -webkit-linear-gradient(top, #f60902, #fd1c15);
@@ -1577,6 +1577,15 @@ and moe scalable.
 /* end .commentlist */
 .git-link {
   margin-right: .25em;
+}
+.resume-section * {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
 }
 .resume-section:after {
   content: '';
@@ -2151,9 +2160,8 @@ Specific mobile styles
   .header nav .nav.top-nav a:visited:focus {
     color: #000000;
   }
-  .header nav .nav.top-nav > li.menu-item-object-downloads,
-  .header nav .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
-  .header nav .nav.top-nav > li.menu-item-194 {
+  .header nav .nav.top-nav > li.menu-item-object-resources,
+  .header nav .nav.top-nav .download-button {
     margin-top: 0;
   }
   .header nav.expanded li {
@@ -2211,14 +2219,14 @@ tweeners.
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-  .nav.top-nav li.menu-item-object-downloads,
-  .nav.top-nav li.menu-item-194 {
+  .nav.top-nav li.menu-item-object-resources,
+  .nav.top-nav .download-button {
     margin-top: -10px;
   }
-  .nav.top-nav li.menu-item-object-downloads a,
-  .nav.top-nav li.menu-item-194 a,
-  .nav.top-nav li.menu-item-object-downloads a:visited,
-  .nav.top-nav li.menu-item-194 a:visited {
+  .nav.top-nav li.menu-item-object-resources a,
+  .nav.top-nav .download-button a,
+  .nav.top-nav li.menu-item-object-resources a:visited,
+  .nav.top-nav .download-button a:visited {
     border: 1px solid #ce0802;
     border-top-color: #ec0902;
     border-left-color: #ec0902;
@@ -2231,10 +2239,10 @@ tweeners.
     background-image: -o-linear-gradient(top, #fd1c15, #f60902);
     background-image: linear-gradient(to bottom, #fd1c15, #f60902);
   }
-  .nav.top-nav li.menu-item-object-downloads a:active,
-  .nav.top-nav li.menu-item-194 a:active,
-  .nav.top-nav li.menu-item-object-downloads a:visited:active,
-  .nav.top-nav li.menu-item-194 a:visited:active {
+  .nav.top-nav li.menu-item-object-resources a:active,
+  .nav.top-nav .download-button a:active,
+  .nav.top-nav li.menu-item-object-resources a:visited:active,
+  .nav.top-nav .download-button a:visited:active {
     background-color: #fd1c15;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f60902), to(#fd1c15));
     background-image: -webkit-linear-gradient(top, #f60902, #fd1c15);
@@ -2538,8 +2546,8 @@ you can add resource intensive styles.
     margin: 0 1.1em;
     color: #000;
   }
-  .nav.top-nav li.menu-item-object-downloads a,
-  .nav.top-nav li.menu-item-194 a {
+  .nav.top-nav li.menu-item-object-resources a,
+  .nav.top-nav li.download-button a {
     margin-right: 0;
     margin-top: 2px;
     -webkit-border-radius: 4px;
@@ -2549,10 +2557,10 @@ you can add resource intensive styles.
     padding: 0 12px;
     line-height: 34px;
   }
-  .nav.top-nav li.menu-item-object-downloads a:hover,
-  .nav.top-nav li.menu-item-194 a:hover,
-  .nav.top-nav li.menu-item-object-downloads a:focus,
-  .nav.top-nav li.menu-item-194 a:focus {
+  .nav.top-nav li.menu-item-object-resources a:hover,
+  .nav.top-nav li.download-button a:hover,
+  .nav.top-nav li.menu-item-object-resources a:focus,
+  .nav.top-nav li.download-button a:focus {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
@@ -2564,14 +2572,14 @@ you can add resource intensive styles.
     background-image: -o-linear-gradient(top, #dd0902, #ab0701);
     background-image: linear-gradient(to bottom, #dd0902, #ab0701);
   }
-  .nav.top-nav li.menu-item-object-downloads.current-menu-item > a,
-  .nav.top-nav li.menu-item-194.current-menu-item > a,
-  .nav.top-nav li.menu-item-object-downloads.current-menu-parent > a,
-  .nav.top-nav li.menu-item-194.current-menu-parent > a,
-  .nav.top-nav li.menu-item-object-downloads.current-menu-ancestor > a,
-  .nav.top-nav li.menu-item-194.current-menu-ancestor > a,
-  .nav.top-nav li.menu-item-object-downloads.current_page_parent > a,
-  .nav.top-nav li.menu-item-194.current_page_parent > a {
+  .nav.top-nav li.menu-item-object-resources.current-menu-item > a,
+  .nav.top-nav li.download-button.current-menu-item > a,
+  .nav.top-nav li.menu-item-object-resources.current-menu-parent > a,
+  .nav.top-nav li.download-button.current-menu-parent > a,
+  .nav.top-nav li.menu-item-object-resources.current-menu-ancestor > a,
+  .nav.top-nav li.download-button.current-menu-ancestor > a,
+  .nav.top-nav li.menu-item-object-resources.current_page_parent > a,
+  .nav.top-nav li.download-button.current_page_parent > a {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
@@ -2677,9 +2685,8 @@ you can add resource intensive styles.
     margin-right: -1em;
     margin-top: 0;
   }
-  header .nav.top-nav > li.menu-item-object-downloads,
-  header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
-  header .nav.top-nav > li.menu-item-194 {
+  header .nav.top-nav > li.menu-item-object-resources,
+  header .nav.top-nav .download-button {
     position: absolute;
     top: -53px;
     right: 0;
@@ -2781,8 +2788,8 @@ This is for the larger monitors and possibly full screen viewers.
   header .nav.top-nav {
     margin-right: 0;
   }
-  header .nav.top-nav > li.menu-item-object-downloads,
-  header .nav.top-nav > li.nav.top-nav li.menu-item-object-downloads,
+  header .nav.top-nav > li.menu-item-object-resources,
+  header .nav.top-nav .download-button,
   header .nav.top-nav > li.menu-item-194 {
     position: relative;
     top: 0;

@@ -33,13 +33,14 @@ require_once('library/bones.php'); // if you remove this, bones will break
 require_once('library/theme-options/theme-options.php');
 require_once('library/multi-post-thumbnails.php');
 require_once('library/custom-post-main-projects.php');
-require_once('library/custom-post-downloads.php');
+require_once('library/custom-post-resources.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');
 require_once('library/citation-extensions.php');
 require_once('library/widgets/custom-recent-posts-widget.php');
 require_once('library/widgets/custom-recent-projects-widget.php');
 require_once('library/widgets/custom-twitter-feed-widget.php');
+require_once('library/widgets/custom-about-widget.php');
 
 /*
 3. library/admin.php
@@ -106,6 +107,16 @@ function bones_register_sidebars() {
     	'after_widget' => '</div>',
     	'before_title' => '<h2 class="widgettitle">',
     	'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'sidebar_about',
+        'name' => 'About Template Sidebar',
+        'description' => 'The sidebar used when the "About" page template is chosen.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
     ));
 
     register_sidebar( array(

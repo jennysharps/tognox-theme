@@ -2,26 +2,26 @@
 
 
  // let's create the function for the custom type
-function custom_post_Downloads() {
+function custom_post_resources() {
 	 // creating (registering) the custom type
-	register_post_type( 'downloads', // (http: //codex.wordpress.org/Function_Reference/register_post_type)
+	register_post_type( 'resources', // (http: //codex.wordpress.org/Function_Reference/register_post_type)
 	 	 // let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Downloads', 'post type general name'), // This is the Title of the Group
-			'all_items' => __('All Downloads'),
-			'singular_name' => __('Download', 'post type singular name'), // This is the individual type
+			'name' => __('Resources', 'post type general name'), // This is the Title of the Group
+			'all_items' => __('All Resources'),
+			'singular_name' => __('Resource', 'post type singular name'), // This is the individual type
 			'add_new' => __('Add New', 'custom post type item'), // The add new menu item
-			'add_new_item' => __('Add New Download'), // Add New Display Title
+			'add_new_item' => __('Add New Resource'), // Add New Display Title
 			'edit' => __( 'Edit' ), // Edit Dialog
-			'edit_item' => __('Edit Download'), // Edit Display Title
-			'new_item' => __('New Download'), // New Display Title
-			'view_item' => __('View Download'), // View Display Title
-			'search_items' => __('Search Downloads'), // Search Custom Type Title
+			'edit_item' => __('Edit Resource'), // Edit Display Title
+			'new_item' => __('New Resource'), // New Display Title
+			'view_item' => __('View Resource'), // View Display Title
+			'search_items' => __('Search Resources'), // Search Custom Type Title
 			'not_found' =>  __('Nothing found in the Database.'), // This displays if there are no entries yet
 			'not_found_in_trash' => __('Nothing found in Trash'), // This displays if there is nothing in the trash
 			'parent_item_colon' => ''
 			), // end of arrays
-			'description' => __( 'This is a content type for Downloads.' ), // Custom Type Description
+			'description' => __( 'This is a content type for Resources.' ), // Custom Type Description
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -29,11 +29,11 @@ function custom_post_Downloads() {
 			'query_var' => true,
 			'menu_position' => 9, // this is what order you want it to appear in on the left hand side menu
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/download.png', // the icon for the custom post type menu
-			'rewrite' => array( 'slug' => 'downloads', 'with_front' => false ),
+			'rewrite' => array( 'slug' => 'resources', 'with_front' => false ),
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			'permalink_epmask' => 'EP_PERMALINK & EP_YEAR',
-			'has_archive' => 'downloads-comingsoon',
+			'has_archive' => true,
 			//'register_meta_box_cb' => 'custom_Download_metaboxes',
 			// the next one is important, it tells what's enabled in the post editor
 			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'sticky'),
@@ -43,27 +43,27 @@ function custom_post_Downloads() {
 
 }
 // adding the function to the Wordpress init
-add_action( 'init', 'custom_post_Downloads');
+add_action( 'init', 'custom_post_resources');
 
 
 // now let's add custom tags (these act like categories)
-function downloads_taxonomies() {
+function resource_taxonomies() {
     register_taxonomy( 'attachment_types',
-	array('downloads'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('resources'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 	array('hierarchical' => true,    /* if this is false, it acts like tags */
-		'label' => __( 'Download Type' ),
+		'label' => __( 'Resource Type' ),
 		'labels' => array(
-			'name' => __( 'Download Type' ), /* name of the custom taxonomy */
-			'singular_name' => __( 'Download Type' ), /* single taxonomy name */
-			'search_items' =>  __( 'Search Download Types' ), /* search title for taxomony */
-			'popular_items' => __( 'Most Used Download Types' ),
-			'all_items' => __( 'All Download Types' ), /* all title for taxonomies */
-			'edit_item' => __( 'Edit Download Type' ), /* edit custom taxonomy title */
-			'update_item' => __( 'Update Download Type' ), /* update title for taxonomy */
-			'add_new_item' => __( 'Add New Download Type' ), /* add new title for taxonomy */
-			'new_item_name' => __( 'New Download Type Name' ) /* name title for taxonomy */,
-			'add_or_remove_items' => __( 'Add or remove download type' ),
-			'choose_from_most_used' => __( 'Choose from the most used download types' ),
+			'name' => __( 'Resource Type' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Resource Type' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Resource Types' ), /* search title for taxomony */
+			'popular_items' => __( 'Most Used Resource Types' ),
+			'all_items' => __( 'All Resource Types' ), /* all title for taxonomies */
+			'edit_item' => __( 'Edit Resource Type' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Resource Type' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Resource Type' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Resource Type Name' ) /* name title for taxonomy */,
+			'add_or_remove_items' => __( 'Add or remove resource type' ),
+			'choose_from_most_used' => __( 'Choose from the most used resource types' ),
 			'menu_name' => __( 'Types' ),
 		),
 		'show_ui' => false,
@@ -72,7 +72,7 @@ function downloads_taxonomies() {
 	)
     );
 }
-add_action( 'init', 'downloads_taxonomies', 0 );
+add_action( 'init', 'resource_taxonomies', 0 );
 
 /*
 // Define additional "post thumbnails". Relies on MultiPostThumbnails to work

@@ -81,7 +81,7 @@ Template Name: About Page
 
 				    </div> <!-- end #main -->
 
-				    <?php get_sidebar(); ?>
+				    <?php get_sidebar('about'); ?>
 
 				</div> <!-- end #inner-content -->
 
