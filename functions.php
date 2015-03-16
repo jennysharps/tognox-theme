@@ -62,6 +62,7 @@ require_once('library/widgets/custom-about-widget.php');
 add_image_size( 'homepage-carousel', 1140, 400, true );
 add_image_size( 'three-col', 720, 253, true );
 add_image_size( 'wide-thumb', 340, 120, true );
+add_image_size( '16x9', 445, 250, true );
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 300, true );
 /*
@@ -328,3 +329,11 @@ function add_menu_parent_class( $items ) {
 	return $items;
 }
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
+
+function post_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+    if ( empty( $html ) ) {
+        return '<img src="' . get_stylesheet_directory_uri() . '/library/images/placeholder-code_' . $size . '.jpg" rel="placeholder"/>';
+    }
+    return $html;
+}
+add_filter( 'post_thumbnail_html', 'post_thumbnail_placeholder', 20, 5 );

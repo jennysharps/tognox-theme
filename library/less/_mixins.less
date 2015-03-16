@@ -242,6 +242,16 @@ TYPOGRAPHY
 }
 
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/fontawesome/fontawesome-webfont.woff") format('woff'),
+       url("../fonts/fontawesome/fontawesome-webfont.ttf") format('truetype'),
+       url("../fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format('svg');
+}
+
+
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -413,4 +423,39 @@ IMAGES
 *********************/
 .bg-shorthand(@img: "", @img-path: "../images/", @bgxpos: 0, @bgypos: 0, @bgcolor: transparent) {
  	background :e(%("url(%s%s)", @img-path, @img)) @bgxpos @bgypos @bgcolor;
+}
+
+/*********************
+ICONS
+*********************/
+.fa-icon:before {
+    display: inline-block;
+    font: normal normal normal 15px FontAwesome; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+&.fa-icon-code:before {
+    content: "\f121";
+}
+
+&.fa-icon-video:before {
+    content: "\f16a";
+}
+
+&.fa-icon-poster:before {
+    content: "\f1fe";
+}
+
+&.fa-icon-video-cam:before {
+    content: "\f16a";
+}
+
+&.fa-icon-image:before {
+    content: "\f03e";
 }

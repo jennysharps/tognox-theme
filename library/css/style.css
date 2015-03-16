@@ -646,6 +646,11 @@ TYPOGRAPHY
   src: url("../fonts/247099_5_0.eot");
   src: url("../fonts/247099_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/247099_5_0.woff") format("woff"), url("../fonts/247099_5_0.ttf") format("truetype");
 }
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/fontawesome/fontawesome-webfont.woff") format('woff'), url("../fonts/fontawesome/fontawesome-webfont.ttf") format('truetype'), url("../fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format('svg');
+}
 /*
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -824,6 +829,35 @@ button[type='submit']:active {
 /*********************
 IMAGES
 *********************/
+/*********************
+ICONS
+*********************/
+.fa-icon:before {
+  display: inline-block;
+  font: normal normal normal 15px FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  font-size: 40px;
+  vertical-align: middle;
+}
+.fa-icon-code:before {
+  content: "\f121";
+}
+.fa-icon-video:before {
+  content: "\f16a";
+}
+.fa-icon-poster:before {
+  content: "\f1fe";
+}
+.fa-icon-video-cam:before {
+  content: "\f16a";
+}
+.fa-icon-image:before {
+  content: "\f03e";
+}
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -989,10 +1023,10 @@ a:visited:focus {
 a:link,
 a:visited:link {
   /*
-		this highlights links on iPhones/iPads.
-		so it basically works like the :hover selector
-		for mobile devices.
-		*/
+        this highlights links on iPhones/iPads.
+        so it basically works like the :hover selector
+        for mobile devices.
+        */
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
@@ -1012,9 +1046,9 @@ h5,
   text-rendering: optimizelegibility;
   font-weight: 400;
   /*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
+    if you're going to use webfonts, be sure to check your weights
+    http://css-tricks.com/watch-your-font-weight/
+    */
 
   /* removing text decoration from all headline links */
 
@@ -1199,12 +1233,12 @@ and moe scalable.
 }
 .nav li {
   /*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
+        so you really have to rethink your dropdowns for mobile.
+        you don't want to have it expand too much because the
+        screen is so small. How you manage your menu should
+        depend on the project. Here's some great info on it:
+        http://www.alistapart.com/articles/organizing-mobile/
+        */
 
 }
 .nav li a {
@@ -1279,11 +1313,11 @@ and moe scalable.
 /* entry content */
 .entry-content {
   /*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
+            image alignment on a screen this size may be
+            a bit difficult. It's set to start aligning
+            and floating images at the next breakpoint,
+            but it's up to you. Feel free to change it up.
+            */
 
 }
 .entry-content dd {
@@ -1335,6 +1369,72 @@ and moe scalable.
 /* image gallery styles */
 /* end .gallery */
 /* gallery caption styles */
+.post-type-archive-resources .items-resources {
+  box-sizing: border-box;
+  display: block;
+  line-height: 0;
+  background: #FFF;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.post-type-archive-resources .item-resources {
+  padding: 0.5em;
+}
+.post-type-archive-resources .item-resources a {
+  display: block;
+  line-height: 0;
+  position: relative;
+}
+.post-type-archive-resources .item-resources .h2 {
+  padding: 0.5em 0.75em;
+  margin: 0;
+  display: block;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  color: white;
+  max-height: 50%;
+  overflow: hidden;
+  font-size: 1.25em;
+}
+.post-type-archive-resources .item-resources .fa-icon {
+  position: absolute;
+  top: 6px;
+  left: -12px;
+  padding: 2px 12px 2px;
+  border: 1px solid #ce0802;
+  border-top-color: #ec0902;
+  border-left-color: #ec0902;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #f60902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+  background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+  -webkit-box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.75) 0px 1px 0px;
+}
+.post-type-archive-resources .item-resources .fa-icon:after {
+  content: '';
+  border-color: transparent #a12c25 transparent transparent;
+  border-style: solid;
+  border-width: 0 11px 9px 0;
+  height: 0;
+  left: 0px;
+  bottom: -10px;
+  position: absolute;
+  width: 0;
+  z-index: 1;
+}
 .post-type-archive-main_projects article.type-main_projects {
   margin-bottom: 2em;
   display: block;
@@ -1381,6 +1481,7 @@ and moe scalable.
 .post-type-archive-main_projects article.type-main_projects header img {
   max-height: 100%;
   width: 100%;
+  display: block;
 }
 .fb-comments,
 .fb-comments span,
@@ -1957,14 +2058,14 @@ figure.quotation figcaption {
   background-position: -48px -144px;
 }
 /*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
+    if you checked out the link above:
+    http://www.alistapart.com/articles/organizing-mobile/
+    you'll want to style the footer nav
+    a bit more in-depth. Remember to keep
+    it simple because you'll have to
+    override these styles for the desktop
+    view.
+    */
 /* end .footer-links */
 /* contact form */
 textarea,
@@ -2313,6 +2414,10 @@ tweeners.
   do they need tweaking?
   */
   /* end .footer-links */
+  .post-type-archive-resources .item-resources {
+    width: 50%;
+    float: left;
+  }
 }
 /*
 TABLET & SMALLER LAPTOPS
@@ -2590,6 +2695,10 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
     background-image: -o-linear-gradient(top, #dd0902, #ab0701);
     background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+  }
+  .post-type-archive-resources .item-resources {
+    width: 33.333%;
+    float: left;
   }
   .post-type-archive-main_projects article.type-main_projects header h1 {
     position: absolute;
