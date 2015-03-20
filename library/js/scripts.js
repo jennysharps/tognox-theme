@@ -27,8 +27,90 @@ if (!window.getComputedStyle) {
     }
 }
 
-// as the page loads, call these scripts
+var contentFilter = {
+    filters: [],
+    Filter: function(filterEl) {
+        this.filterEl = filterEl;
+        this.type = filterEl.attr('data-filter-type');
+        this.itemsContainer = jQuery('.items-' + this.type);
+        this.activeFilters = [];
+        this.filtersCleared = null;
+
+        var filterButtons = [];
+        
+        filterEl.find('.filter-button').each( function() {
+            filterButtons.push({
+                el: jQuery(this),
+                type: jQuery(this).attr('data-filter'),
+            });
+        });
+
+        this.filterButtons = filterButtons;
+    },
+    init: function() {
+        this.setFilters();
+        this.attachEvents();
+    },
+    setFilters: function() {
+        var filters = this.filters;
+        var Filter = this.Filter;
+
+        jQuery('.filter').each( function() {
+            filters.push(new Filter(jQuery(this)));
+        });
+    },
+    attachEvents: function() {
+        var instance = this;
+
+        jQuery(this.filters).each(function() {
+            var filter = this;
+
+            jQuery(filter.filterButtons).each( function() {
+                var filterButton = this;
+
+                filterButton.el.on( 'click', function() {
+                    if(filterButton.el.hasClass('filter-button-active')) {
+                        filterButton.el.removeClass('filter-button-active');
+                        var itemToRemove = filter.activeFilters.indexOf(filterButton.type);
+                        filter.activeFilters.splice(itemToRemove, 1);
+                    } else {
+                        filterButton.el.addClass('filter-button-active');
+                        filter.activeFilters.push(filterButton.type);
+                    }
+
+                    if(filter.activeFilters.length < 1) {
+                        filter.filtersCleared = true;
+                    } else {
+                        filter.filtersCleared = false;
+                    }
+
+                    instance.updateFilterContainerClasses();
+                });
+            });
+        });
+    },
+    updateFilterContainerClasses: function() {
+        var instance = this;
+
+        jQuery(instance.filters).each(function() {
+            var filter = this;
+
+            jQuery(filter.filterButtons).each( function() {
+                var filterButton = this;
+
+                if(filter.filtersCleared || filter.activeFilters.indexOf(filterButton.type) !== -1) {
+                    filter.itemsContainer.find('.filter-' + filterButton.type).removeClass('filter-hide');
+                } else {
+                    filter.itemsContainer.find('.filter-' + filterButton.type).addClass('filter-hide');
+                }
+            });
+        });
+    }
+};
+
+// when the page loads, call these scripts
 jQuery(document).ready(function($) {
+    contentFilter.init();
 
     /*
     Responsive jQuery is a tricky thing.
@@ -87,7 +169,7 @@ jQuery(document).ready(function($) {
         $('html').addClass('no-touch');
     }
 
-}); /* end of as page load scripts */
+}); /* end of after page load scripts */
 
 
 /*! A fix for the iOS orientationchange zoom bug.

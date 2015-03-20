@@ -332,7 +332,24 @@ add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 
 function post_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
     if ( empty( $html ) ) {
-        return '<img src="' . get_stylesheet_directory_uri() . '/library/images/placeholder-code_' . $size . '.jpg" rel="placeholder"/>';
+        $meta = get_post_meta(get_the_ID());
+        if(isset($meta['resource_type'])) {
+            switch($meta['resource_type'][0]) {
+                case "gist":
+                    $type = "code";
+                    break;
+                case "video":
+                    $type = "video";
+                    break;
+                case "file":
+                    $type = "poster";
+                    break;
+            }
+            return '<img src="' . get_stylesheet_directory_uri() . '/library/images/placeholder-' . $type . '_' . $size . '.jpg" rel="placeholder"/>';
+
+        } else {
+            return;
+        }
     }
     return $html;
 }

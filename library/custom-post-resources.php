@@ -66,7 +66,7 @@ function resource_taxonomies() {
 			'choose_from_most_used' => __( 'Choose from the most used resource types' ),
 			'menu_name' => __( 'Types' ),
 		),
-		'show_ui' => false,
+		'show_ui' => true,
 		'query_var' => true,
 		'rewrite' => array( 'slug' => 'type', 'with_front' => false )
 	)

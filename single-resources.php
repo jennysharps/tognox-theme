@@ -17,11 +17,11 @@ single-bookmarks.php
 <?php
     $meta = get_post_meta(  get_the_ID() );
     var_dump( $meta );
-    $download_type_id = $meta['download_type'][0];
-    $download_type = get_term_by( 'id', $download_type_id, 'attachment_types' );
+    $resource_type_id = $meta['resource_type'][0];
+    $resource_type = get_term_by( 'id', $resource_type_id, 'attachment_types' );
 
     $terms = get_the_terms( get_the_ID(), 'attachment_types' );
-    var_dump( $download_type );
+    var_dump( $resource_type );
     $gist = $meta['gist-id'];
 ?>
 
@@ -45,7 +45,7 @@ single-bookmarks.php
 
 							    <?php the_content(); ?>
 
-                                                            <p class="download"></p>
+                                                            <p class="resource"></p>
 
 						    </section> <!-- end article section -->
 

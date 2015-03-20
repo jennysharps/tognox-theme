@@ -371,6 +371,45 @@ BOX SHADOW
 BUTTONS
 *********************/
 
+.filter-hide {
+    display: none;
+}
+
+#main .filter  {
+    margin: -1em 0 0;
+    text-indent: 0;
+    padding: 0;
+
+    .filter-text, .filter-button {
+        padding: 4px 12px;
+        display: inline-block;
+        font-size: 15px;
+        text-decoration: none;
+        text-shadow: 0 1px rgba(0,0,0, .75);
+        margin: 0 0 20px;
+        line-height: 21px;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+    }
+
+    .filter-text:first-child {
+        padding-left: 0;
+    }
+}
+
+.filter-button {
+    cursor: pointer;
+
+    &:hover, &.filter-button-active {
+        color: @white;
+        border: 1px solid darken(@bones-pink, 13%);
+        border-top-color: darken(@bones-pink, 7%);
+        border-left-color: darken(@bones-pink, 7%);
+        .border-radius(4px);
+        .css-gradient(@bones-pink,darken(@bones-pink, 5%));
+    }
+}
+
 .button, .button:visited, button[type='submit'] {
 	border: 1px solid darken(@bones-pink, 13%);
 	border-top-color: darken(@bones-pink, 7%);

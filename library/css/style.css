@@ -733,6 +733,48 @@ BOX SHADOW
 /*********************
 BUTTONS
 *********************/
+.filter-hide {
+  display: none;
+}
+#main .filter {
+  margin: -1em 0 0;
+  text-indent: 0;
+  padding: 0;
+}
+#main .filter .filter-text,
+#main .filter .filter-button {
+  padding: 4px 12px;
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  margin: 0 0 20px;
+  line-height: 21px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+#main .filter .filter-text:first-child {
+  padding-left: 0;
+}
+.filter-button {
+  cursor: pointer;
+}
+.filter-button:hover,
+.filter-button.filter-button-active {
+  color: #ffffff;
+  border: 1px solid #ce0802;
+  border-top-color: #ec0902;
+  border-left-color: #ec0902;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f60902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+  background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+}
 .button,
 .button:visited,
 button[type='submit'] {
@@ -1369,6 +1411,9 @@ and moe scalable.
 /* image gallery styles */
 /* end .gallery */
 /* gallery caption styles */
+#main .filter {
+  text-align: left;
+}
 .post-type-archive-resources .items-resources {
   box-sizing: border-box;
   display: block;
@@ -1378,6 +1423,7 @@ and moe scalable.
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  clear: both;
 }
 .post-type-archive-resources .item-resources {
   padding: 0.5em;
@@ -1397,7 +1443,7 @@ and moe scalable.
   position: absolute;
   bottom: 0;
   color: white;
-  max-height: 50%;
+  max-height: 52%;
   overflow: hidden;
   font-size: 1.25em;
 }
@@ -2414,6 +2460,9 @@ tweeners.
   do they need tweaking?
   */
   /* end .footer-links */
+  #main .filter {
+    text-align: center;
+  }
   .post-type-archive-resources .item-resources {
     width: 50%;
     float: left;
@@ -2695,6 +2744,9 @@ you can add resource intensive styles.
     background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
     background-image: -o-linear-gradient(top, #dd0902, #ab0701);
     background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+  }
+  #main .filter {
+    text-align: right;
   }
   .post-type-archive-resources .item-resources {
     width: 33.333%;

@@ -230,38 +230,28 @@ if ( function_exists( "register_field_group" ) ) {
     ) );
 
     register_field_group(array (
-            'id' => 'acf_download-options',
-            'title' => 'Download Options',
+            'id' => 'acf_resource-options',
+            'title' => 'Resource Options',
             'fields' => array (
                     array (
                             'key' => 'field_52b76fb5c1324',
-                            'label' => 'Download Type',
-                            'name' => 'download_type',
-                            'type' => 'taxonomy',
+                            'label' => 'Resource Type',
+                            'name' => 'resource_type',
+                            'type' => 'select',
                             'required' => 1,
-                            'taxonomy' => 'attachment_types',
-                            'field_type' => 'select',
+                            'choices' => array (
+                                'video' => 'Video',
+                                'gist' => 'Code',
+                                'file' => 'Poster/Presentation',
+                            ),
+                            'default_value' => '',
                             'allow_null' => 0,
-                            'load_save_terms' => 1,
-                            'return_format' => 'object',
                             'multiple' => 0,
                     ),
                     array (
                             'key' => 'field_52b770e0c1325',
                             'label' => 'Gist ID',
                             'name' => 'gist-id',
-                            'type' => 'text',
-                            'default_value' => '',
-                            'placeholder' => '',
-                            'prepend' => '',
-                            'append' => '',
-                            'formatting' => 'none',
-                            'maxlength' => '',
-                    ),
-                    array (
-                            'key' => 'field_52ce3d1863568',
-                            'label' => 'GitHub URL',
-                            'name' => 'github-url',
                             'type' => 'text',
                             'default_value' => '',
                             'placeholder' => '',
@@ -278,13 +268,25 @@ if ( function_exists( "register_field_group" ) ) {
                             'save_format' => 'object',
                             'library' => 'all',
                     ),
+                    array (
+                            'key' => 'field_52ce3d1b63570',
+                            'label' => 'YouTube ID',
+                            'name' => 'video-id',
+                            'type' => 'text',
+                            'default_value' => '',
+                            'placeholder' => '',
+                            'prepend' => '',
+                            'append' => '',
+                            'formatting' => 'none',
+                            'maxlength' => '',
+                    )
             ),
             'location' => array (
                     array (
                             array (
                                     'param' => 'post_type',
                                     'operator' => '==',
-                                    'value' => 'downloads',
+                                    'value' => 'resources',
                                     'order_no' => 0,
                                     'group_no' => 0,
                             ),
