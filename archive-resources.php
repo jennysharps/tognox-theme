@@ -35,13 +35,13 @@
 						    				break;
 						    		}
 						    	?>
+						    	
 							    <article id="post-<?php the_ID(); ?>" <?php post_class("clearfix item item-resources filter-{$type}"); ?> role="article">
 	                                <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 	                                    <?php the_post_thumbnail( '16x9' ); ?>
 	                                    <span class="fa-icon fa-icon-<?php echo $type; ?>"></span>
 	                                    <h1 class="h2 "><?php the_title(); ?></h1>
 	                                </a>
-
 							    </article> <!-- end article -->
 						    <?php endwhile; ?>
 						</div>

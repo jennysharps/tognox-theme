@@ -1425,6 +1425,9 @@ and moe scalable.
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   clear: both;
 }
+.post-type-archive-resources .items-resources img {
+  width: 100%;
+}
 .post-type-archive-resources .item-resources {
   padding: 0.5em;
 }

@@ -334,18 +334,23 @@ function post_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $size,
     if ( empty( $html ) ) {
         $meta = get_post_meta(get_the_ID());
         if(isset($meta['resource_type'])) {
+            $placeholder_url = null;
+
             switch($meta['resource_type'][0]) {
                 case "gist":
                     $type = "code";
+                    $placeholder_url = get_stylesheet_directory_uri() . '/library/images/placeholder-' . $type . '_' . $size . '.jpg';
                     break;
                 case "video":
                     $type = "video";
+                    $placeholder_url = "http://img.youtube.com/vi/{$meta['video-id'][0]}/mqdefault.jpg";
                     break;
                 case "file":
                     $type = "poster";
+                    $placeholder_url = get_stylesheet_directory_uri() . '/library/images/placeholder-' . $type . '_' . $size . '.jpg';
                     break;
             }
-            return '<img src="' . get_stylesheet_directory_uri() . '/library/images/placeholder-' . $type . '_' . $size . '.jpg" rel="placeholder"/>';
+            return "<img src='{$placeholder_url}' rel='placeholder'/>";
 
         } else {
             return;
