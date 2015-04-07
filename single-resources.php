@@ -16,13 +16,14 @@ single-bookmarks.php
 <?php get_header(); ?>
 <?php
     $meta = get_post_meta(  get_the_ID() );
-    var_dump( $meta );
+    set_query_var('meta', $meta);
+
     $resource_type_id = $meta['resource_type'][0];
     $resource_type = get_term_by( 'id', $resource_type_id, 'attachment_types' );
 
     $terms = get_the_terms( get_the_ID(), 'attachment_types' );
-    var_dump( $resource_type );
     $gist = $meta['gist-id'];
+    echo $meta['resource_type'][0];
 ?>
 
 			<div id="content">
@@ -43,9 +44,11 @@ single-bookmarks.php
 
 						    <section class="entry-content clearfix">
 
-							    <?php the_content(); ?>
+						    	<?php set_query_var('the_content', get_the_content()); ?>
 
-                                                            <p class="resource"></p>
+						    	<?php get_template_part('library/content', $meta['resource_type'][0]); ?>
+
+                                <p class="resource"></p>
 
 						    </section> <!-- end article section -->
 
