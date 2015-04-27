@@ -23,7 +23,7 @@ single-bookmarks.php
 
     $terms = get_the_terms( get_the_ID(), 'attachment_types' );
     $gist = $meta['gist-id'];
-    echo $meta['resource_type'][0];
+    // echo $meta['resource_type'][0];
 ?>
 
 			<div id="content">
@@ -44,7 +44,7 @@ single-bookmarks.php
 
 						    <section class="entry-content clearfix">
 
-						    	<?php set_query_var('the_content', get_the_content()); ?>
+						    	<?php set_query_var('the_content', apply_filters('the_content', get_the_content())); ?>
 
 						    	<?php get_template_part('library/content', $meta['resource_type'][0]); ?>
 

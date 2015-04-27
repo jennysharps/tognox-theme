@@ -359,3 +359,59 @@ function post_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $size,
     return $html;
 }
 add_filter( 'post_thumbnail_html', 'post_thumbnail_placeholder', 20, 5 );
+
+function tognox_embed_gist($atts) {
+    $return = '';
+
+    $atts = shortcode_atts(array(
+        'id' => null,
+        'filename' => 'remove-firefox-button-padding.css'
+    ), $atts, 'gist');
+
+    if(false && $atts['id'] != null) {
+        $return .= "<script src='http://gist.github.com/{$atts['id']}.js'></script>";
+
+        $result = get_gist_data($atts['id']);
+        $json = json_decode($result['body'], true);
+
+        echo 'https://api.github.com/gists/' . $atts['id'];
+        //var_dump($json);
+
+        if(false && isset($json['description'])) {
+            $description = $json['description'];
+
+            if($atts['filename']) {
+
+                /*echo '<br>------------------<br>';
+                var_dump($json['files'][$atts['filename']]['content']);
+                echo '<br>------------------<br>';*/
+                if(isset($json['files'][$atts['filename']])) {
+                    $return .= '<h2>'.$description.'</h2>';
+                    $return .= '<pre><code>';
+                    $return .= $json['files'][$atts['filename']]['content'];
+                    $return .= '</code></pre>';
+                }
+            } else {
+                /*foreach($json['files'] as $key => $fileData) {
+                    $content .= $fileData['content'];
+
+                    $return .= '<h2>'.$description.'</h2>';
+                    $return .= '<pre><code>';
+                    $return .= $fileData[]['content']
+                    $return .= '</code></pre>';
+                }*/
+            }
+        }
+    }
+
+    return $return;
+}
+add_action( 'init', 'register_shortcodes', 99);
+function register_shortcodes() {
+    add_shortcode('gist', 'tognox_embed_gist');
+}
+
+function get_gist_data($gist_id) {
+    $result = wp_remote_get('https://api.github.com/gists/' . $gist_id, array('sslverify' => false));
+    return json_decode($result['body'], true);
+}

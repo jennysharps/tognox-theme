@@ -900,6 +900,19 @@ ICONS
 .fa-icon-image:before {
   content: "\f03e";
 }
+.fa-icon-github:before {
+  display: inline-block;
+  font: normal normal normal 15px FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  font-size: 19px;
+  vertical-align: middle;
+  content: "\f09b";
+  padding-right: 0.5rem;
+}
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -2180,6 +2193,9 @@ a.file.application-mspowerpoint,
 a.file.application-powerpoint {
   background: url(../images/icon-ppt.png) no-repeat transparent;
 }
+.crayon-syntax {
+  z-index: 9;
+}
 /*MOBILE
 Specific mobile styles
 */
@@ -2680,7 +2696,7 @@ you can add resource intensive styles.
     text-align: center;
   }
   .header #site-info {
-    width: 525px;
+    width: 530px;
   }
   .header #site-info .site-info-text {
     width: 84%;
