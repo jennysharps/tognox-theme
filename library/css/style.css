@@ -816,8 +816,7 @@ BUTTONS
     background-image: -o-linear-gradient(top, #fd1c15, #f60902);
     background-image: linear-gradient(to bottom, #fd1c15, #f60902);
   }
-  .filter-button.filter-button-active,
-  .filter-button:active {
+  .filter-button.filter-button-active {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
@@ -843,7 +842,7 @@ BUTTONS
     -moz-border-radius: 4px;
     border-radius: 4px;
   }
-  .filter-button:hover {
+  .filter-button:active {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ec0902;
@@ -855,8 +854,7 @@ BUTTONS
     background-image: -o-linear-gradient(top, #fd1c15, #f60902);
     background-image: linear-gradient(to bottom, #fd1c15, #f60902);
   }
-  .filter-button.filter-button-active,
-  .filter-button:active {
+  .filter-button.filter-button-active {
     color: #ffffff;
     border: 1px solid #ce0802;
     border-top-color: #ab0701;
