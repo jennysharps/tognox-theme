@@ -96,15 +96,16 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                          echo $the_tweet;
 
 
+                         echo '<div class="tweet-meta">';
                          // 3. Tweet Actions
                          //    Reply, Retweet, and Favorite action icons must always be visible for the user to interact with the Tweet. These actions must be implemented using Web Intents or with the authenticated Twitter API.
                          //    No other social or 3rd party actions similar to Follow, Reply, Retweet and Favorite may be attached to a Tweet.
                          // get the sprite or images from twitter's developers resource and update your stylesheet
                          echo '
-                        <div class="twitter_intents">
-                            <a class="reply" href="https://twitter.com/intent/tweet?in_reply_to=' . $tweet['id_str'] . '">Reply</a>
-                            <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id=' . $tweet['id_str'] . '">Retweet</a>
-                            <a class="favorite" href="https://twitter.com/intent/favorite?tweet_id=' . $tweet['id_str'] . '">Favorite</a>
+                        <div class="twitter-intents">
+                            <a class="reply fa-icon fa-icon-reply" href="https://twitter.com/intent/tweet?in_reply_to=' . $tweet['id_str'] . '" title="Reply">Reply</a>
+                            <a class="retweet fa-icon fa-icon-retweet" href="https://twitter.com/intent/retweet?tweet_id=' . $tweet['id_str'] . '" title="Retweet">Retweet</a>
+                            <a class="favorite fa-icon fa-icon-small fa-icon-star" href="https://twitter.com/intent/favorite?tweet_id=' . $tweet['id_str'] . '" title="Favorite">Favorite</a>
                         </div>';
 
 
@@ -118,6 +119,9 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
                      ' . date( 'h:i A M d', strtotime( $tweet['created_at'] . '- 8 hours' ) ) . '
                  </a>
              </p>'; // -8 GMT for Pacific Standard Time
+
+             echo '</div>';
+             
                      } else {
                          echo '
              <br /><br />

@@ -792,6 +792,21 @@ ICONS
 .fa-icon-twitter:before {
   content: "\f099";
 }
+.fa-icon-reply:before {
+  content: "\f112";
+}
+.fa-icon-reply:before {
+  content: "\f112";
+}
+.fa-icon-reply:before {
+  content: "\f112";
+}
+.fa-icon-retweet:before {
+  content: "\f079";
+}
+.fa-icon-star:before {
+  content: "\f005";
+}
 /*********************
 BUTTONS
 *********************/
@@ -3128,8 +3143,12 @@ be set to display none.
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.widget_custom_twitter_feed_widget.slides-display {
-  height: 225px;
+.widget_custom_twitter_feed_widget a,
+.widget_custom_twitter_feed_widget a:active,
+.widget_custom_twitter_feed_widget a:visited {
+  color: #f0c9c0;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
 .widget_custom_twitter_feed_widget ul {
   background: rgba(0, 0, 0, 0.55);
@@ -3139,27 +3158,31 @@ be set to display none.
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35);
   padding: 1rem 0;
 }
-.widget.widget_custom_twitter_feed_widget.list-display ul {
-  height: 250px;
-  overflow: scroll;
-  padding-bottom: 0;
-}
-.widget.widget_custom_twitter_feed_widget li {
+.widget_custom_twitter_feed_widget li {
   padding: 0 1rem;
   font-weight: 200;
   margin: 0;
   overflow: hidden;
 }
-.widget.widget_custom_twitter_feed_widget.slides-display li {
-  height: 175px;
+.widget_custom_twitter_feed_widget.slides-display {
+  height: 235px;
 }
-.widget.widget_custom_twitter_feed_widget.list-display li {
+.widget_custom_twitter_feed_widget.slides-display li {
+  height: 185px;
+  margin: 0;
+}
+.widget_custom_twitter_feed_widget.list-display ul {
+  height: 250px;
+  overflow: scroll;
+  padding-bottom: 0;
+}
+.widget_custom_twitter_feed_widget.list-display li {
   margin-bottom: 1.35em;
   -moz-box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 10px -2px brgba(0, 0, 0, 0.5);
 }
-.widget.widget_custom_twitter_feed_widget.list-display li:last-of-type {
+.widget_custom_twitter_feed_widget.list-display li:last-of-type {
   margin-bottom: 0;
 }
 .widget_custom_twitter_feed_widget .widgettitle {
@@ -3172,9 +3195,29 @@ be set to display none.
 .widget_custom_twitter_feed_widget .widgettitle .fa-icon:before {
   padding-right: 0.5rem;
 }
-.widget_custom_twitter_feed_widget a,
-.widget_custom_twitter_feed_widget a:active,
-.widget_custom_twitter_feed_widget a:visited {
-  color: #f0c9c0;
-  text-decoration: none;
+.widget_custom_twitter_feed_widget .timestamp {
+  float: left;
+  clear: none;
+  margin: 1em 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+.widget_custom_twitter_feed_widget .twitter-intents {
+  float: right;
+  margin: 1em 0;
+  line-height: 1;
+}
+.widget_custom_twitter_feed_widget .twitter-intents .fa-icon {
+  margin: 0 0.5rem;
+  font-size: 0;
+}
+.widget_custom_twitter_feed_widget .twitter-intents .fa-icon:before {
+  font-size: 20px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+@media only screen and (max-width: 768px) {
+  .widget_custom_twitter_feed_widget {
+    margin: 10px 20px 20px;
+    text-align: left;
+  }
 }
