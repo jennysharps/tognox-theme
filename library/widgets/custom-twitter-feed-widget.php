@@ -33,10 +33,18 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
 
              if ( is_array( $this->tweets ) ) {
 
+                if( strpos($before_widget, 'class') === false ) {
+                    $before_widget = str_replace('>', 'class="'. $instance['display'] . '-display"', $before_widget);
+                }
+                // there is 'class' attribute - append width value to it
+                else {
+                    $before_widget = str_replace('class="', 'class="'. $instance['display'] . '-display ', $before_widget);
+                }
+
                 echo $before_widget;
 
                 if( $title ) {
-                    echo $before_title . $title . $after_title;
+                    echo $before_title . '<i class="fa-icon fa-icon-twitter"></i>' . $title . $after_title;
                 }
 
                 $this->enqueue_scripts( $instance );
@@ -169,32 +177,16 @@ class Custom_Twitter_Feed_Widget extends WP_Widget {
 	}
 
         public function enqueue_scripts( $instance ) {
-
                 if( $instance['display'] == 'slides' ) {
                     wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/library/js/libs/jquery.flexslides.js', array( 'jquery' ) );
                     wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/library/css/flexslides.css' );
-
                     wp_enqueue_script( 'custom-twitter-widget', get_template_directory_uri() . '/library/widgets/js/custom-twitter-feed-widget.js', array( 'flexslider', 'jquery' ) );
-                    // wp_enqueue_style( 'custom-twitter-widget', get_template_directory_uri() . '/library/widgets/css/custom-twitter-feed-widget.css', array( 'flexslider' ) );
-
-                    add_action( 'wp_print_footer_scripts', array( &$this, 'print_twitter_slider_base_css' ) );
                 }
 
                 wp_enqueue_script( 'twitter-widgets', '//platform.twitter.com/widgets.js' );
 
                 return;
         }
-
-        public function print_twitter_slider_base_css() { ?>
-
-            <style>
-            .widget.widget_custom_twitter_feed_widget ul.slides li {
-                height: 210px;
-                margin: 0;
-            }
-            </style>
-
-        <?php }
 }
 
 add_action( 'widgets_init', function(){
