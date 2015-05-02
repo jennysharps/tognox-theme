@@ -33,16 +33,27 @@ HEADER SYTLES
 *********************/
 
 .header {
+	nav[role=navigation] {
+        clear: both;
+        margin-top: .75em;
+        text-align: center;
+    }
+
 	padding-bottom: 1em;
 
 	#site-info {
-                /* min-width: 511px;
+		text-align: left;
+		width: 530px;
 
-		.site-info-logo, .site-info-text {
-			display: block;
+		.site-info-logo {
+			float: left; 
+		}
+
+		.site-info-text {
+			width: 430px;
+			text-align: left;
 			float: left;
-		} */
-
+		}
 	}
 
         #inner-header {
@@ -112,24 +123,6 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
-
-.header {
-
-        nav[role=navigation] {
-                clear: both;
-                margin-top: .75em;
-                text-align: center;
-        }
-
-        #site-info {
-                    width: 530px;
-
-                    .site-info-text{
-                            width: 84%;
-                    }
-        }
-
-}
 
 .nav.top-nav {
         display: inline-block;
