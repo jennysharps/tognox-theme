@@ -7,6 +7,13 @@ var downloadsPostType = {
     downloadTypeSelect: null,
     chosenDownloadType: null,
     downloadFields: null,
+    domFieldRefs: {},
+    fieldsByDownloadType: {
+        'gist': ['acf-gist-id'],
+        'github': ['acf-github-url'],
+        'video': ['acf-video-id'],
+        'file': ['acf-related-file', 'acf-button-text']
+    },
     init: function() {
         this.downloadTypeSelect = jQuery('#acf-resource_type');
 
@@ -15,37 +22,37 @@ var downloadsPostType = {
 
             this.downloadFields = jQuery('#acf_acf_resource-options .field');
 
+            this.setFieldRefs();
             this.attachEvents();
             this.showCurrentFields(chosenDownloadType);
         }
     },
+    setFieldRefs: function(current) {
+        var self = this;
+
+        self.downloadFields.each( function() {
+            var key = jQuery(this).attr('id');
+            self.domFieldRefs[key] = jQuery(this);
+        });
+    },
     attachEvents: function() {
         var self = this;
         self.downloadTypeSelect.change( function() {
-            self.chosenDownloadType = jQuery(this).find('select :selected').val();
+            var chosenDownloadType = jQuery(this).find('select :selected').val();
 
-            self.showCurrentFields(self.chosenDownloadType);
+            self.showCurrentFields(chosenDownloadType);
 
         });
     },
-    showCurrentFields: function(current) {
-        this.downloadFields.removeClass('current');
+    showCurrentFields: function(chosenDownloadType) {
+        var self = this;
 
-        switch(current) {
-            case 'gist':
-                jQuery('#acf-gist-id').addClass('current');
-                break;
-            case 'github':
-                jQuery('#acf-github-url').addClass('current');
-                break;
-            case 'video':
-                jQuery('#acf-video-id').addClass('current');
-                break;
-            case 'file':
-                jQuery('#acf-related-file').addClass('current');
-                break;
-        }
+        self.downloadFields.removeClass('current');
 
-        console.log('current: '+current);
+        var fieldsToShow = self.fieldsByDownloadType[chosenDownloadType];
+
+        jQuery(fieldsToShow).each( function(index, value) {
+            self.domFieldRefs[value].addClass('current');
+        });
     }
 }

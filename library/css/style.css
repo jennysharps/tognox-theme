@@ -492,60 +492,23 @@ dd {
 .commentlist {
   list-style: none;
 }
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of LESS' great features:
-Mixins & Constants. I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques like box shadow and
-border-radius.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
-
-******************************************************************/
 /*********************
-CLEARFIXIN'
+UTILITY CLASSES
 *********************/
-.clearfix {
-  zoom: 1;
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
 }
 .clearfix:before,
 .clearfix:after {
-  content: "";
+  content: '';
   display: table;
 }
 .clearfix:after {
   clear: both;
 }
-/*********************
-TOOLS
-*********************/
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-/*********************
-COLORS
-Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
-*********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 /*********************
 TYPOGRAPHY
 *********************/
@@ -646,6 +609,60 @@ TYPOGRAPHY
   src: url("../fonts/247099_5_0.eot");
   src: url("../fonts/247099_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/247099_5_0.woff") format("woff"), url("../fonts/247099_5_0.ttf") format("truetype");
 }
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome/fontawesome-webfont.eot");
@@ -730,6 +747,48 @@ really slow down your CSS. Don't overdo it.
 BOX SHADOW
 *********************/
 /* .boxShadow(0,0,4px,4px,#444); */
+/*********************
+IMAGES
+*********************/
+/*********************
+ICONS
+*********************/
+.fa-icon:before {
+  display: inline-block;
+  font: normal normal normal 40px FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  font-size: 40px;
+  vertical-align: middle;
+}
+.fa-icon-button:before {
+  font-size: 19px;
+  padding-right: 0.5rem;
+}
+.fa-icon-code:before {
+  content: "\f121";
+}
+.fa-icon-video:before {
+  content: "\f16a";
+}
+.fa-icon-poster:before {
+  content: "\f1fe";
+}
+.fa-icon-video-cam:before {
+  content: "\f16a";
+}
+.fa-icon-image:before {
+  content: "\f03e";
+}
+.fa-icon-github:before {
+  content: "\f09b";
+}
+.fa-icon-download:before {
+  content: "\f019";
+}
 /*********************
 BUTTONS
 *********************/
@@ -867,51 +926,6 @@ button[type='submit']:active {
   background-image: -moz-linear-gradient(top, #1681c4, #1990db);
   background-image: -o-linear-gradient(top, #1681c4, #1990db);
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
-}
-/*********************
-IMAGES
-*********************/
-/*********************
-ICONS
-*********************/
-.fa-icon:before {
-  display: inline-block;
-  font: normal normal normal 15px FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-size: 40px;
-  vertical-align: middle;
-}
-.fa-icon-code:before {
-  content: "\f121";
-}
-.fa-icon-video:before {
-  content: "\f16a";
-}
-.fa-icon-poster:before {
-  content: "\f1fe";
-}
-.fa-icon-video-cam:before {
-  content: "\f16a";
-}
-.fa-icon-image:before {
-  content: "\f03e";
-}
-.fa-icon-github:before {
-  display: inline-block;
-  font: normal normal normal 15px FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  font-size: 19px;
-  vertical-align: middle;
-  content: "\f09b";
-  padding-right: 0.5rem;
 }
 /*
 BASE (MOBILE) SIZE

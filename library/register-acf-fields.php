@@ -269,6 +269,14 @@ if ( function_exists( "register_field_group" ) ) {
                             'library' => 'all',
                     ),
                     array (
+                        'key' => 'field_51dbdf720cf23',
+                        'label' => 'Download Button Text',
+                        'name' => 'button-text',
+                        'type' => 'text',
+                        'default_value' => '',
+                        'formatting' => 'none',
+                    ),
+                    array (
                             'key' => 'field_52ce3d1b63570',
                             'label' => 'YouTube ID',
                             'name' => 'video-id',
