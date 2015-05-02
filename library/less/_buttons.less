@@ -6,69 +6,37 @@ BUTTONS
     display: none;
 }
 
-@media only screen and (max-width: 480px) {
-	.filter-button {
-		cursor: pointer;
-    	.border-radius(4px);
-	    width: 100%;
-	    text-align: center;
-	    padding: 10px 12px;
-	    margin: 0 0 0 2px;
-	    color: @white;
+.filter-button {
+	cursor: pointer;
+    .border-radius(4px);
+
+    &:active {
+        color: @white;
         border: 1px solid darken(@bones-pink, 13%);
         border-top-color: darken(@bones-pink, 7%);
         border-left-color: darken(@bones-pink, 7%);
         .css-gradient(@bones-pink,darken(@bones-pink, 5%));
-	
-		&.filter-button-active {
-	        color: @white;
-	        border: 1px solid darken(@bones-pink, 13%);
-	        border-top-color: darken(@bones-pink, 20%);
-	        border-left-color: darken(@bones-pink, 20%);
-	        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
-	    }
     }
 
-	.filter-button, .filter-text {
-		list-style-type: none;
-		width: 100%;
-		text-align: center;
+    &.filter-button-active {
+        color: @white;
+        border: 1px solid darken(@bones-pink, 13%);
+        border-top-color: darken(@bones-pink, 20%);
+        border-left-color: darken(@bones-pink, 20%);
+        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
     }
 }
 
-@media only screen and (min-width: 481px) {
-	.filter-button {
-		cursor: pointer;
-	    .border-radius(4px);
-
-	    &:active {
-	        color: @white;
-	        border: 1px solid darken(@bones-pink, 13%);
-	        border-top-color: darken(@bones-pink, 7%);
-	        border-left-color: darken(@bones-pink, 7%);
-	        .css-gradient(@bones-pink,darken(@bones-pink, 5%));
-	    }
-
-	    &.filter-button-active {
-	        color: @white;
-	        border: 1px solid darken(@bones-pink, 13%);
-	        border-top-color: darken(@bones-pink, 20%);
-	        border-left-color: darken(@bones-pink, 20%);
-	        .css-gradient(darken(@bones-pink, 10%),darken(@bones-pink, 20%));
-	    }
-	}
-
-    .filter-text, .filter-button {
-        padding: 4px 12px;
-        display: inline-block;
-        font-size: 15px;
-        text-decoration: none;
-        text-shadow: 0 1px rgba(0,0,0, .75);
-        margin: 0 0 20px;
-        line-height: 21px;
-        box-sizing: border-box;
-        border: 1px solid transparent;
-    }
+.filter-text, .filter-button {
+    padding: 4px 12px;
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0,0,0, .75);
+    margin: 0 0 20px;
+    line-height: 21px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
 }
 
 #main .filter  {
@@ -78,6 +46,13 @@ BUTTONS
 
     .filter-text:first-child {
         padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+	#main ul .filter-text {
+		width: 100%;
+		margin-bottom: 0;
     }
 }
 

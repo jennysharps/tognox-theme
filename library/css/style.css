@@ -795,89 +795,47 @@ BUTTONS
 .filter-hide {
   display: none;
 }
-@media only screen and (max-width: 480px) {
-  .filter-button {
-    cursor: pointer;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    width: 100%;
-    text-align: center;
-    padding: 10px 12px;
-    margin: 0 0 0 2px;
-    color: #ffffff;
-    border: 1px solid #ce0802;
-    border-top-color: #ec0902;
-    border-left-color: #ec0902;
-    background-color: #f60902;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
-    background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
-    background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
-    background-image: -o-linear-gradient(top, #fd1c15, #f60902);
-    background-image: linear-gradient(to bottom, #fd1c15, #f60902);
-  }
-  .filter-button.filter-button-active {
-    color: #ffffff;
-    border: 1px solid #ce0802;
-    border-top-color: #ab0701;
-    border-left-color: #ab0701;
-    background-color: #ab0701;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
-    background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
-    background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
-    background-image: -o-linear-gradient(top, #dd0902, #ab0701);
-    background-image: linear-gradient(to bottom, #dd0902, #ab0701);
-  }
-  .filter-button,
-  .filter-text {
-    list-style-type: none;
-    width: 100%;
-    text-align: center;
-  }
+.filter-button {
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
-@media only screen and (min-width: 481px) {
-  .filter-button {
-    cursor: pointer;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-  }
-  .filter-button:active {
-    color: #ffffff;
-    border: 1px solid #ce0802;
-    border-top-color: #ec0902;
-    border-left-color: #ec0902;
-    background-color: #f60902;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
-    background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
-    background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
-    background-image: -o-linear-gradient(top, #fd1c15, #f60902);
-    background-image: linear-gradient(to bottom, #fd1c15, #f60902);
-  }
-  .filter-button.filter-button-active {
-    color: #ffffff;
-    border: 1px solid #ce0802;
-    border-top-color: #ab0701;
-    border-left-color: #ab0701;
-    background-color: #ab0701;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
-    background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
-    background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
-    background-image: -o-linear-gradient(top, #dd0902, #ab0701);
-    background-image: linear-gradient(to bottom, #dd0902, #ab0701);
-  }
-  .filter-text,
-  .filter-button {
-    padding: 4px 12px;
-    display: inline-block;
-    font-size: 15px;
-    text-decoration: none;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.75);
-    margin: 0 0 20px;
-    line-height: 21px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-  }
+.filter-button:active {
+  color: #ffffff;
+  border: 1px solid #ce0802;
+  border-top-color: #ec0902;
+  border-left-color: #ec0902;
+  background-color: #f60902;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fd1c15), to(#f60902));
+  background-image: -webkit-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -moz-linear-gradient(top, #fd1c15, #f60902);
+  background-image: -o-linear-gradient(top, #fd1c15, #f60902);
+  background-image: linear-gradient(to bottom, #fd1c15, #f60902);
+}
+.filter-button.filter-button-active {
+  color: #ffffff;
+  border: 1px solid #ce0802;
+  border-top-color: #ab0701;
+  border-left-color: #ab0701;
+  background-color: #ab0701;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dd0902), to(#ab0701));
+  background-image: -webkit-linear-gradient(top, #dd0902, #ab0701);
+  background-image: -moz-linear-gradient(top, #dd0902, #ab0701);
+  background-image: -o-linear-gradient(top, #dd0902, #ab0701);
+  background-image: linear-gradient(to bottom, #dd0902, #ab0701);
+}
+.filter-text,
+.filter-button {
+  padding: 4px 12px;
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  margin: 0 0 20px;
+  line-height: 21px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
 }
 #main .filter {
   margin: -1em 0 0;
@@ -886,6 +844,12 @@ BUTTONS
 }
 #main .filter .filter-text:first-child {
   padding-left: 0;
+}
+@media only screen and (max-width: 480px) {
+  #main ul .filter-text {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 .button,
 .button:visited,
