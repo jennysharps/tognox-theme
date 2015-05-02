@@ -3165,10 +3165,10 @@ be set to display none.
   overflow: hidden;
 }
 .widget_custom_twitter_feed_widget.slides-display {
-  height: 215px;
+  height: 235px;
 }
 .widget_custom_twitter_feed_widget.slides-display li {
-  height: 200px;
+  height: 235px;
   margin: 0;
 }
 .widget_custom_twitter_feed_widget.list-display ul {
