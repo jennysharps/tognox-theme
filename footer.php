@@ -30,8 +30,8 @@
                                     ?>
 
                                     <div>
-                                        <h2>Francesco Tonini</h2>
-                                        <p>Statistician specialized in GIS</p>
+                                        <h2><?php bloginfo('name'); ?></h2>
+                                        <p><?php bloginfo('description'); ?></p>
                                     </div>
                                </div>
 
