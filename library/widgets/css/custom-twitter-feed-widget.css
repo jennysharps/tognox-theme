@@ -23,11 +23,15 @@
 }
 
 .widget_custom_twitter_feed_widget .widgettitle {
-   margin: 0.5rem 0 0;
-   padding: 0 1rem;
+   margin: 0;
+   padding: 0.5rem 1rem 0;
    border-bottom: none;
    font-weight: bolder;
    border-bottom: 2px solid;
+   color: #78e0f8;
+   -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .widget_custom_twitter_feed_widget .widgettitle .fa-icon:before {
@@ -53,6 +57,7 @@
 
 .widget_custom_twitter_feed_widget a,
 .widget_custom_twitter_feed_widget a:active {
-	color: rgba(250, 250, 250, 0.75);
+	color: #78e0f8;
+	font-weight: bold;
 	text-decoration: none;
 }
