@@ -25,6 +25,7 @@
 
 						    		switch($meta['resource_type'][0]) {
 						    			case "gist":
+						    			case "github":
 						    				$type = "code";
 						    				break;
 						    			case "video":
