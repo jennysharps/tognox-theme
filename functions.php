@@ -338,6 +338,7 @@ function post_thumbnail_placeholder( $html, $post_id, $post_thumbnail_id, $size,
 
             switch($meta['resource_type'][0]) {
                 case "gist":
+                case "github":
                     $type = "code";
                     $placeholder_url = get_stylesheet_directory_uri() . '/library/images/placeholder-' . $type . '_' . $size . '.jpg';
                     break;
