@@ -3192,7 +3192,7 @@ be set to display none.
   border-bottom: none;
   font-weight: bolder;
   border-bottom: 0;
-  color: #78e0f8;
+  background: #78e0f8;
   -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
