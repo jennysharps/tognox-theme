@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     $('.certification-add-button').live('click', function() {
         var parent = $(this).parent();
-        debugger
+        debugger;
         var container = parent.find('.certification-container');
         var template = parent.find('.certificationItemTemplate').html();
         $(template).appendTo(container);
