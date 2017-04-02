@@ -108,24 +108,26 @@ Class Custom_Certifications_Widget extends WP_Widget {
 
 		<div>
 			<h4>Logos</h4>
-			<?php $template = $this->get_image_selection_template( $cert_images ); ?>
+			<div>
+				<?php $template = $this->get_image_selection_template( $cert_images ); ?>
 
-			<script class="certificationItemTemplate" type="text/html">
-				<?php echo $template; ?>
-			</script><?php
-			if ( count( $images ) ) {
-				foreach( $images as $key => $current_image ) {
-					if( $cert_images->have_posts() ) {?>
-						<div class="certification-logos-container"><?php
-							echo $this->get_image_selection_template( $cert_images, $current_image );?>
-						</div><?php
-					} else {
-					    echo 'There are no images tagged "cert" in the media library. Click <a href="' . admin_url('/media-new.php') . '" title="Add Images">here</a> to add some images';
+				<script class="certificationItemTemplate" type="text/html">
+					<?php echo $template; ?>
+				</script><?php
+				if ( count( $images ) ) {
+					foreach( $images as $key => $current_image ) {
+						if( $cert_images->have_posts() ) {?>
+							<div class="certification-logos-container"><?php
+								echo $this->get_image_selection_template( $cert_images, $current_image );?>
+							</div><?php
+						} else {
+						    echo 'There are no images tagged "cert" in the media library. Click <a href="' . admin_url('/media-new.php') . '" title="Add Images">here</a> to add some images';
+						}
 					}
-				}
-			} else {
-				echo $template;
-			}?>
+				} else {
+					echo $template;
+				}?>
+			</div>
 			<a class="button certification-add-button">Add Logo</a>
 		</div>
 

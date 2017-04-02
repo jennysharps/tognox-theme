@@ -28,6 +28,7 @@
 	width: auto;
 	margin-left: 5px;
 	text-shadow: 0 1px 0 #d43f3a;
+	text-align: center;
 }
 
 .button.certification-delete-button:hover {
