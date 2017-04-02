@@ -113,16 +113,16 @@ Class Custom_Certifications_Widget extends WP_Widget {
 			<script class="certificationItemTemplate" type="text/html">
 				<?php echo $template; ?>
 			</script><?php
-			if ( count( $images ) ) {
-				foreach( $images as $key => $current_image ) {
-					if( $cert_images->have_posts() ) {?>
-						<div class="certification-logos-container"><?php
-							echo $this->get_image_selection_template( $cert_images, $current_image );?>
-						</div><?php
-					} else {
-					    echo 'There are no images tagged "cert" in the media library. Click <a href="' . admin_url('/media-new.php') . '" title="Add Images">here</a> to add some images';
-					}
-				}
+			if ( count( $images ) ) { ?>
+				<div class="certification-logos-container"><?php
+					foreach( $images as $key => $current_image ) {
+						if( $cert_images->have_posts() ) {
+							echo $this->get_image_selection_template( $cert_images, $current_image );
+						} else {
+						    echo 'There are no images tagged "cert" in the media library. Click <a href="' . admin_url('/media-new.php') . '" title="Add Images">here</a> to add some images';
+						}
+					} ?>
+				</div><?php
 			} else {
 				echo $template;
 			}?>
