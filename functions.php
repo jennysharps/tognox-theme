@@ -37,6 +37,7 @@ require_once('library/custom-post-resources.php');
 require_once('library/post-type-archive-menu-links/post-type-archive-menu-links.php');
 require_once('library/register-acf-fields.php');
 require_once('library/citation-extensions.php');
+require_once('library/widgets/custom-certifications-widget.php');
 require_once('library/widgets/custom-recent-posts-widget.php');
 require_once('library/widgets/custom-recent-projects-widget.php');
 require_once('library/widgets/custom-twitter-feed-widget.php');
@@ -416,3 +417,8 @@ function get_gist_data($gist_id) {
     $result = wp_remote_get('https://api.github.com/gists/' . $gist_id, array('sslverify' => false));
     return json_decode($result['body'], true);
 }
+
+function tognox_add_tags_to_attachments() {
+    register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+}
+add_action( 'init' , 'tognox_add_tags_to_attachments' );
