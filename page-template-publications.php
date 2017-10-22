@@ -31,6 +31,7 @@
                                             /* Start publications query */
                                             $args = array(
                                                     'post_type' => 'jls_citation',
+						    'posts_per_page' => -1,
                                                     'meta_query' => array(
                                                             array(
                                                                     'key' => 'citation_type',
